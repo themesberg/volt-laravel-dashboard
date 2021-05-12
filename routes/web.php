@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Livewire\ResetPassword;
+use App\Http\Livewire\ForgotPassword;
+use App\Http\Livewire\Login;
+use App\Http\Livewire\Profile;
 use App\Http\Livewire\Register;
 use Illuminate\Support\Facades\Route;
 
@@ -21,10 +25,11 @@ Route::get('/', function () {
 Route::get('/register', Register::class);
 
 
-Route::get('/login', function () {
-    return view('livewire/auth/login');
-});
+Route::get('/login', Login::class);
 
-Route::get('/profile', function () {
-    return view('livewire/profile');
-});
+
+Route::get('/profile', Profile::class);
+
+Route::get('/forgot-password', ForgotPassword::class);
+
+Route::get('/reset-password', ResetPassword::class);

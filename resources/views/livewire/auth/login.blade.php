@@ -1,12 +1,5 @@
    @extends('layouts.base')
 
-
-
-    <!-- NOTICE: You can use the _analytics.html partial to include production code specific code & trackers -->
-{{--     @@if (environment === 'production') {
-        @@include('./_analytics-body.html')
-    } --}}
-
     <main>
 
         <!-- Section -->
@@ -19,14 +12,15 @@
                             <div class="text-center text-md-center mb-4 mt-md-0">
                                 <h1 class="mb-0 h3">Sign in to our platform</h1>
                             </div>
-                            <form action="#" class="mt-4">
+                            <form wire:submit.prevent="login" action="#" class="mt-4" method="POST">
                                 <!-- Form -->
                                 <div class="form-group mb-4">
                                     <label for="email">Your Email</label>
                                     <div class="input-group">
                                         <span class="input-group-text" id="basic-addon1"><span class="fas fa-envelope"></span></span>
-                                        <input type="email" class="form-control" placeholder="example@company.com" id="email" autofocus required>
+                                        <input wire:model="email" type="email" class="form-control" placeholder="example@company.com" id="email" autofocus required>
                                     </div>  
+                                    @error('email') <div> {{$message}} </div> @enderror
                                 </div>
                                 <!-- End of Form -->
                                 <div class="form-group">
@@ -35,8 +29,9 @@
                                         <label for="password">Your Password</label>
                                         <div class="input-group">
                                             <span class="input-group-text" id="basic-addon2"><span class="fas fa-unlock-alt"></span></span>
-                                            <input type="password" placeholder="Password" class="form-control" id="password" required>
+                                            <input wire:model.lazy="password" type="password" placeholder="Password" class="form-control" id="password" required>
                                         </div>  
+                                        @error('password') <div> {{ $message }} </div> @enderror
                                     </div>
                                     <!-- End of Form -->
                                     <div class="d-flex justify-content-between align-items-top mb-4">

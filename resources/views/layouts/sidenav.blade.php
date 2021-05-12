@@ -100,12 +100,12 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/pages/examples/forgot-password.html">
+                <a class="nav-link" href="/forgot-password">
                   <span class="sidebar-text">Forgot password</span>
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/pages/examples/reset-password.html">
+                <a class="nav-link" href="/reset-password">
                   <span class="sidebar-text">Reset password</span>
                 </a>
               </li>

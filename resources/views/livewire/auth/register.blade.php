@@ -15,14 +15,15 @@
                             <div class="text-center text-md-center mb-4 mt-md-0">
                                 <h1 class="mb-0 h3">Create an account</h1>
                             </div>
-                            <form action="#">
+                            <form wire:submit.prevent="register" action="#" method="POST">
                                 <!-- Form -->
                                 <div class="form-group mb-4">
                                     <label for="email">Your Email</label>
                                     <div class="input-group">
                                         <span class="input-group-text" id="basic-addon3"><span class="fas fa-envelope"></span></span>
-                                        <input type="email" class="form-control" placeholder="example@company.com" id="email" autofocus required>
-                                    </div>  
+                                        <input wire:model="email" id="email" type="email" class="form-control" placeholder="example@company.com" autofocus required>
+                                    </div>
+                                    @error('email') <div> {{ $message }} </div> @enderror 
                                 </div>
                                 <!-- End of Form -->
                                 <div class="form-group">
@@ -31,8 +32,9 @@
                                         <label for="password">Your Password</label>
                                         <div class="input-group">
                                             <span class="input-group-text" id="basic-addon4"><span class="fas fa-unlock-alt"></span></span>
-                                            <input type="password" placeholder="Password" class="form-control" id="password" required>
+                                            <input wire:model.lazy="password" type="password" placeholder="Password" class="form-control" id="password" required>
                                         </div>  
+                                        @error('password') <div> {{ $message }} </div> @enderror
                                     </div>
                                     <!-- End of Form -->
                                     <!-- Form -->
@@ -40,7 +42,7 @@
                                         <label for="confirm_password">Confirm Password</label>
                                         <div class="input-group">
                                             <span class="input-group-text" id="basic-addon5"><span class="fas fa-unlock-alt"></span></span>
-                                            <input type="password" placeholder="Confirm Password" class="form-control" id="confirm_password" required>
+                                            <input wire:model.lazy="passwordConfirmation" type="password" placeholder="Confirm Password" class="form-control" id="confirm_password" required>
                                         </div>  
                                     </div>
                                     <!-- End of Form -->

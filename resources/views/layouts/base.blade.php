@@ -46,6 +46,10 @@
     <!-- Volt CSS -->
     <link type="text/css" href="/css/volt.css" rel="stylesheet">
 
+    @livewireStyles
+
+    @livewireScripts
+
     <script src="/assets/js/volt.js"></script>
     <script src="/assets/js/datepicker.min.js"></script>
     <script async defer src="https://buttons.github.io/buttons.js"></script>
