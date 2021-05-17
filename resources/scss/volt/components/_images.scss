@@ -1,0 +1,74 @@
+/**
+ * = Images
+ */
+.image-xl {
+    height: 20rem;
+    img{
+        height: 20rem;
+    }
+}
+
+.image-lg {
+    height: 12rem;
+    img{
+        height: 12rem;
+    }
+}
+
+.image-md{
+    height: 5.5rem;
+    img{
+        height: 5.5rem;
+    }
+}
+
+.image-sm {
+    height: 3rem;
+    img{
+        height: 3rem;
+    }
+}
+
+.image-xs {
+    height: 1.5rem;
+    img{
+        height: 1.5rem;
+    }
+}
+
+.image-small {
+    height: 1rem;
+    img{
+        height: 1rem;
+    }
+}
+
+
+
+.img-thumbnail {
+    border-width: $border-width-md;
+    box-shadow: none;
+}
+
+.full-image{
+    height:100%;
+}
+
+.gallery-feed{
+    img{
+        width: 20%;
+        margin-right: .5rem;
+        margin-bottom: .5rem;
+        float: left;
+    }
+}
+
+.language-flag{
+    width: auto;
+    height: 1rem;
+    margin-right: 0.4rem;
+    position: relative;
+    top: -2px;
+}
+
+
