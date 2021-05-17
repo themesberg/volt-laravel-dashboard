@@ -5,6 +5,7 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
 class Register extends Component
 {
@@ -22,13 +23,18 @@ class Register extends Component
     {
         $this->validate([
             'email' => 'required',
-            'password' => 'required|same:passwordConfirmation',
+            'password' => 'required|same:passwordConfirmation|min:6',
         ]);
 
         $user = User::create([
             'email' =>$this->email,
             'password' => Hash::make($this->password),
+            'remember_token' => Str::random(10),
         ]);
+
+        auth()->login($user);
+
+        return redirect('/profile');
     }
 
     public function render()

@@ -8,7 +8,7 @@
         <!-- Section -->
         <section class="d-flex align-items-center my-5 mt-lg-6 mb-lg-5">
             <div class="container">
-                <p class="text-center"><a href="../profile" class="text-gray-700"><i class="fas fa-angle-left me-2"></i> Back to homepage</a></p>
+                <p class="text-center"><a href="{{ route('profile') }}" class="text-gray-700"><i class="fas fa-angle-left me-2"></i> Back to homepage</a></p>
                 <div class="row justify-content-center form-bg-image" data-background-lg="/assets/img/illustrations/signin.svg">
                     <div class="col-12 d-flex align-items-center justify-content-center">
                         <div class="mb-4 mb-lg-0 bg-white shadow-soft border rounded border-light p-4 p-lg-5 w-100 fmxw-500">
@@ -74,7 +74,7 @@
                             <div class="d-flex justify-content-center align-items-center mt-4">
                                 <span class="fw-normal">
                                     Already have an account?
-                                    <a href="/login" class="fw-bold">Login here</a>
+                                    <a href="{{ route('login') }}" class="fw-bold">Login here</a>
                                 </span>
                             </div>
                         </div>

@@ -24,13 +24,18 @@ class UserFactory extends Factory
     public function definition()
     {
         return [
-            'First Name' => $this->faker->firstName(),
-            'Last Name' => $this->faker->lastName(),
+            'First_Name' => $this->faker->firstName(),
+            'Last_Name' => $this->faker->lastName(),
             'Gender' => Arr::random(['male', 'female', 'other']),
             'email' => $this->faker->unique()->safeEmail(),
             'email_verified_at' => now(),
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
             'Phone' => $this->faker->phoneNumber,
+            'Birthday' => $this->faker->dateTimeThisCentury,
+            'Address' => $this->faker->address,
+            'City' => $this->faker->city,
+            'ZIP' => $this->faker->randomNumber(6),
+            'Number' => $this->faker->buildingNumber,
             'remember_token' => Str::random(10),
         ];
     }
