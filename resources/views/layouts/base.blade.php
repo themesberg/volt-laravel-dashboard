@@ -34,6 +34,10 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
     
+    <!-- Datepicker -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/css/datepicker.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/css/datepicker-bs4.min.css">
+
     <!-- Fontawesome -->
     <link type="text/css" href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
     
@@ -45,6 +49,15 @@
     
     <!-- Volt CSS -->
     <link type="text/css" href="/css/volt.css" rel="stylesheet">
+
+    @livewireStyles
+
+    @livewireScripts
+
+    <!-- Alpine -->
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <!-- Datepicker -->
+    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/js/datepicker.min.js"></script>
 
     <script src="/assets/js/volt.js"></script>
     <script src="/assets/js/datepicker.min.js"></script>

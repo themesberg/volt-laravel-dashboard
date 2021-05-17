@@ -8,21 +8,22 @@
         <!-- Section -->
         <section class="d-flex align-items-center my-5 mt-lg-6 mb-lg-5">
             <div class="container">
-                <p class="text-center"><a href="../profile" class="text-gray-700"><i class="fas fa-angle-left me-2"></i> Back to homepage</a></p>
+                <p class="text-center"><a href="{{ route('profile') }}" class="text-gray-700"><i class="fas fa-angle-left me-2"></i> Back to homepage</a></p>
                 <div class="row justify-content-center form-bg-image" data-background-lg="/assets/img/illustrations/signin.svg">
                     <div class="col-12 d-flex align-items-center justify-content-center">
                         <div class="mb-4 mb-lg-0 bg-white shadow-soft border rounded border-light p-4 p-lg-5 w-100 fmxw-500">
                             <div class="text-center text-md-center mb-4 mt-md-0">
                                 <h1 class="mb-0 h3">Create an account</h1>
                             </div>
-                            <form action="#">
+                            <form wire:submit.prevent="register" action="#" method="POST">
                                 <!-- Form -->
                                 <div class="form-group mb-4">
                                     <label for="email">Your Email</label>
                                     <div class="input-group">
                                         <span class="input-group-text" id="basic-addon3"><span class="fas fa-envelope"></span></span>
-                                        <input type="email" class="form-control" placeholder="example@company.com" id="email" autofocus required>
-                                    </div>  
+                                        <input wire:model="email" id="email" type="email" class="form-control" placeholder="example@company.com" autofocus required>
+                                    </div>
+                                    @error('email') <div> {{ $message }} </div> @enderror 
                                 </div>
                                 <!-- End of Form -->
                                 <div class="form-group">
@@ -31,8 +32,9 @@
                                         <label for="password">Your Password</label>
                                         <div class="input-group">
                                             <span class="input-group-text" id="basic-addon4"><span class="fas fa-unlock-alt"></span></span>
-                                            <input type="password" placeholder="Password" class="form-control" id="password" required>
+                                            <input wire:model.lazy="password" type="password" placeholder="Password" class="form-control" id="password" required>
                                         </div>  
+                                        @error('password') <div> {{ $message }} </div> @enderror
                                     </div>
                                     <!-- End of Form -->
                                     <!-- Form -->
@@ -40,7 +42,7 @@
                                         <label for="confirm_password">Confirm Password</label>
                                         <div class="input-group">
                                             <span class="input-group-text" id="basic-addon5"><span class="fas fa-unlock-alt"></span></span>
-                                            <input type="password" placeholder="Confirm Password" class="form-control" id="confirm_password" required>
+                                            <input wire:model.lazy="passwordConfirmation" type="password" placeholder="Confirm Password" class="form-control" id="confirm_password" required>
                                         </div>  
                                     </div>
                                     <!-- End of Form -->
@@ -72,7 +74,7 @@
                             <div class="d-flex justify-content-center align-items-center mt-4">
                                 <span class="fw-normal">
                                     Already have an account?
-                                    <a href="/login" class="fw-bold">Login here</a>
+                                    <a href="{{ route('login') }}" class="fw-bold">Login here</a>
                                 </span>
                             </div>
                         </div>
