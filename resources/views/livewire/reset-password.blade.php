@@ -40,6 +40,11 @@
                                 </div>  
                             </div>
                             <!-- End of Form -->
+                            @if($isPasswordChanged)
+                            <div class="alert alert-success" role="alert">
+                                Your password has been changed.
+                              </div>
+                            @endif
                             <div class="d-grid">
                                 <button type="submit" class="btn btn-dark">Reset password</button>
                             </div>
