@@ -7,7 +7,6 @@
 {{-- SideNav --}}
 @extends('layouts.sidenav')
 
-
   <main class="content">
       
 {{-- TopBar --}}
@@ -190,18 +189,18 @@
         <div class="col-12 col-xl-8">
             <div class="card card-body shadow-sm mb-4">
                 <h2 class="h5 mb-4">General information</h2>
-                <form>
+                <form wire:submit.prevent="save">
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <div>
                                 <label for="first_name">First Name</label>
-                                <input class="form-control" id="first_name" type="text" placeholder="Enter your first name" required>
+                                <input wire:model="user.first_name" value="{{ old('user.first_name') }}" class="form-control" id="first_name" type="text" placeholder="Enter your first name" required>
                             </div>
                         </div>
                         <div class="col-md-6 mb-3">
                             <div>
                                 <label for="last_name">Last Name</label>
-                                <input class="form-control" id="last_name" type="text" placeholder="Also your last name" required>
+                                <input wire:model="user.last_name" class="form-control" id="last_name" type="text" placeholder="Also your last name" required>
                             </div>
                         </div>
                     </div>
@@ -210,15 +209,16 @@
                             <label for="birthday">Birthday</label>
                             <div class="input-group">
                                 <span class="input-group-text"><span class="far fa-calendar-alt"></span></span>
-                                <input data-datepicker="" class="form-control" id="birthday" type="text" placeholder="dd/mm/yyyy" required>                                               
+                                <input wire:model="user.birthday" data-datepicker="" class="form-control datepicker-input" id="birthday" type="text" placeholder="yyyy/mm/dd">                                               
                              </div>
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="gender">Gender</label>
-                            <select class="form-select mb-0" id="gender" aria-label="Gender select example">
+                            <select wire:model="user.gender" class="form-select mb-0" id="gender" aria-label="Gender select example">
                                 <option selected>Gender</option>
-                                <option value="1">Female</option>
-                                <option value="2">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Male">Male</option>
+                                <option value="Other">Other</option>
                             </select>
                         </div>
                     </div>
@@ -226,13 +226,14 @@
                         <div class="col-md-6 mb-3">
                             <div class="form-group">
                                 <label for="email">Email</label>
-                                <input class="form-control" id="email" type="email" placeholder="name@company.com" required>
+                                <input wire:model="user.email" class="form-control" id="email" type="email" placeholder="name@company.com">
                             </div>
+                            @error('email') <div>{{ $message }}</div> @enderror
                         </div>
                         <div class="col-md-6 mb-3">
                             <div class="form-group">
                                 <label for="phone">Phone</label>
-                                <input class="form-control" id="phone" type="number" placeholder="+12-345 678 910" required>
+                                <input wire:model="user.phone" class="form-control" id="phone" type="number" placeholder="+12-345 678 910">
                             </div>
                         </div>
                     </div>
@@ -241,13 +242,13 @@
                         <div class="col-sm-9 mb-3">
                             <div class="form-group">
                                 <label for="address">Address</label>
-                                <input class="form-control" id="address" type="text" placeholder="Enter your home address" required>
+                                <input wire:model="user.address" class="form-control" id="address" type="text" placeholder="Enter your home address">
                             </div>
                         </div>
                         <div class="col-sm-3 mb-3">
                             <div class="form-group">
                                 <label for="number">Number</label>
-                                <input class="form-control" id="number" type="number" placeholder="No." required>
+                                <input wire:model="user.number" class="form-control" id="number" type="number" placeholder="No.">
                             </div>
                         </div>
                     </div>
@@ -255,20 +256,25 @@
                         <div class="col-sm-4 mb-3">
                             <div class="form-group">
                                 <label for="city">City</label>
-                                <input class="form-control" id="city" type="text" placeholder="City" required>
+                                <input wire:model="user.city" class="form-control" id="city" type="text" placeholder="City">
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label for="zip">ZIP</label>
-                                <input class="form-control" id="zip" type="tel" placeholder="ZIP" required>
+                                <input wire:model="user.zip" class="form-control" id="zip" type="tel" placeholder="ZIP">
                             </div>
                         </div>
                     </div>
                     <div class="mt-3">
                         <button type="submit" class="btn btn-dark">Save All</button>
-                    </div>
-                </form>
+                      </div>
+                    </form>
+                    @if($showSavedAlert)
+                      <div class="alert alert-primary mt-2" role="alert">
+                        Saved!
+                      </div>
+                    @endif
             </div>
             <div class="card card-body shadow-sm mb-4 mb-lg-0">
                 <h2 class="h5 mb-4">Alerts & Notifications</h2>
