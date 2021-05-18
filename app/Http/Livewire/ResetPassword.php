@@ -2,6 +2,8 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 use Livewire\Component;
 
 class ResetPassword extends Component
@@ -9,6 +11,7 @@ class ResetPassword extends Component
     public $email = '';
     public $password = '';
     public $passwordConfirmation = '';
+    public $isPasswordChanged = false;
 
     public $rules=[
         'email' => 'required|email|exists:users',
@@ -19,7 +22,14 @@ class ResetPassword extends Component
     ];
 
     public function resetPassword() {
-/////to do : add functionality here
+        $this->validate();
+        $existingUser = User::where('email', $this->email)->first();
+        if($existingUser) {
+            $existingUser->update([
+                'password' => Hash::make($this->password)
+            ]);
+        }
+        $this->isPasswordChanged = true;
     }
     
     public function render()
