@@ -1,18 +1,3 @@
-@extends('layouts.base')
-
-{{-- Nav --}}
-@include('layouts.nav')
-
-
-{{-- SideNav --}}
-@include('layouts.sidenav')
-
-
-<main class="content">
-{{-- TopBar --}}
-@include('layouts.topbar')
-
-
 <div class="py-4">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">
@@ -227,6 +212,3 @@
         </div>
     </div>
 </div>
-
-@include('layouts.footer')
-</main>

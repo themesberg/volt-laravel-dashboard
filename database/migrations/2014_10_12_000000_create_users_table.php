@@ -27,7 +27,7 @@ class CreateUsersTable extends Migration
             $table->string('ZIP')->nullable();
             $table->string('Phone')->nullable();
             $table->timestamp('email_verified_at')->nullable();
-            $table->rememberToken();
+            $table->rememberToken()->unique();
             $table->timestamps();
         });
     }

@@ -15,12 +15,12 @@ class Profile extends Component
         'user.last_name' => 'max:20',
         'user.birthday' => 'date_format:Y-m-d',
         'user.email' => 'email',
-        'user.phone' => '',
+        'user.phone' => 'numeric',
         'user.gender' => '',
-        'user.address' => '',
-        'user.number' => '',
-        'user.city' => '',
-        'user.zip' => '',
+        'user.address' => 'max:20',
+        'user.number' => 'numeric',
+        'user.city' => 'max:20',
+        'user.zip' => 'numeric',
     ];
 
     public function mount() { $this->user = auth()->user(); }
@@ -37,7 +37,6 @@ class Profile extends Component
 
     public function render()
     {
-        return view('livewire.profile')
-        ->layout('layouts.base');
+        return view('livewire.profile');
     }
 }

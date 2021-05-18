@@ -1,6 +1,3 @@
-@extends('layouts.base')
-
-<!-- Section -->
 <section class="vh-lg-100 bg-soft d-flex align-items-center my-4">
     <div class="container">
         <p class="text-center"><a href="/dashboard" class="text-gray-700"><i class="fas fa-angle-left me-2"></i> Back to homepage</a></p>

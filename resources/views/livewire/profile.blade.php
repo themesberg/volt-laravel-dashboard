@@ -1,17 +1,4 @@
-@extends('layouts.base')
-
-{{-- Nav --}}
-@include('layouts.nav')
-
-
-{{-- SideNav --}}
-@include('layouts.sidenav')
-
-  <main class="content">
-      
-{{-- TopBar --}}
-@include('layouts.topbar')
-
+<div>
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center py-4">
         <div>
             <button class="btn btn-secondary text-dark me-2 dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -45,7 +32,7 @@
         <div class="col-12 col-xl-8">
             <div class="card card-body shadow-sm mb-4">
                 <h2 class="h5 mb-4">General information</h2>
-                <form wire:submit.prevent="save">
+                <form wire:submit.prevent="save" action="#" method="POST">
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <div>
@@ -240,10 +227,4 @@
             </div>
         </div>
     </div>
-    @include('layouts.footer')
-  </main>
-
-
-</body>
-
-</html>
+</div>

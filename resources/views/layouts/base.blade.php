@@ -96,7 +96,7 @@
 
 <body>
 
-    {{ $slot ?? '' }}
+    {{ $slot }}
 
 </body>
 

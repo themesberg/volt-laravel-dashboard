@@ -1,9 +1,4 @@
-   @extends('layouts.base')
-
-
-
-
-    <main>
+ <main>
 
         <!-- Section -->
         <section class="d-flex align-items-center my-5 mt-lg-6 mb-lg-5">
@@ -83,8 +78,3 @@
             </div>
         </section>
     </main>
-
-{{--     @@include('./_scripts.html', {
-        "path": "../.."
-    }) --}}
-    

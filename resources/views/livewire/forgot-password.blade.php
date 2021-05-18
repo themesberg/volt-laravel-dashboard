@@ -1,5 +1,3 @@
-@extends('layouts.base')
-
 <main>
 
     <!-- Section -->

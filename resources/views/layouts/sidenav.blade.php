@@ -26,7 +26,7 @@
             <span class="mt-1 ms-1 sidebar-text">Volt Overview</span>
           </a>
         </li>
-        <li class="nav-item @@if (context.page === 'overview') { active }">
+        <li class="nav-item {{ Request::segment(1) == 'dashboard' ? 'active' : '' }}">
           <a href="/dashboard" class="nav-link">
             <span class="sidebar-icon"><span class="fas fa-chart-pie"></span></span>
             <span class="sidebar-text">Dashboard</span>
@@ -43,13 +43,13 @@
             </span>
           </a>
         </li>
-        <li class="nav-item @@if (context.page === 'transactions') { active }">
+        <li class="nav-item {{ Request::segment(1) == 'transactions' ? 'active' : '' }}">
           <a href="/transactions" class="nav-link">
             <span class="sidebar-icon"><span class="fas fa-hand-holding-usd"></span></span>
             <span class="sidebar-text">Transactions</span>
           </a>
         </li>
-        <li class="nav-item @@if (context.page === 'settings') { active }">
+        <li class="nav-item {{ Request::segment(1) == 'profile' ? 'active' : '' }}">
           <a href="/profile" class="nav-link">
             <span class="sidebar-icon"><span class="fas fa-cog"></span></span>
             <span class="sidebar-text">Settings</span>
@@ -57,7 +57,7 @@
         </li>
         <li class="nav-item">
           <span
-            class="nav-link @@if (context.page !== 'datatables' && context.page !== 'tables') { collapsed } d-flex justify-content-between align-items-center"
+            class="nav-link {{ Request::segment(1) !== 'bootstrap-tables' ? 'collapsed' : '' }} d-flex justify-content-between align-items-center"
             data-bs-toggle="collapse" data-bs-target="#submenu-app">
             <span>
               <span class="sidebar-icon"><span class="fas fa-table"></span></span>
@@ -65,10 +65,10 @@
             </span>
             <span class="link-arrow"><span class="fas fa-chevron-right"></span></span>
           </span>
-          <div class="multi-level collapse @@if (context.page === 'datatables' || context.page === 'tables') { show }"
+          <div class="multi-level collapse {{ Request::segment(1) == 'bootstrap-tables' ? 'show' : '' }}"
             role="list" id="submenu-app" aria-expanded="false">
             <ul class="flex-column nav">
-              <li class="nav-item @@if (context.page === 'tables') { active }">
+              <li class="nav-item {{ Request::segment(1) == 'bootstrap-tables' ? 'active' : '' }}">
                 <a class="nav-link" href="/bootstrap-tables">
                   <span class="sidebar-text">Bootstrap Tables</span>
                 </a>
@@ -78,7 +78,7 @@
         </li>
         <li class="nav-item">
           <span
-            class="nav-link @@if (context.page_group !== 'page_examples') { collapsed } d-flex justify-content-between align-items-center"
+            class="nav-link collapsed d-flex justify-content-between align-items-center"
             data-bs-toggle="collapse" data-bs-target="#submenu-pages">
             <span>
               <span class="sidebar-icon"><span class="far fa-file-alt"></span></span>
@@ -86,7 +86,7 @@
             </span>
             <span class="link-arrow"><span class="fas fa-chevron-right"></span></span>
           </span>
-          <div class="multi-level collapse @@if (context.page_group === 'page_examples') { show }" role="list"
+          <div class="multi-level collapse" role="list"
             id="submenu-pages" aria-expanded="false">
             <ul class="flex-column nav">
               <li class="nav-item">
@@ -129,7 +129,7 @@
         </li>
         <li class="nav-item">
           <span
-            class="nav-link @@if (context.page_group !== 'components') { collapsed } d-flex justify-content-between align-items-center"
+            class="nav-link collapsed d-flex justify-content-between align-items-center"
             data-bs-toggle="collapse" data-bs-target="#submenu-components">
             <span>
               <span class="sidebar-icon"><span class="fas fa-box-open"></span></span>
@@ -137,7 +137,7 @@
             </span>
             <span class="link-arrow"><span class="fas fa-chevron-right"></span></span>
           </span>
-          <div class="multi-level collapse @@if (context.page_group === 'components') { show }" role="list"
+          <div class="multi-level collapse {{ Request::segment(1) == 'buttons' || Request::segment(1) == 'notifications' || Request::segment(1) == 'forms' || Request::segment(1) == 'modals' || Request::segment(1) == 'typography' ? 'show' : '' }}" role="list"
             id="submenu-components" aria-expanded="false">
             <ul class="flex-column nav">
               <li class="nav-item">
@@ -146,27 +146,27 @@
                   <span class="sidebar-text">All Components</span>
                 </a>
               </li>
-              <li class="nav-item @@if (context.page === 'buttons') { active }">
+              <li class="nav-item {{ Request::segment(1) == 'buttons' ? 'active' : '' }}">
                 <a class="nav-link" href="/buttons">
                   <span class="sidebar-text">Buttons</span>
                 </a>
               </li>
-              <li class="nav-item @@if (context.page === 'notifications') { active }">
+              <li class="nav-item {{ Request::segment(1) == 'notifications' ? 'active' : '' }}">
                 <a class="nav-link" href="/notifications">
                   <span class="sidebar-text">Notifications</span>
                 </a>
               </li>
-              <li class="nav-item @@if (context.page === 'forms') { active }">
+              <li class="nav-item {{ Request::segment(1) == 'forms' ? 'active' : '' }}">
                 <a class="nav-link" href="/forms">
                   <span class="sidebar-text">Forms</span>
                 </a>
               </li>
-              <li class="nav-item @@if (context.page === 'modals') { active }">
+              <li class="nav-item {{ Request::segment(1) == 'modals' ? 'active' : '' }}">
                 <a class="nav-link" href="/modals">
                   <span class="sidebar-text">Modals</span>
                 </a>
               </li>
-              <li class="nav-item @@if (context.page === 'typography') { active }">
+              <li class="nav-item {{ Request::segment(1) == 'typography' ? 'active' : '' }}">
                 <a class="nav-link" href="/typography">
                   <span class="sidebar-text">Typography</span>
                 </a>

@@ -27,13 +27,12 @@ class ForgotPassword extends Component
     public function recoverPassword() {
         $this->validate();
         $user=User::where('email', $this->email)->first();
-        $this->notify(new ResetPassword($user->remember_token));
+        $this->notify(new ResetPassword($user->id));
         $this->mailSentAlert = true;
     }
 
     public function render()
     {
-        return view('livewire.forgot-password')
-            ->layout('layouts.base');
+        return view('livewire.forgot-password');
     }
 }
