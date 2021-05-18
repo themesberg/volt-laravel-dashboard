@@ -53,15 +53,45 @@
     @livewireStyles
 
     @livewireScripts
+    {{--     <!-- Alpine -->
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script> --}}
+    <!-- Core -->
+    <script src="/assets/js/popper.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
 
-    <!-- Alpine -->
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <!-- Vendor JS -->
+    <script src="/assets/js/on-screen.umd.min.js"></script>
+
+    <!-- Slider -->
+    <script src="/assets/js/nouislider.min.js"></script>
+
+    <!-- Smooth scroll -->
+    <script src="/assets/js/smooth-scroll.polyfills.min.js"></script>
+
+    <!-- Charts -->
+    <script src="/assets/js/chartist.min.js"></script>
+    <script src="/assets/js/chartist-plugin-tooltip.min.js"></script>
+
     <!-- Datepicker -->
     <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/js/datepicker.min.js"></script>
 
-    <script src="/assets/js/volt.js"></script>
-    <script src="/assets/js/datepicker.min.js"></script>
+    <!-- Sweet Alerts 2 -->
+    <script src="/assets/js/sweetalert2.all.min.js"></script>
+
+    <!-- Moment JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+
+    <!-- Notyf -->
+    <script src="/vendor/notyf/notyf.min.js"></script>
+
+    <!-- Simplebar -->
+    <script src="/assets/js/simplebar.min.js"></script>
+
+    <!-- Github buttons -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
+    
+    <!-- Volt JS -->
+    <script src="/assets/js/volt.js"></script>
 </head>
 
 <body>

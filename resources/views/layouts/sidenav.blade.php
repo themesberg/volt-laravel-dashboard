@@ -8,7 +8,7 @@
           </div>
           <div class="d-block">
             <h2 class="h6">Hi, Jane</h2>
-            <a href="/pages/examples/sign-in.html" class="btn btn-secondary text-dark btn-xs"><span
+            <a href="/login" class="btn btn-secondary text-dark btn-xs"><span
                 class="me-2"><span class="fas fa-sign-out-alt"></span></span>Sign Out</a>
           </div>
         </div>
@@ -27,7 +27,7 @@
           </a>
         </li>
         <li class="nav-item @@if (context.page === 'overview') { active }">
-          <a href="/pages/dashboard/dashboard.html" class="nav-link">
+          <a href="/dashboard" class="nav-link">
             <span class="sidebar-icon"><span class="fas fa-chart-pie"></span></span>
             <span class="sidebar-text">Dashboard</span>
           </a>
@@ -44,13 +44,13 @@
           </a>
         </li>
         <li class="nav-item @@if (context.page === 'transactions') { active }">
-          <a href="/pages/transactions.html" class="nav-link">
+          <a href="/transactions" class="nav-link">
             <span class="sidebar-icon"><span class="fas fa-hand-holding-usd"></span></span>
             <span class="sidebar-text">Transactions</span>
           </a>
         </li>
         <li class="nav-item @@if (context.page === 'settings') { active }">
-          <a href="/pages/settings.html" class="nav-link">
+          <a href="/profile" class="nav-link">
             <span class="sidebar-icon"><span class="fas fa-cog"></span></span>
             <span class="sidebar-text">Settings</span>
           </a>
@@ -69,7 +69,7 @@
             role="list" id="submenu-app" aria-expanded="false">
             <ul class="flex-column nav">
               <li class="nav-item @@if (context.page === 'tables') { active }">
-                <a class="nav-link" href="/pages/tables/bootstrap-tables.html">
+                <a class="nav-link" href="/bootstrap-tables">
                   <span class="sidebar-text">Bootstrap Tables</span>
                 </a>
               </li>
@@ -110,17 +110,17 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/pages/examples/lock.html">
+                <a class="nav-link" href="/lock">
                   <span class="sidebar-text">Lock</span>
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/pages/examples/404.html">
+                <a class="nav-link" href="/404">
                   <span class="sidebar-text">404 Not Found</span>
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/pages/examples/500.html">
+                <a class="nav-link" href="/500">
                   <span class="sidebar-text">500 Not Found</span>
                 </a>
               </li>
@@ -147,27 +147,27 @@
                 </a>
               </li>
               <li class="nav-item @@if (context.page === 'buttons') { active }">
-                <a class="nav-link" href="/pages/components/buttons.html">
+                <a class="nav-link" href="/buttons">
                   <span class="sidebar-text">Buttons</span>
                 </a>
               </li>
               <li class="nav-item @@if (context.page === 'notifications') { active }">
-                <a class="nav-link" href="/pages/components/notifications.html">
+                <a class="nav-link" href="/notifications">
                   <span class="sidebar-text">Notifications</span>
                 </a>
               </li>
               <li class="nav-item @@if (context.page === 'forms') { active }">
-                <a class="nav-link" href="/pages/components/forms.html">
+                <a class="nav-link" href="/forms">
                   <span class="sidebar-text">Forms</span>
                 </a>
               </li>
               <li class="nav-item @@if (context.page === 'modals') { active }">
-                <a class="nav-link" href="/pages/components/modals.html">
+                <a class="nav-link" href="/modals">
                   <span class="sidebar-text">Modals</span>
                 </a>
               </li>
               <li class="nav-item @@if (context.page === 'typography') { active }">
-                <a class="nav-link" href="/pages/components/typography.html">
+                <a class="nav-link" href="/typography">
                   <span class="sidebar-text">Typography</span>
                 </a>
               </li>
