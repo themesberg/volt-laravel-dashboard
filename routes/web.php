@@ -17,6 +17,7 @@ use App\Http\Livewire\Profile;
 use App\Http\Livewire\Auth\Register;
 use App\Http\Livewire\Transactions;
 use Illuminate\Support\Facades\Route;
+use App\Http\Livewire\ResetPasswordExample;
 
 
 /*
@@ -45,8 +46,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', Profile::class)->name('profile');
 });
 
-Route::get('/reset-password/{id}', ResetPassword::class)->name('reset-password');
-Route::get('/reset-password', ResetPassword::class)->name('reset-password');
+Route::get('/reset-password/{id}', ResetPassword::class)->name('reset-password')->middleware('signed');
+Route::get('/reset-password-example', ResetPasswordExample::class)->name('reset-password');
 Route::get('/dashboard', Dashboard::class)->name('dashboard');
 Route::get('/transactions', Transactions::class)->name('transactions');
 Route::get('/bootstrap-tables', BootstrapTables::class)->name('bootstrap-tables');

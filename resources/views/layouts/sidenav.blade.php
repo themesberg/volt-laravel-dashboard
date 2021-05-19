@@ -105,7 +105,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{ route('reset-password', $token ?? '') }}">
+                <a class="nav-link" href="/reset-password-example">
                   <span class="sidebar-text">Reset password</span>
                 </a>
               </li>

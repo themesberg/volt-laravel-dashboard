@@ -9,6 +9,7 @@ class Profile extends Component
 {
     public User $user;
     public $showSavedAlert = false;
+    public $showDemoNotification = false;
 
     protected $rules = [
         'user.first_name' => 'max:15',
@@ -27,12 +28,19 @@ class Profile extends Component
 
     public function save()
     {
+        if(env('IS_DEMO')) {
+            $this->showDemoNotification = true;
+        }
+        else {
         $this->validate();
 
         $this->user->save();
 
         $this->showSavedAlert = true;
+            
+        }
     }
+
 
 
     public function render()

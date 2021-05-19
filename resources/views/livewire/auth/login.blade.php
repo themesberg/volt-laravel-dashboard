@@ -3,8 +3,8 @@
         <!-- Section -->
         <section class="d-flex align-items-center my-5 mt-lg-6 mb-lg-5">
             <div class="container">
-                <p class="text-center"><a href="{{ route('profile') }}" class="text-gray-700"><i class="fas fa-angle-left me-2"></i> Back to homepage</a></p>
-                <div wire:ignore class="row justify-content-center form-bg-image" data-background-lg="/assets/img/illustrations/signin.svg">
+                <p class="text-center"><a href="{{ route('dashboard') }}" class="text-gray-700"><i class="fas fa-angle-left me-2"></i> Back to homepage</a></p>
+                <div wire:ignore.self class="row justify-content-center form-bg-image" data-background-lg="/assets/img/illustrations/signin.svg">
                     <div class="col-12 d-flex align-items-center justify-content-center">
                         <div class="bg-white shadow-soft border rounded border-light p-4 p-lg-5 w-100 fmxw-500">
                             <div class="text-center text-md-center mb-4 mt-md-0">
@@ -18,7 +18,7 @@
                                         <span class="input-group-text" id="basic-addon1"><span class="fas fa-envelope"></span></span>
                                         <input wire:model="email" type="email" class="form-control" placeholder="example@company.com" id="email" autofocus required>
                                     </div>  
-                                    @error('email') <div> {{$message}} </div> @enderror
+                                    @error('email') <div wire:key="form" class="invalid-feedback"> {{$message}} </div> @enderror
                                 </div>
                                 <!-- End of Form -->
                                 <div class="form-group">
@@ -29,7 +29,7 @@
                                             <span class="input-group-text" id="basic-addon2"><span class="fas fa-unlock-alt"></span></span>
                                             <input wire:model.lazy="password" type="password" placeholder="Password" class="form-control" id="password" required>
                                         </div>  
-                                        @error('password') <div> {{ $message }} </div> @enderror
+                                        @error('password') <div class="invalid-feedback"> {{ $message }} </div> @enderror
                                     </div>
                                     <!-- End of Form -->
                                     <div class="d-flex justify-content-between align-items-top mb-4">

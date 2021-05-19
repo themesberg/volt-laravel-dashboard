@@ -15,7 +15,7 @@
         @include('layouts.footer')
         </main>
 
-    @elseif(in_array(request()->route()->getName(), ['register', 'login', '404', '500', 'forgot-password', 'reset-password', 'lock']))
+    @elseif(in_array(request()->route()->getName(), ['register', 'login', '404', '500', 'forgot-password', 'reset-password','reset-password-example', 'lock']))
 
         {{ $slot }}
 
