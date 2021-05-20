@@ -1,17 +1,4 @@
-@extends('layouts.base')
-
-{{-- Nav --}}
-@include('layouts.nav')
-
-
-{{-- SideNav --}}
-@include('layouts.sidenav')
-
-  <main class="content">
-      
-{{-- TopBar --}}
-@include('layouts.topbar')
-
+<div>
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center py-4">
         <div>
             <button class="btn btn-secondary text-dark me-2 dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -45,12 +32,12 @@
         <div class="col-12 col-xl-8">
             <div class="card card-body shadow-sm mb-4">
                 <h2 class="h5 mb-4">General information</h2>
-                <form wire:submit.prevent="save">
+                <form wire:submit.prevent="save" action="#" method="POST">
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <div>
                                 <label for="first_name">First Name</label>
-                                <input wire:model="user.first_name" value="{{ old('user.first_name') }}" class="form-control" id="first_name" type="text" placeholder="Enter your first name" required>
+                                <input wire:model="user.first_name" class="form-control" id="first_name" type="text" placeholder="Enter your first name" required>
                             </div>
                         </div>
                         <div class="col-md-6 mb-3">
@@ -65,7 +52,7 @@
                             <label for="birthday">Birthday</label>
                             <div class="input-group">
                                 <span class="input-group-text"><span class="far fa-calendar-alt"></span></span>
-                                <input wire:model="user.birthday" data-datepicker="" class="form-control datepicker-input" id="birthday" type="text" placeholder="yyyy/mm/dd">                                               
+                                <input wire:model="user.birthday" data-datepicker="" class="form-control datepicker-input" id="birthday" type="text" placeholder="yyyy/mm/dd" disabled>                                               
                              </div>
                         </div>
                         <div class="col-md-6 mb-3">
@@ -82,7 +69,7 @@
                         <div class="col-md-6 mb-3">
                             <div class="form-group">
                                 <label for="email">Email</label>
-                                <input wire:model="user.email" class="form-control" id="email" type="email" placeholder="name@company.com">
+                                <input wire:model="user.email" class="form-control" id="email" type="email" placeholder="name@company.com" disabled>
                             </div>
                             @error('email') <div>{{ $message }}</div> @enderror
                         </div>
@@ -131,6 +118,11 @@
                         Saved!
                       </div>
                     @endif
+                    @if($showDemoNotification)
+                        <div class="alert alert-info mt-2" role="alert">
+                            You cannot do that in the demo version.
+                        </div>
+                    @endif
             </div>
             <div class="card card-body shadow-sm mb-4 mb-lg-0">
                 <h2 class="h5 mb-4">Alerts & Notifications</h2>
@@ -178,7 +170,7 @@
             <div class="row">
                 <div class="col-12 mb-4">
                     <div class="card shadow-sm text-center p-0">
-                        <div class="profile-cover rounded-top" data-background="/assets/img/profile-cover.jpg"></div>
+                        <div wire:ignore class="profile-cover rounded-top" data-background="/assets/img/profile-cover.jpg"></div>
                         <div class="card-body pb-5">
                             <img src="../assets/img/team/profile-picture-1.jpg" class="user-avatar large-avatar rounded-circle mx-auto mt-n7 mb-4" alt="Neil Portrait">
                             <h4 class="h3">Neil Sims</h4>
@@ -240,10 +232,4 @@
             </div>
         </div>
     </div>
-    @include('layouts.footer')
-  </main>
-
-
-</body>
-
-</html>
+</div>

@@ -14,6 +14,7 @@ class ForgotPassword extends Component
     use Notifiable;
 
     public $mailSentAlert = false;
+    public $showDemoNotification = false;
     public $email='';
     public $rules=[
         'email' => 'required|email|exists:users'
@@ -21,19 +22,27 @@ class ForgotPassword extends Component
     protected $messages = [
         'email.exists' => 'The Email Address must be in our database.',
     ];
+    public function updatedEmail()
+    {
+        $this->validate(['email'=>'required|email|exists:users']);
+    }
     public function routeNotificationForMail() {
         return $this->email;
     }
     public function recoverPassword() {
+        if(env('IS_DEMO')) {
+            $this->showDemoNotification = true;
+        }
+        else {
         $this->validate();
         $user=User::where('email', $this->email)->first();
-        $this->notify(new ResetPassword($user->remember_token));
+        $this->notify(new ResetPassword($user->id));
         $this->mailSentAlert = true;
+        }
     }
 
     public function render()
     {
-        return view('livewire.forgot-password')
-            ->layout('layouts.base');
+        return view('livewire.forgot-password');
     }
 }

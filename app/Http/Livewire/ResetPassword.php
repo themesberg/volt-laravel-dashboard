@@ -12,6 +12,8 @@ class ResetPassword extends Component
     public $password = '';
     public $passwordConfirmation = '';
     public $isPasswordChanged = false;
+    public $wrongEmail = false;
+    public $urlId='';
 
     public $rules=[
         'email' => 'required|email|exists:users',
@@ -21,20 +23,32 @@ class ResetPassword extends Component
         'email.exists' => 'The Email Address must be in our database.',
     ];
 
+    public function updatedEmail()
+    {
+        $this->validate(['email'=>'required|email|exists:users']);
+    }
+    public function mount($id) {
+        $existingUser = User::find($id);
+        $this->urlId = intval($existingUser->id);
+    }
+
     public function resetPassword() {
         $this->validate();
         $existingUser = User::where('email', $this->email)->first();
-        if($existingUser) {
+        if($existingUser && $existingUser->id == $this->urlId) {
             $existingUser->update([
                 'password' => Hash::make($this->password)
             ]);
+            $this->isPasswordChanged = true;
+            $this->wrongEmail = false;
         }
-        $this->isPasswordChanged = true;
+        else {
+            $this->wrongEmail = true;
+        }
     }
     
     public function render()
     {
-        return view('livewire.reset-password')
-            ->layout('layouts.base');
+        return view('livewire.reset-password');
     }
 }

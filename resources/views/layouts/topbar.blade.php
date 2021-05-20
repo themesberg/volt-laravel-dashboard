@@ -136,7 +136,7 @@
                 <a class="dropdown-item fw-bold" href="#"><span class="fas fa-envelope-open-text"></span>Messages</a>
                 <a class="dropdown-item fw-bold" href="#"><span class="fas fa-user-shield"></span>Support</a>
                 <div role="separator" class="dropdown-divider my-0"></div>
-                <a class="dropdown-item rounded-bottom fw-bold" href="#"><span class="fas fa-sign-out-alt text-danger"></span>Logout</a>
+                <a class="dropdown-item rounded-bottom fw-bold"> <livewire:logout /></a>
             </div>
           </li>
         </ul>

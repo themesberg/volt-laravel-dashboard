@@ -1,19 +1,24 @@
 <?php
 
+use App\Http\Livewire\BootstrapTables;
+use App\Http\Livewire\Components\Buttons;
+use App\Http\Livewire\Components\Forms;
+use App\Http\Livewire\Components\Modals;
+use App\Http\Livewire\Components\Notifications;
+use App\Http\Livewire\Components\Typography;
+use App\Http\Livewire\Dashboard;
+use App\Http\Livewire\Err404;
+use App\Http\Livewire\Err500;
 use App\Http\Livewire\ResetPassword;
 use App\Http\Livewire\ForgotPassword;
-use App\Http\Livewire\Login;
+use App\Http\Livewire\Lock;
+use App\Http\Livewire\Auth\Login;
 use App\Http\Livewire\Profile;
-use App\Http\Livewire\Register;
-use App\Models\User;
-use App\Notifications\MailResetPasswordToken;
+use App\Http\Livewire\Auth\Register;
+use App\Http\Livewire\Transactions;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Auth\Events\PasswordReset;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Mail;
-use Illuminate\Support\Facades\Password;
-use Illuminate\Support\Str;
+use App\Http\Livewire\ResetPasswordExample;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -41,44 +46,16 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', Profile::class)->name('profile');
 });
 
-Route::get('/reset-password/{token}', ResetPassword::class)->name('reset-password');
-Route::get('/reset-password', ResetPassword::class)->name('reset-password');
-Route::get('/dashboard', function () {
-    return view('dashboard');
-});
-Route::get('/transactions', function () {
-    return view('transactions');
-});
-Route::get('/bootstrap-tables', function () {
-    return view('bootstrap-tables');
-});
-Route::get('/lock', function () {
-    return view('lock');
-});
-Route::get('/404', function () {
-    return view('404');
-});
-Route::get('/500', function () {
-    return view('500');
-});
-Route::get('/buttons', function () {
-    return view('components.buttons');
-});
-Route::get('/notifications', function () {
-    return view('components.notifications');
-});
-Route::get('/forms', function () {
-    return view('components.forms');
-});
-Route::get('/modals', function () {
-    return view('components.modals');
-});
-Route::get('/typography', function () {
-    return view('components.typography');
-});
-
-Route::get('mail', function(){
-    $order = App\Models\User::find(1);
-
-    return (new ResetPassword($order))->toMail($order->user);
-});
+Route::get('/reset-password/{id}', ResetPassword::class)->name('reset-password')->middleware('signed');
+Route::get('/reset-password-example', ResetPasswordExample::class)->name('reset-password');
+Route::get('/dashboard', Dashboard::class)->name('dashboard');
+Route::get('/transactions', Transactions::class)->name('transactions');
+Route::get('/bootstrap-tables', BootstrapTables::class)->name('bootstrap-tables');
+Route::get('/lock', Lock::class)->name('lock');
+Route::get('/404', Err404::class)->name('404');
+Route::get('/500', Err500::class)->name('500');
+Route::get('/buttons', Buttons::class)->name('buttons');
+Route::get('/notifications', Notifications::class)->name('notifications');
+Route::get('/forms', Forms::class)->name('forms');
+Route::get('/modals', Modals::class)->name('modals');
+Route::get('/typography', Typography::class)->name('typography');

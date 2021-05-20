@@ -1,5 +1,3 @@
-@extends('layouts.base')
-
 <main>
 
     <!-- Section -->
@@ -18,12 +16,17 @@
                                 <div class="input-group">
                                     <input wire:model='email' type="email" class="form-control" id="email" placeholder="john@company.com" required autofocus>
                                 </div>  
-                                @error('email') <div>{{ $message }}</div> @enderror
+                                @error('email') <div class="invalid-feedback">{{ $message }}</div> @enderror
                             </div>
                             <!-- End of Form -->
                             @if($mailSentAlert)
                                 <div class="alert alert-info" role="alert">
                                     An email containing the password reset link has been sent.
+                                </div>
+                            @endif
+                            @if($showDemoNotification)
+                                <div class="alert alert-info" role="alert">
+                                    You cannot do that in the demo version.
                                 </div>
                             @endif
                             <div class="d-grid">

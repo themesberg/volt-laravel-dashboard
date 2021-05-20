@@ -1,17 +1,3 @@
-@extends('layouts.base')
-
-{{-- Nav --}}
-@include('layouts.nav')
-
-
-{{-- SideNav --}}
-@include('layouts.sidenav')
-
-
-<main class="content">
-{{-- TopBar --}}
-@include('layouts.topbar')
-
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center py-4">
     <div class="btn-toolbar dropdown">
         <button class="btn btn-dark btn-sm me-2 dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -493,5 +479,3 @@
         </div>
     </div>
 </div>
-@include('layouts.footer')
-</main>
