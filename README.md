@@ -38,7 +38,7 @@ This product is built using the following widely used technologies:
 
 * [Versions](#versions)
 * [Demo](#demo)
-* [Quick Start](#quick-start)
+* [Installation](#installation)
 * [Documentation](#documentation)
 * [File Structure](#file-structure)
 * [Browser Support](#browser-support)
@@ -80,7 +80,7 @@ This product is built using the following widely used technologies:
 -   [Live Preview](https://demo.themesberg.com/volt/)
 -   [Details](https://themesberg.com/product/admin-dashboard/volt-bootstrap-5-dashboard)
 
-# Quick start
+# Installation
 
 ## Prerequisites
 
