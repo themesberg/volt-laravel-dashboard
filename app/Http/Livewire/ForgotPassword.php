@@ -34,10 +34,10 @@ class ForgotPassword extends Component
             $this->showDemoNotification = true;
         }
         else {
-        $this->validate();
-        $user=User::where('email', $this->email)->first();
-        $this->notify(new ResetPassword($user->id));
-        $this->mailSentAlert = true;
+            $this->validate();
+            $user=User::where('email', $this->email)->first();
+            $this->notify(new ResetPassword($user->id));
+            $this->mailSentAlert = true;
         }
     }
 

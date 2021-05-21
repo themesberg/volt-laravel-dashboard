@@ -36,12 +36,9 @@ class Profile extends Component
 
         $this->user->save();
 
-        $this->showSavedAlert = true;
-            
+        $this->showSavedAlert = true;   
         }
     }
-
-
 
     public function render()
     {
