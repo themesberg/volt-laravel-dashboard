@@ -1,0 +1,935 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Use Volts&rsquo;s advanced grid system to create fully responsive layouts with reduced effort">
+<meta name="author" content="Themesberg">
+<meta name="generator" content="Hugo 0.67.1">
+
+<title>Grid · Volt Bootstrap 5 Dashboard Documentation</title>
+
+
+
+
+
+<!-- Bootstrap core CSS -->
+
+
+<link type="text/css" href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+
+<link type="text/css" href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
+
+
+<link type="text/css" href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/notyf/notyf.min.css" rel="stylesheet">
+
+
+<link type="text/css" href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/fullcalendar/main.min.css" rel="stylesheet">
+
+
+<link type="text/css" href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/dropzone/dist/min/dropzone.min.css" rel="stylesheet">
+
+
+<link type="text/css" href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/choices.js/public/assets/styles/choices.min.css" rel="stylesheet">
+
+
+<link type="text/css" href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/leaflet/dist/leaflet.css" rel="stylesheet">
+  <link rel="stylesheet" href="/docs/volt-bootstrap-5-dashboard/assets/css/docs.css">
+
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/img/favicon/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/img/favicon/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/img/favicon/favicon-16x16.png" sizes="16x16" type="image/png">
+
+<link rel="mask-icon" href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/img/favicon/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/img/favicon/favicon.ico">
+<meta name="msapplication-config" content="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@themesberg">
+<meta name="twitter:creator" content="@themesberg">
+<meta name="twitter:title" content="Grid · Volt Bootstrap 5 Dashboard Documentation">
+<meta name="twitter:description" content="Use Volts&rsquo;s advanced grid system to create fully responsive layouts with reduced effort">
+<meta name="twitter:image" content="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/img/volt-bootstrap-5-dashboard-preview.jpg">
+
+<!-- Facebook -->
+<meta property="og:url" content="https://themesberg.com/docs/volt-bootstrap-5-dashboard/foundation/grid/">
+<meta property="og:title" content="Grid · Volt Bootstrap 5 Dashboard Documentation">
+<meta property="og:description" content="Use Volts&rsquo;s advanced grid system to create fully responsive layouts with reduced effort">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/img/volt-bootstrap-5-dashboard-preview.jpg">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+
+<script>(function (w, d, s, l, i) {
+    w[l] = w[l] || []; w[l].push({
+      'gtm.start':
+        new Date().getTime(), event: 'gtm.js'
+    }); var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+  })(window, document, 'script', 'dataLayer', 'GTM-THQTXJ7');</script>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141734189-6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-141734189-6');
+</script>
+
+
+  </head>
+  <body>
+    
+
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-THQTXJ7"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  
+
+
+    <header class="navbar navbar-nav navbar-expand navbar-dark navbar-theme-primary">
+  <div class="container px-3 px-md-4">
+    <div class="d-flex align-items-center">
+      <a class="navbar-brand me-4" href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/getting-started/overview/" aria-label="Volt Documentation">
+        <img src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/brand/light.svg" height="30" alt="Volt logo">
+        <span class="ms-2">Volt Docs</span>
+      </a>
+
+      <div class="navbar-nav-scroll order-md-0 justify-content-start d-none d-md-flex">
+        <ul class="navbar-nav bd-navbar-nav flex-row">
+          <li class="nav-item">
+            <a class="nav-link" href="https://themesberg.com/templates/bootstrap" target="_blank" rel="noopener">Themes</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdownPreview" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Live preview <i class="fas fa-angle-down nav-link-arrow ms-2"></i>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownPreview">
+              <li>
+                <a href="https://demo.themesberg.com/volt/" target="_blank" class="dropdown-item">Volt Dashboard</a>
+              </li>
+              <li>
+                <a href="https://demo.themesberg.com/volt-pro/" target="_blank" class="dropdown-item">Volt Dashboard Pro</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdownSupport" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Support <i class="fas fa-angle-down nav-link-arrow ms-2"></i>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownSupport">
+              <li>
+                <a href="https://github.com/themesberg/volt-bootstrap-5-dashboard/issues" target="_blank" class="dropdown-item">Volt Dashboard</a>
+              </li>
+              <li>
+                <a href="https://themesberg.com/contact" target="_blank" class="dropdown-item">Volt Dashboard Pro</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <button class="btn btn-link bd-search-docs-toggle d-lg-none p-0 ms-3 order-3 ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" role="img"><title>Menu</title><path stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"/></svg>
+    </button>
+
+    <div class="d-flex align-items-center">
+      <ul class="flex-row list-style-none me-3 d-none d-lg-flex">
+        <li class="me-3">
+          <a href="https://www.facebook.com/themesberg/" class="fab fa-facebook text-white" target="_blank"></a>
+        </li>
+        <li class="me-3">
+          <a href="https://twitter.com/themesberg" class="fab fa-twitter text-white" target="_blank"></a>
+        </li>
+        <li>
+          <a href="https://github.com/themesberg/volt-bootstrap-5-dashboard" class="fab fa-github text-white" target="_blank"></a>
+        </li>
+      </ul>
+      <div class="d-none d-lg-block">
+        <a class="btn btn-secondary text-dark animate-up-2 ms-3 d-none d-sm-inline-block" href="https://themesberg.com/product/admin-dashboard/volt-premium-bootstrap-5-dashboard" target="_blank"><i class="fas fa-cart-arrow-down me-2"></i>Buy now</a>
+        <a class="btn btn-outline-white animate-up-2 ms-3 d-none d-sm-inline-block" href="https://demo.themesberg.com/volt/" target="_blank">Try free demo</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+    <nav class="bd-subnavbar pt-3 pb-3 pb-md-3 d-lg-none">
+  <div class="container">
+    
+
+    
+
+    <div class="d-flex w-100 align-items-center justify-content-between">
+      <ul class="flex-row list-style-none me-3 d-flex d-lg-none">
+        <li class="me-3">
+          <a href="https://www.facebook.com/themesberg/" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Themesberg on Facebook" data-original-title="Like us on Facebook">
+            <i class="fab fa-facebook text-primary"></i>
+          </a>
+        </li>
+        <li class="me-3">
+          <a href="https://twitter.com/themesberg" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Themesberg on Twitter" data-original-title="Follow us on Twitter ❤️">
+            <i class="fab fa-twitter text-primary"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/themesberg" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Themesberg on Github" data-original-title="Star us on Github">
+            <i class="fab fa-github text-primary"></i>
+          </a>
+        </li>
+      </ul>
+      <div>
+        <a class="btn btn-sm btn-secondary text-dark animate-up-2 ms-2 ms-lg-3" href="https://themesberg.com/product/admin-dashboard/volt-premium-bootstrap-5-dashboard" target="_blank"><i class="fas fa-download me-2"></i>Buy now</a>
+        <a class="btn btn-sm btn-outline-gray animate-up-2 ms-2 ms-lg-3" href="https://demo.themesberg.com/volt/" target="_blank">Try free demo</a>
+      </div>
+    </div>
+
+    
+  </div>
+</nav>
+
+
+    <div class="container my-4">
+      <div class="row flex-xl-nowrap">
+        <div class="col-lg-2 bd-sidebar">
+          <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Main navigation"><ul class="list-unstyled">
+
+    <li class="bd-sidenav-group my-1 js-sidenav-group has-children">
+      <a class="d-inline-flex align-items-center bd-sidenav-group-link"   href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/getting-started/overview/">
+        Getting started 
+      </a>
+      <ul class="nav bd-sidenav flex-column mb-2">
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/getting-started/overview/">Overview
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/getting-started/download/">Download
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/getting-started/installation/">Installation
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/getting-started/license/">License
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/getting-started/file-structure/">File structure
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/getting-started/build-tools/">Build tools
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/getting-started/changelog/">Changelog
+          </a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="bd-sidenav-group my-1 js-sidenav-group has-children">
+      <a class="d-inline-flex align-items-center bd-sidenav-group-link"   href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/laravel-example-pages/settings/">
+        Laravel example pages 
+      </a>
+      <ul class="nav bd-sidenav flex-column mb-2">
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/laravel-example-pages/settings/">Settings
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/laravel-example-pages/sign-in/">Sign in
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/laravel-example-pages/sign-up/">Sign up
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/laravel-example-pages/forgot-password/">Forgot password
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/laravel-example-pages/reset-password/">Reset password
+          </a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="bd-sidenav-group my-1 active js-sidenav-group has-children">
+      <a class="d-inline-flex align-items-center bd-sidenav-group-link"   href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/foundation/colors/" aria-current="true">
+        Foundation 
+      </a>
+      <ul class="nav bd-sidenav flex-column mb-2">
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/foundation/colors/">Colors
+          </a>
+        </li>
+        <li  class="active bd-sidenav-active">
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/foundation/grid/" aria-current="page">Grid
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/foundation/icons/">Icons
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/foundation/typography/">Typography
+          </a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="bd-sidenav-group my-1 js-sidenav-group has-children">
+      <a class="d-inline-flex align-items-center bd-sidenav-group-link"   href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/accordions/">
+        Components 
+      </a>
+      <ul class="nav bd-sidenav flex-column mb-2">
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/accordions/">Accordions
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/alerts/">Alerts
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/badges/">Badges
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/widgets/">Widgets
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/breadcrumbs/">Breadcrumbs
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/buttons/">Buttons
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/forms/">Forms
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/modals/">Modals
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/navs/">Navs
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/navbars/">Navbars
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/pagination/">Pagination
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/popovers/">Popovers
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/progress/">Progress
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/tables/">Tables
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/tabs/">Tabs
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/toasts/">Toasts
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/tooltips/">Tooltips
+          </a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="bd-sidenav-group my-1 js-sidenav-group has-children">
+      <a class="d-inline-flex align-items-center bd-sidenav-group-link"   href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/plugins/charts/">
+        Plugins 
+      </a>
+      <ul class="nav bd-sidenav flex-column mb-2">
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/plugins/charts/">Charts
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/plugins/datepicker/">Datepicker
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/plugins/notifications/">Notifications
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/plugins/kanban/">Kanban<span class="badge badge-sm bg-secondary text-dark px-2 ms-2">Pro</span>
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/plugins/mapbox/">MapBox<span class="badge badge-sm bg-secondary text-dark px-2 ms-2">Pro</span>
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/plugins/calendar/">Calendar<span class="badge badge-sm bg-secondary text-dark px-2 ms-2">Pro</span>
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/plugins/sweet-alerts/">Sweet Alerts<span class="badge badge-sm bg-secondary text-dark px-2 ms-2">Pro</span>
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/plugins/dropzone/">DropZone<span class="badge badge-sm bg-secondary text-dark px-2 ms-2">Pro</span>
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/plugins/datatables/">DataTables<span class="badge badge-sm bg-secondary text-dark px-2 ms-2">Pro</span>
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/plugins/svg-map/">SVG Map<span class="badge badge-sm bg-secondary text-dark px-2 ms-2">Pro</span>
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/plugins/choices-js/">Choices JS<span class="badge badge-sm bg-secondary text-dark px-2 ms-2">Pro</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+        </div>
+
+        <main class="col-lg-7 py-md-3 px-lg-5 bd-content" role="main">
+          <h1 class="bd-title" id="content">Grid </h1>
+          <p class="bd-lead">Use Volts&rsquo;s advanced grid system to create fully responsive layouts with reduced effort</p>
+
+          <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CEBDT237&placement=themesbergcom" id="_carbonads_js"></script>
+          
+          
+
+          <h2 id="how-it-works">How it works</h2>
+<p>Bootstrap&rsquo;s grid system uses a series of containers, rows, and columns to layout and align content. It&rsquo;s built with <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">flexbox</a> and is fully responsive. Below is an example and an in-depth look at how the grid comes together.</p>
+<p><strong>New to or unfamiliar with flexbox?</strong> <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background">Read this CSS Tricks flexbox guide</a> for background, terminology, guidelines, and code snippets.</p>
+<div class="ct-example-row">
+<div class="bd-example">
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <span>One of three columns</span>
+    </div>
+    <div class="col-sm">
+      <span>One of three columns</span>
+    </div>
+    <div class="col-sm">
+      <span>One of three columns</span>
+    </div>
+  </div>
+</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;container&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-sm&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>One of three columns<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-sm&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>One of three columns<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-sm&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>One of three columns<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+</div>
+<p>The above example creates three equal-width columns on small, medium, large, and extra large devices using our predefined grid classes. Those columns are centered in the page with the parent <code>.container</code>.</p>
+<h2 id="grid-options">Grid options</h2>
+<p>While Bootstrap uses <code>em</code>s or <code>rem</code>s for defining most sizes, <code>px</code>s are used for grid breakpoints and container widths. This is because the viewport width is in pixels and does not change with the <a href="https://drafts.csswg.org/mediaqueries-3/#units">font size</a>.</p>
+<p>See how aspects of the Bootstrap grid system work across multiple devices with a handy table.</p>
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th class="text-center">
+        Extra small<br>
+        <small>&lt;576px</small>
+      </th>
+      <th class="text-center">
+        Small<br>
+        <small>&ge;576px</small>
+      </th>
+      <th class="text-center">
+        Medium<br>
+        <small>&ge;768px</small>
+      </th>
+      <th class="text-center">
+        Large<br>
+        <small>&ge;992px</small>
+      </th>
+      <th class="text-center">
+        Extra large<br>
+        <small>&ge;1200px</small>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th class="text-nowrap" scope="row">Max container width</th>
+      <td>None (auto)</td>
+      <td>540px</td>
+      <td>720px</td>
+      <td>960px</td>
+      <td>1140px</td>
+    </tr>
+    <tr>
+      <th class="text-nowrap" scope="row">Class prefix</th>
+      <td><code>.col-</code></td>
+      <td><code>.col-sm-</code></td>
+      <td><code>.col-md-</code></td>
+      <td><code>.col-lg-</code></td>
+      <td><code>.col-xl-</code></td>
+    </tr>
+    <tr>
+      <th class="text-nowrap" scope="row"># of columns</th>
+      <td colspan="5">12</td>
+    </tr>
+    <tr>
+      <th class="text-nowrap" scope="row">Gutter width</th>
+      <td colspan="5">30px (15px on each side of a column)</td>
+    </tr>
+    <tr>
+      <th class="text-nowrap" scope="row">Nestable</th>
+      <td colspan="5">Yes</td>
+    </tr>
+    <tr>
+      <th class="text-nowrap" scope="row">Column ordering</th>
+      <td colspan="5">Yes</td>
+    </tr>
+  </tbody>
+</table>
+<h2 id="auto-layout-columns">Auto-layout columns</h2>
+<p>Utilize breakpoint-specific column classes for easy column sizing without an explicit numbered class like <code>.col-sm-6</code>.</p>
+<h3 id="equal-width">Equal-width</h3>
+<p>For example, here are two grid layouts that apply to every device and viewport, from <code>xs</code> to <code>xl</code>. Add any number of unit-less classes for each breakpoint you need and every column will be the same width.</p>
+<div class="ct-example-row">
+<div class="bd-example">
+<div class="container">
+  <div class="row">
+    <div class="col bg-soft">
+      <span>1 of 2</span>
+    </div>
+    <div class="col bg-soft">
+      <span>2 of 2</span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col bg-soft">
+      <span>1 of 3</span>
+    </div>
+    <div class="col bg-soft">
+      <span>2 of 3</span>
+    </div>
+    <div class="col bg-soft">
+      <span>3 of 3</span>
+    </div>
+  </div>
+</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;container&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col bg-soft&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>1 of 2<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col bg-soft&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>2 of 2<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col bg-soft&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>1 of 3<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col bg-soft&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>2 of 3<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col bg-soft&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>3 of 3<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+</div>
+<p>Equal-width columns can be broken into multiple lines, but there was a <a href="https://github.com/philipwalton/flexbugs#flexbug-11">Safari flexbox bug</a> that prevented this from working without an explicit <code>flex-basis</code> or <code>border</code>. There are workarounds for older browser versions, but they shouldn&rsquo;t be necessary if you&rsquo;re up-to-date.</p>
+<div class="ct-example-row">
+<div class="bd-example">
+<div class="container">
+  <div class="row">
+    <div class="col bg-soft"><span>Column</span></div>
+    <div class="col bg-soft"><span>Column</span></div>
+    <div class="w-100"></div>
+    <div class="col bg-soft"><span>Column</span></div>
+    <div class="col bg-soft"><span>Column</span></div>
+  </div>
+</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;container&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col bg-soft&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>Column<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col bg-soft&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>Column<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;w-100&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col bg-soft&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>Column<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col bg-soft&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>Column<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+</div>
+<h3 id="setting-one-column-width">Setting one column width</h3>
+<p>Auto-layout for flexbox grid columns also means you can set the width of one column and have the sibling columns automatically resize around it. You may use predefined grid classes (as shown below), grid mixins, or inline widths. Note that the other columns will resize no matter the width of the center column.</p>
+<div class="ct-example-row">
+<div class="bd-example">
+<div class="container">
+  <div class="row">
+    <div class="col bg-soft">
+      <span>1 of 3</span>
+    </div>
+    <div class="col-6 bg-soft">
+      <span>2 of 3 (wider)</span>
+    </div>
+    <div class="col bg-soft">
+      <span>3 of 3</span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col bg-soft">
+      <span>1 of 3</span>
+    </div>
+    <div class="col-5 bg-soft">
+      <span>2 of 3 (wider)</span>
+    </div>
+    <div class="col bg-soft">
+      <span>3 of 3</span>
+    </div>
+  </div>
+</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;container&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col bg-soft&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>1 of 3<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-6 bg-soft&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>2 of 3 (wider)<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col bg-soft&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>3 of 3<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col bg-soft&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>1 of 3<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-5 bg-soft&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>2 of 3 (wider)<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col bg-soft&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>3 of 3<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+</div>
+<h3 id="variable-width-content">Variable width content</h3>
+<p>Use <code>col-{breakpoint}-auto</code> classes to size columns based on the natural width of their content.</p>
+<div class="ct-example-row">
+<div class="bd-example">
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col col-lg-2 bg-soft">
+      <span>1 of 3</span>
+    </div>
+    <div class="col-md-auto bg-soft">
+      <span>Variable width content</span>
+    </div>
+    <div class="col col-lg-2 bg-soft">
+      <span>3 of 3</span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col bg-soft">
+      <span>1 of 3</span>
+    </div>
+    <div class="col-md-auto bg-soft">
+      <span>Variable width content</span>
+    </div>
+    <div class="col col-lg-2 bg-soft">
+      <span>3 of 3</span>
+    </div>
+  </div>
+</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;container&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row justify-content-md-center&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col col-lg-2 bg-soft&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>1 of 3<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-md-auto bg-soft&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>Variable width content<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col col-lg-2 bg-soft&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>3 of 3<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col bg-soft&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>1 of 3<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-md-auto bg-soft&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>Variable width content<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col col-lg-2 bg-soft&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>3 of 3<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+</div>
+<h3 id="equal-width-multi-row">Equal-width multi-row</h3>
+<p>Create equal-width columns that span multiple rows by inserting a <code>.w-100</code> where you want the columns to break to a new line. Make the breaks responsive by mixing the <code>.w-100</code> with some responsive display utilities.</p>
+<div class="ct-example-row">
+<div class="bd-example">
+<div class="row">
+  <div class="col bg-soft"><span>col</span></div>
+  <div class="col bg-soft"><span>col</span></div>
+  <div class="w-100"></div>
+  <div class="col bg-soft"><span>col</span></div>
+  <div class="col bg-soft"><span>col</span></div>
+</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col bg-soft&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>col<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col bg-soft&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>col<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;w-100&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col bg-soft&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>col<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col bg-soft&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>col<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+</div>
+<h2 id="responsive-classes">Responsive classes</h2>
+<p>Bootstrap&rsquo;s grid includes five tiers of predefined classes for building complex responsive layouts. Customize the size of your columns on extra small, small, medium, large, or extra large devices however you see fit.</p>
+<h3 id="all-breakpoints">All breakpoints</h3>
+<p>For grids that are the same from the smallest of devices to the largest, use the <code>.col</code> and <code>.col-*</code> classes. Specify a numbered class when you need a particularly sized column; otherwise, feel free to stick to <code>.col</code>.</p>
+<div class="ct-example-row">
+<div class="bd-example">
+<div class="row">
+  <div class="col bg-soft"><span>col</span></div>
+  <div class="col bg-soft"><span>col</span></div>
+  <div class="col bg-soft"><span>col</span></div>
+  <div class="col bg-soft"><span>col</span></div>
+</div>
+<div class="row">
+  <div class="col-8 bg-soft"><span>col-8</span></div>
+  <div class="col-4 bg-soft"><span>col-4</span></div>
+</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col bg-soft&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>col<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col bg-soft&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>col<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col bg-soft&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>col<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col bg-soft&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>col<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-8 bg-soft&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>col-8<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-4 bg-soft&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>col-4<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+</div>
+<h3 id="stacked-to-horizontal">Stacked to horizontal</h3>
+<p>Using a single set of <code>.col-sm-*</code> classes, you can create a basic grid system that starts out stacked and becomes horizontal at the small breakpoint (<code>sm</code>).</p>
+<div class="ct-example-row">
+<div class="bd-example">
+<div class="row">
+  <div class="col-sm-8 bg-soft"><span>col-sm-8</span></div>
+  <div class="col-sm-4 bg-soft"><span>col-sm-4</span></div>
+</div>
+<div class="row">
+  <div class="col-sm bg-soft"><span>col-sm</span></div>
+  <div class="col-sm bg-soft"><span>col-sm</span></div>
+  <div class="col-sm bg-soft"><span>col-sm</span></div>
+</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-sm-8 bg-soft&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>col-sm-8<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-sm-4 bg-soft&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>col-sm-4<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-sm bg-soft&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>col-sm<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-sm bg-soft&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>col-sm<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-sm bg-soft&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>col-sm<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+</div>
+<h3 id="mix-and-match">Mix and match</h3>
+<p>Don&rsquo;t want your columns to simply stack in some grid tiers? Use a combination of different classes for each tier as needed. See the example below for a better idea of how it all works.</p>
+<div class="ct-example-row">
+<div class="bd-example">
+<!-- Stack the columns on mobile by making one full-width and the other half-width -->
+<div class="row">
+  <div class="col-12 col-md-8 bg-soft"><span>.col-12 .col-md-8</span></div>
+  <div class="col-6 col-md-4 bg-soft"><span>.col-6 .col-md-4</span></div>
+</div>
+
+<!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+<div class="row">
+  <div class="col-6 col-md-4 bg-soft"><span>.col-6 .col-md-4</span></div>
+  <div class="col-6 col-md-4 bg-soft"><span>.col-6 .col-md-4</span></div>
+  <div class="col-6 col-md-4 bg-soft"><span>.col-6 .col-md-4</span></div>
+</div>
+
+<!-- Columns are always 50% wide, on mobile and desktop -->
+<div class="row">
+  <div class="col-6 bg-soft"><span>.col-6</span></div>
+  <div class="col-6 bg-soft"><span>.col-6</span></div>
+</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- Stack the columns on mobile by making one full-width and the other half-width --&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-12 col-md-8 bg-soft&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>.col-12 .col-md-8<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-6 col-md-4 bg-soft&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>.col-6 .col-md-4<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+<span class="c">&lt;!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop --&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-6 col-md-4 bg-soft&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>.col-6 .col-md-4<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-6 col-md-4 bg-soft&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>.col-6 .col-md-4<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-6 col-md-4 bg-soft&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>.col-6 .col-md-4<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+<span class="c">&lt;!-- Columns are always 50% wide, on mobile and desktop --&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-6 bg-soft&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>.col-6<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-6 bg-soft&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>.col-6<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+</div>
+
+        </main>
+
+        <div class="col-lg-3 bd-sidebar">
+          
+            <nav class="bd-toc bd-links mb-5 text-muted list-style-none" aria-label="Secondary navigation">
+              <nav id="TableOfContents">
+  <ul>
+    <li><a href="#how-it-works">How it works</a></li>
+    <li><a href="#grid-options">Grid options</a></li>
+    <li><a href="#auto-layout-columns">Auto-layout columns</a>
+      <ul>
+        <li><a href="#equal-width">Equal-width</a></li>
+        <li><a href="#setting-one-column-width">Setting one column width</a></li>
+        <li><a href="#variable-width-content">Variable width content</a></li>
+        <li><a href="#equal-width-multi-row">Equal-width multi-row</a></li>
+      </ul>
+    </li>
+    <li><a href="#responsive-classes">Responsive classes</a>
+      <ul>
+        <li><a href="#all-breakpoints">All breakpoints</a></li>
+        <li><a href="#stacked-to-horizontal">Stacked to horizontal</a></li>
+        <li><a href="#mix-and-match">Mix and match</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+            </nav>
+          
+        </div>
+      </div>
+    </div>
+
+    <footer class="bd-footer p-3 pt-5 p-md-5 mt-5 bg-primary text-white text-center">
+  <div class="container">
+    <a href="https://themesberg.com" target="_blank">
+      <img src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/brand/themesberg.svg" class="mb-4" width="35" alt="Themesberg Logo">
+    </a>
+    <p class="font-small mb-4">Designed and built by <a href="https://themesberg.com" target="_blank">Themesberg</a>.</p>
+    <hr class="my-4" style="background: #181e38">
+    <ul class="bd-footer-links mb-2">
+      <li class="me-3"><a href="https://themesberg.com/themes" target="_blank">Products</a></li>
+      <li class="me-3"><a href="https://themesberg.com/blog" target="_blank">Blog</a></li>
+      <li class="me-3"><a href="https://themesberg.com/about" target="_blank">About</a></li>
+      <li><a href="https://themesberg.com/contact" target="_blank">Contact</a></li>
+    </ul>
+  </div>
+</footer>
+
+    
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/@popperjs/core/dist/umd/popper.min.js"></script>
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+
+
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/onscreen/dist/on-screen.umd.min.js"></script>
+
+
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/nouislider/distribute/nouislider.min.js"></script>
+
+
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/jarallax/dist/jarallax.min.js"></script>
+
+
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+
+
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/countup.js/dist/countUp.umd.js"></script>
+
+
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/chartist/dist/chartist.min.js"></script>
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
+
+
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/vanillajs-datepicker/dist/js/datepicker.min.js"></script>
+
+
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/simple-datatables/dist/umd/simple-datatables.js"></script>
+
+
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/sweetalert2/dist/sweetalert2.all.min.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+
+
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/vanillajs-datepicker/dist/js/datepicker.min.js"></script>
+
+
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/fullcalendar/main.min.js"></script>
+
+
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/dropzone/dist/min/dropzone.min.js"></script>
+
+
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/choices.js/public/assets/scripts/choices.min.js"></script>
+
+
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/notyf/notyf.min.js"></script>
+
+
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/leaflet/dist/leaflet.js"></script>
+
+
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/svg-pan-zoom/dist/svg-pan-zoom.min.js"></script>
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/svgmap/dist/svgMap.min.js"></script>
+
+
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/js/volt.js"></script>
+
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/clipboard.min.js"></script>
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/anchor.min.js"></script>
+
+<script src="/docs/volt-bootstrap-5-dashboard/docs/3.0/assets/js/docs.min.js"></script>
+
+  </body>
+</html>

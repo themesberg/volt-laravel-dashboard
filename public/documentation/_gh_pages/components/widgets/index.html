@@ -1,0 +1,1791 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="You can use these cards to show statistics, profiles, events and many more">
+<meta name="author" content="Themesberg">
+<meta name="generator" content="Hugo 0.67.1">
+
+<title>Widgets · Volt Bootstrap 5 Dashboard Documentation</title>
+
+
+
+
+
+<!-- Bootstrap core CSS -->
+
+
+<link type="text/css" href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+
+<link type="text/css" href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
+
+
+<link type="text/css" href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/notyf/notyf.min.css" rel="stylesheet">
+
+
+<link type="text/css" href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/fullcalendar/main.min.css" rel="stylesheet">
+
+
+<link type="text/css" href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/dropzone/dist/min/dropzone.min.css" rel="stylesheet">
+
+
+<link type="text/css" href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/choices.js/public/assets/styles/choices.min.css" rel="stylesheet">
+
+
+<link type="text/css" href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/leaflet/dist/leaflet.css" rel="stylesheet">
+  <link rel="stylesheet" href="/docs/volt-bootstrap-5-dashboard/assets/css/docs.css">
+
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/img/favicon/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/img/favicon/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/img/favicon/favicon-16x16.png" sizes="16x16" type="image/png">
+
+<link rel="mask-icon" href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/img/favicon/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/img/favicon/favicon.ico">
+<meta name="msapplication-config" content="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@themesberg">
+<meta name="twitter:creator" content="@themesberg">
+<meta name="twitter:title" content="Widgets · Volt Bootstrap 5 Dashboard Documentation">
+<meta name="twitter:description" content="You can use these cards to show statistics, profiles, events and many more">
+<meta name="twitter:image" content="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/img/volt-bootstrap-5-dashboard-preview.jpg">
+
+<!-- Facebook -->
+<meta property="og:url" content="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/widgets/">
+<meta property="og:title" content="Widgets · Volt Bootstrap 5 Dashboard Documentation">
+<meta property="og:description" content="You can use these cards to show statistics, profiles, events and many more">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/img/volt-bootstrap-5-dashboard-preview.jpg">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+
+<script>(function (w, d, s, l, i) {
+    w[l] = w[l] || []; w[l].push({
+      'gtm.start':
+        new Date().getTime(), event: 'gtm.js'
+    }); var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+  })(window, document, 'script', 'dataLayer', 'GTM-THQTXJ7');</script>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141734189-6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-141734189-6');
+</script>
+
+
+  </head>
+  <body>
+    
+
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-THQTXJ7"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  
+
+
+    <header class="navbar navbar-nav navbar-expand navbar-dark navbar-theme-primary">
+  <div class="container px-3 px-md-4">
+    <div class="d-flex align-items-center">
+      <a class="navbar-brand me-4" href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/getting-started/overview/" aria-label="Volt Documentation">
+        <img src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/brand/light.svg" height="30" alt="Volt logo">
+        <span class="ms-2">Volt Docs</span>
+      </a>
+
+      <div class="navbar-nav-scroll order-md-0 justify-content-start d-none d-md-flex">
+        <ul class="navbar-nav bd-navbar-nav flex-row">
+          <li class="nav-item">
+            <a class="nav-link" href="https://themesberg.com/templates/bootstrap" target="_blank" rel="noopener">Themes</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdownPreview" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Live preview <i class="fas fa-angle-down nav-link-arrow ms-2"></i>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownPreview">
+              <li>
+                <a href="https://demo.themesberg.com/volt/" target="_blank" class="dropdown-item">Volt Dashboard</a>
+              </li>
+              <li>
+                <a href="https://demo.themesberg.com/volt-pro/" target="_blank" class="dropdown-item">Volt Dashboard Pro</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdownSupport" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Support <i class="fas fa-angle-down nav-link-arrow ms-2"></i>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownSupport">
+              <li>
+                <a href="https://github.com/themesberg/volt-bootstrap-5-dashboard/issues" target="_blank" class="dropdown-item">Volt Dashboard</a>
+              </li>
+              <li>
+                <a href="https://themesberg.com/contact" target="_blank" class="dropdown-item">Volt Dashboard Pro</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <button class="btn btn-link bd-search-docs-toggle d-lg-none p-0 ms-3 order-3 ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" role="img"><title>Menu</title><path stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"/></svg>
+    </button>
+
+    <div class="d-flex align-items-center">
+      <ul class="flex-row list-style-none me-3 d-none d-lg-flex">
+        <li class="me-3">
+          <a href="https://www.facebook.com/themesberg/" class="fab fa-facebook text-white" target="_blank"></a>
+        </li>
+        <li class="me-3">
+          <a href="https://twitter.com/themesberg" class="fab fa-twitter text-white" target="_blank"></a>
+        </li>
+        <li>
+          <a href="https://github.com/themesberg/volt-bootstrap-5-dashboard" class="fab fa-github text-white" target="_blank"></a>
+        </li>
+      </ul>
+      <div class="d-none d-lg-block">
+        <a class="btn btn-secondary text-dark animate-up-2 ms-3 d-none d-sm-inline-block" href="https://themesberg.com/product/admin-dashboard/volt-premium-bootstrap-5-dashboard" target="_blank"><i class="fas fa-cart-arrow-down me-2"></i>Buy now</a>
+        <a class="btn btn-outline-white animate-up-2 ms-3 d-none d-sm-inline-block" href="https://demo.themesberg.com/volt/" target="_blank">Try free demo</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+    <nav class="bd-subnavbar pt-3 pb-3 pb-md-3 d-lg-none">
+  <div class="container">
+    
+
+    
+
+    <div class="d-flex w-100 align-items-center justify-content-between">
+      <ul class="flex-row list-style-none me-3 d-flex d-lg-none">
+        <li class="me-3">
+          <a href="https://www.facebook.com/themesberg/" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Themesberg on Facebook" data-original-title="Like us on Facebook">
+            <i class="fab fa-facebook text-primary"></i>
+          </a>
+        </li>
+        <li class="me-3">
+          <a href="https://twitter.com/themesberg" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Themesberg on Twitter" data-original-title="Follow us on Twitter ❤️">
+            <i class="fab fa-twitter text-primary"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/themesberg" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Themesberg on Github" data-original-title="Star us on Github">
+            <i class="fab fa-github text-primary"></i>
+          </a>
+        </li>
+      </ul>
+      <div>
+        <a class="btn btn-sm btn-secondary text-dark animate-up-2 ms-2 ms-lg-3" href="https://themesberg.com/product/admin-dashboard/volt-premium-bootstrap-5-dashboard" target="_blank"><i class="fas fa-download me-2"></i>Buy now</a>
+        <a class="btn btn-sm btn-outline-gray animate-up-2 ms-2 ms-lg-3" href="https://demo.themesberg.com/volt/" target="_blank">Try free demo</a>
+      </div>
+    </div>
+
+    
+  </div>
+</nav>
+
+
+    <div class="container my-4">
+      <div class="row flex-xl-nowrap">
+        <div class="col-lg-2 bd-sidebar">
+          <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Main navigation"><ul class="list-unstyled">
+
+    <li class="bd-sidenav-group my-1 js-sidenav-group has-children">
+      <a class="d-inline-flex align-items-center bd-sidenav-group-link"   href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/getting-started/overview/">
+        Getting started 
+      </a>
+      <ul class="nav bd-sidenav flex-column mb-2">
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/getting-started/overview/">Overview
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/getting-started/download/">Download
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/getting-started/installation/">Installation
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/getting-started/license/">License
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/getting-started/file-structure/">File structure
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/getting-started/build-tools/">Build tools
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/getting-started/changelog/">Changelog
+          </a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="bd-sidenav-group my-1 js-sidenav-group has-children">
+      <a class="d-inline-flex align-items-center bd-sidenav-group-link"   href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/laravel-example-pages/settings/">
+        Laravel example pages 
+      </a>
+      <ul class="nav bd-sidenav flex-column mb-2">
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/laravel-example-pages/settings/">Settings
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/laravel-example-pages/sign-in/">Sign in
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/laravel-example-pages/sign-up/">Sign up
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/laravel-example-pages/forgot-password/">Forgot password
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/laravel-example-pages/reset-password/">Reset password
+          </a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="bd-sidenav-group my-1 js-sidenav-group has-children">
+      <a class="d-inline-flex align-items-center bd-sidenav-group-link"   href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/foundation/colors/">
+        Foundation 
+      </a>
+      <ul class="nav bd-sidenav flex-column mb-2">
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/foundation/colors/">Colors
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/foundation/grid/">Grid
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/foundation/icons/">Icons
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/foundation/typography/">Typography
+          </a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="bd-sidenav-group my-1 active js-sidenav-group has-children">
+      <a class="d-inline-flex align-items-center bd-sidenav-group-link"   href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/accordions/" aria-current="true">
+        Components 
+      </a>
+      <ul class="nav bd-sidenav flex-column mb-2">
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/accordions/">Accordions
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/alerts/">Alerts
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/badges/">Badges
+          </a>
+        </li>
+        <li  class="active bd-sidenav-active">
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/widgets/" aria-current="page">Widgets
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/breadcrumbs/">Breadcrumbs
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/buttons/">Buttons
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/forms/">Forms
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/modals/">Modals
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/navs/">Navs
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/navbars/">Navbars
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/pagination/">Pagination
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/popovers/">Popovers
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/progress/">Progress
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/tables/">Tables
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/tabs/">Tabs
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/toasts/">Toasts
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/tooltips/">Tooltips
+          </a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="bd-sidenav-group my-1 js-sidenav-group has-children">
+      <a class="d-inline-flex align-items-center bd-sidenav-group-link"   href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/plugins/charts/">
+        Plugins 
+      </a>
+      <ul class="nav bd-sidenav flex-column mb-2">
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/plugins/charts/">Charts
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/plugins/datepicker/">Datepicker
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/plugins/notifications/">Notifications
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/plugins/kanban/">Kanban<span class="badge badge-sm bg-secondary text-dark px-2 ms-2">Pro</span>
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/plugins/mapbox/">MapBox<span class="badge badge-sm bg-secondary text-dark px-2 ms-2">Pro</span>
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/plugins/calendar/">Calendar<span class="badge badge-sm bg-secondary text-dark px-2 ms-2">Pro</span>
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/plugins/sweet-alerts/">Sweet Alerts<span class="badge badge-sm bg-secondary text-dark px-2 ms-2">Pro</span>
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/plugins/dropzone/">DropZone<span class="badge badge-sm bg-secondary text-dark px-2 ms-2">Pro</span>
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/plugins/datatables/">DataTables<span class="badge badge-sm bg-secondary text-dark px-2 ms-2">Pro</span>
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/plugins/svg-map/">SVG Map<span class="badge badge-sm bg-secondary text-dark px-2 ms-2">Pro</span>
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/plugins/choices-js/">Choices JS<span class="badge badge-sm bg-secondary text-dark px-2 ms-2">Pro</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+        </div>
+
+        <main class="col-lg-7 py-md-3 px-lg-5 bd-content" role="main">
+          <h1 class="bd-title" id="content">Widgets </h1>
+          <p class="bd-lead">You can use these cards to show statistics, profiles, events and many more</p>
+
+          <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CEBDT237&placement=themesbergcom" id="_carbonads_js"></script>
+          
+          
+
+          <h3 id="widget-cards">Widget cards</h3>
+<div class="bd-example">
+<div class="card shadow-sm">
+  <div class="card-body">
+      <h2 class="h5">Total Installs</h2>
+      <h3 class="h2 mb-1">367,567</h3>
+      <div class="small mb-3">Feb 1 - Apr 1,  <span class="icon icon-small"><span class="fas fa-globe-europe"></span></span> WorldWide</div>
+  </div>
+</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card shadow-sm&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-body&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">h2</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;h5&#34;</span><span class="p">&gt;</span>Total Installs<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">h3</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;h2 mb-1&#34;</span><span class="p">&gt;</span>367,567<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;small mb-3&#34;</span><span class="p">&gt;</span>Feb 1 - Apr 1,  <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;icon icon-small&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-globe-europe&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span> WorldWide<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<h3 id="counters">Counters</h3>
+<p>Use these cards to show counters and statistics:</p>
+<div class="bd-example">
+<div class="row">
+    <div class="col-12 col-lg-8">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <div class="row d-block d-xl-flex align-items-center">
+                    <div class="col-12 col-xl-5 text-xl-center mb-3 mb-xl-0 d-flex align-items-center justify-content-xl-center">
+                        <div class="icon icon-shape icon-md icon-shape-primary rounded me-4 me-sm-0"><span class="fas fa-chart-line"></span></div>
+                        <div class="d-sm-none">
+                            <h2 class="h5">Customers</h2>
+                            <h3 class="mb-1">345,678</h3>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-7 px-xl-0">
+                        <div class="d-none d-sm-block">
+                            <h2 class="h5">Customers</h2>
+                            <h3 class="mb-1">345k</h3>
+                        </div>
+                        <small>Feb 1 - Apr 1,  <span class="icon icon-small"><span class="fas fa-globe-europe"></span></span> WorldWide</small>
+                        <div class="small mt-2">
+                            <span class="fas fa-angle-up text-success"></span>
+                            <span class="text-success fw-bold">18.2%</span> Since last month
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-12 col-lg-8&#34;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card shadow-sm&#34;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-body&#34;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row d-block d-xl-flex align-items-center&#34;</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-12 col-xl-5 text-xl-center mb-3 mb-xl-0 d-flex align-items-center justify-content-xl-center&#34;</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;icon icon-shape icon-md icon-shape-primary rounded me-4 me-sm-0&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-chart-line&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-sm-none&#34;</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">h2</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;h5&#34;</span><span class="p">&gt;</span>Customers<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">h3</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mb-1&#34;</span><span class="p">&gt;</span>345,678<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+                        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-12 col-xl-7 px-xl-0&#34;</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-none d-sm-block&#34;</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">h2</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;h5&#34;</span><span class="p">&gt;</span>Customers<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">h3</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mb-1&#34;</span><span class="p">&gt;</span>345k<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+                        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">small</span><span class="p">&gt;</span>Feb 1 - Apr 1,  <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;icon icon-small&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-globe-europe&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span> WorldWide<span class="p">&lt;/</span><span class="nt">small</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;small mt-2&#34;</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-angle-up text-success&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-success fw-bold&#34;</span><span class="p">&gt;</span>18.2%<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span> Since last month
+                        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<h3 id="category">Category</h3>
+<p>Use these cards to display categories:</p>
+<div class="bd-example">
+<div class="row">
+    <div class="col-12 col-lg-8">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <div class="d-flex align-items-center justify-content-between border-bottom border-gray-300 pb-3">
+                    <div>
+                        <h6 class="mb-0"><span class="icon icon-xs me-3"><span class="fas fa-globe-europe"></span></span>Global Rank</h6>
+                    </div>
+                    <div>
+                        <a href="#" class="text-primary fw-bold">#755<span class="fas fa-chart-line ms-2"></span></a>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-between border-bottom border-gray-300 py-3">
+                    <div>
+                        <h6 class="mb-0"><span class="icon icon-xs me-3"><span class="fas fa-flag-usa"></span></span>Country Rank</h6>
+                        <div class="small card-stats">United States<span class="icon icon-xs text-success ms-2"><span class="fas fa-angle-up"></span></span></div>
+                    </div>
+                    <div>
+                        <a href="#" class="text-primary fw-bold">#32<span class="fas fa-chart-line ms-2"></span></a>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-between pt-3">
+                    <div>
+                        <h6 class="mb-0"><span class="icon icon-xs me-3"><span class="fas fa-folder-open"></span></span>Category Rank</h6>
+                        <a href="#" class="small card-stats">Travel > Accomodation</a>
+                    </div>
+                    <div>
+                        <a href="#" class="text-primary fw-bold">#16<span class="fas fa-chart-line ms-2"></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-12 col-lg-8&#34;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card shadow-sm&#34;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-body&#34;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex align-items-center justify-content-between border-bottom border-gray-300 pb-3&#34;</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">h6</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mb-0&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;icon icon-xs me-3&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-globe-europe&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>Global Rank<span class="p">&lt;/</span><span class="nt">h6</span><span class="p">&gt;</span>
+                    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-primary fw-bold&#34;</span><span class="p">&gt;</span>#755<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-chart-line ms-2&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+                    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex align-items-center justify-content-between border-bottom border-gray-300 py-3&#34;</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">h6</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mb-0&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;icon icon-xs me-3&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-flag-usa&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>Country Rank<span class="p">&lt;/</span><span class="nt">h6</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;small card-stats&#34;</span><span class="p">&gt;</span>United States<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;icon icon-xs text-success ms-2&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-angle-up&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-primary fw-bold&#34;</span><span class="p">&gt;</span>#32<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-chart-line ms-2&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+                    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex align-items-center justify-content-between pt-3&#34;</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">h6</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mb-0&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;icon icon-xs me-3&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-folder-open&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>Category Rank<span class="p">&lt;/</span><span class="nt">h6</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;small card-stats&#34;</span><span class="p">&gt;</span>Travel &gt; Accomodation<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+                    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-primary fw-bold&#34;</span><span class="p">&gt;</span>#16<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-chart-line ms-2&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+                    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<h3 id="ratings-span-classbadge-bg-secondary-text-dark-font-small-px-2-ms-2prospan">Ratings <span class="badge bg-secondary text-dark font-small px-2 ms-2">Pro</span></h3>
+<p>Use these card to show ratings for certain elements:</p>
+<div class="bd-example">
+ <div class="card shadow-sm">
+    <div class="card-body">
+          <div class="row d-block d-md-flex align-items-center">
+            <div class="col-12 col-md-5">
+                <h2 class="h5 mb-1">Average Rating</h2>
+                <h3 class="h1 mb-1">4.5</h3>
+                <div class="mb-2">
+                    <span class="fas fa-star text-warning"></span>
+                    <span class="fas fa-star text-warning"></span>
+                    <span class="fas fa-star text-warning"></span>
+                    <span class="fas fa-star text-warning"></span>
+                    <span class="fas fa-star-half-alt text-warning"></span>
+                </div>
+                <span class="small">Based on <span class="fw-bold text-dark">103,456</span> ratings</span>
+            </div>
+            <div class="col-12 col-md-7 mt-3 mt-md-0">
+                <div class="col-12">
+                    <div class="row d-flex align-items-center mb-1">
+                        <div class="col-2 text-gray fw-bold px-0 small">
+                            5<span class="fas fa-star ms-1"></span>
+                        </div>
+                        <div class="col-10 px-0">
+                            <div class="progress progress-lg rounded mb-0">
+                                <div class="progress-bar bg-success rounded" role="progressbar" aria-valuenow="51" aria-valuemin="0" aria-valuemax="100" style="width: 51%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end row -->
+                    <div class="row d-flex align-items-center mb-1">
+                        <div class="col-2 text-gray fw-bold px-0 small">
+                            4<span class="fas fa-star ms-1"></span>
+                        </div>
+                        <div class="col-10 px-0">
+                            <div class="progress progress-lg rounded mb-0">
+                                <div class="progress-bar bg-cyan rounded" role="progressbar" aria-valuenow="31" aria-valuemin="0" aria-valuemax="100" style="width: 31%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end row -->
+                    <div class="row d-flex align-items-center mb-1">
+                        <div class="col-2 text-gray fw-bold px-0 small">
+                            3<span class="fas fa-star ms-1"></span>
+                        </div>
+                        <div class="col-10 px-0">
+                            <div class="progress progress-lg rounded mb-0">
+                                <div class="progress-bar bg-warning rounded" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end row -->
+                    <div class="row d-flex align-items-center mb-1">
+                        <div class="col-2 text-gray fw-bold px-0 small">
+                            2<span class="fas fa-star ms-1"></span>
+                        </div>
+                        <div class="col-10 px-0">
+                            <div class="progress progress-lg rounded mb-0">
+                                <div class="progress-bar bg-orange rounded" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 10%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end row -->
+                    <div class="row d-flex align-items-center mb-1">
+                        <div class="col-2 text-gray fw-bold px-0 small">
+                            1<span class="fas fa-star ms-1"></span>
+                        </div>
+                        <div class="col-10 px-0">
+                            <div class="progress progress-lg rounded mb-0">
+                                <div class="progress-bar bg-danger rounded" role="progressbar" aria-valuenow="6" aria-valuemin="0" aria-valuemax="100" style="width: 6%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end row -->
+                </div>
+            </div>
+          </div>
+    </div>
+  </div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"> <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card shadow-sm&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-body&#34;</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row d-block d-md-flex align-items-center&#34;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-12 col-md-5&#34;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">h2</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;h5 mb-1&#34;</span><span class="p">&gt;</span>Average Rating<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">h3</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;h1 mb-1&#34;</span><span class="p">&gt;</span>4.5<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mb-2&#34;</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-star text-warning&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-star text-warning&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-star text-warning&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-star text-warning&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-star-half-alt text-warning&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;small&#34;</span><span class="p">&gt;</span>Based on <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fw-bold text-dark&#34;</span><span class="p">&gt;</span>103,456<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span> ratings<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-12 col-md-7 mt-3 mt-md-0&#34;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-12&#34;</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row d-flex align-items-center mb-1&#34;</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-2 text-gray fw-bold px-0 small&#34;</span><span class="p">&gt;</span>
+                            5<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-star ms-1&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+                        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-10 px-0&#34;</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress progress-lg rounded mb-0&#34;</span><span class="p">&gt;</span>
+                                <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress-bar bg-success rounded&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;progressbar&#34;</span> <span class="na">aria-valuenow</span><span class="o">=</span><span class="s">&#34;51&#34;</span> <span class="na">aria-valuemin</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">aria-valuemax</span><span class="o">=</span><span class="s">&#34;100&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;width: 51%;&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                    <span class="c">&lt;!-- end row --&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row d-flex align-items-center mb-1&#34;</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-2 text-gray fw-bold px-0 small&#34;</span><span class="p">&gt;</span>
+                            4<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-star ms-1&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+                        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-10 px-0&#34;</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress progress-lg rounded mb-0&#34;</span><span class="p">&gt;</span>
+                                <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress-bar bg-cyan rounded&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;progressbar&#34;</span> <span class="na">aria-valuenow</span><span class="o">=</span><span class="s">&#34;31&#34;</span> <span class="na">aria-valuemin</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">aria-valuemax</span><span class="o">=</span><span class="s">&#34;100&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;width: 31%;&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                    <span class="c">&lt;!-- end row --&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row d-flex align-items-center mb-1&#34;</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-2 text-gray fw-bold px-0 small&#34;</span><span class="p">&gt;</span>
+                            3<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-star ms-1&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+                        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-10 px-0&#34;</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress progress-lg rounded mb-0&#34;</span><span class="p">&gt;</span>
+                                <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress-bar bg-warning rounded&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;progressbar&#34;</span> <span class="na">aria-valuenow</span><span class="o">=</span><span class="s">&#34;20&#34;</span> <span class="na">aria-valuemin</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">aria-valuemax</span><span class="o">=</span><span class="s">&#34;100&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;width: 20%;&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                    <span class="c">&lt;!-- end row --&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row d-flex align-items-center mb-1&#34;</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-2 text-gray fw-bold px-0 small&#34;</span><span class="p">&gt;</span>
+                            2<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-star ms-1&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+                        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-10 px-0&#34;</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress progress-lg rounded mb-0&#34;</span><span class="p">&gt;</span>
+                                <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress-bar bg-orange rounded&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;progressbar&#34;</span> <span class="na">aria-valuenow</span><span class="o">=</span><span class="s">&#34;10&#34;</span> <span class="na">aria-valuemin</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">aria-valuemax</span><span class="o">=</span><span class="s">&#34;100&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;width: 10%;&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                    <span class="c">&lt;!-- end row --&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row d-flex align-items-center mb-1&#34;</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-2 text-gray fw-bold px-0 small&#34;</span><span class="p">&gt;</span>
+                            1<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-star ms-1&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+                        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-10 px-0&#34;</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress progress-lg rounded mb-0&#34;</span><span class="p">&gt;</span>
+                                <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress-bar bg-danger rounded&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;progressbar&#34;</span> <span class="na">aria-valuenow</span><span class="o">=</span><span class="s">&#34;6&#34;</span> <span class="na">aria-valuemin</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">aria-valuemax</span><span class="o">=</span><span class="s">&#34;100&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;width: 6%;&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                    <span class="c">&lt;!-- end row --&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+          <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<h3 id="progress-tracker-span-classbadge-bg-secondary-text-dark-font-small-px-2-ms-2prospan">Progress tracker <span class="badge bg-secondary text-dark font-small px-2 ms-2">Pro</span></h3>
+<p>Use these card to show progress for certain elements:</p>
+<div class="bd-example">
+<div class="card shadow-sm">
+  <div class="card-header border-bottom border-gray-300">
+      <h2 class="h5 mb-0">Progress track</h2>
+  </div>
+  <div class="card-body">
+      <div class="row align-items-center mb-4">
+          <div class="col-auto">
+              <span class="icon icon-md text-purple"><span class="fab fa-bootstrap"></span></span>
+          </div>
+          <div class="col">
+              <div class="progress-wrapper">
+                  <div class="progress-info">
+                      <div class="h6 mb-0">Rocket - SaaS Template</div>
+                      <div class="small fw-bold text-dark"><span>34 %</span></div>
+                  </div>
+                  <div class="progress mb-0">
+                      <div class="progress-bar bg-purple" role="progressbar" aria-valuenow="34" aria-valuemin="0" aria-valuemax="100" style="width: 34%;"></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="row align-items-center mb-4">
+          <div class="col-auto">
+              <span class="icon icon-md text-danger"><span class="fab fa-angular"></span></span>
+          </div>
+          <div class="col">
+              <div class="progress-wrapper">
+                  <div class="progress-info">
+                      <div class="h6 mb-0">Pixel - Design System</div>
+                      <div class="small fw-bold text-dark"><span>60 %</span></div>
+                  </div>
+                  <div class="progress mb-0">
+                      <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="row align-items-center mb-4">
+          <div class="col-auto">
+              <span class="icon icon-md text-success"><span class="fab fa-vuejs"></span></span>
+          </div>
+          <div class="col">
+              <div class="progress-wrapper">
+                  <div class="progress-info">
+                      <div class="h6 mb-0">Spaces - Listings Template</div>
+                      <div class="small fw-bold text-dark"><span>45 %</span></div>
+                  </div>
+                  <div class="progress mb-0">
+                      <div class="progress-bar bg-tertiary" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%;"></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="row align-items-center mb-4">
+          <div class="col-auto">
+              <span class="icon icon-md text-info"><span class="fab fa-react"></span></span>
+          </div>
+          <div class="col">
+              <div class="progress-wrapper">
+                  <div class="progress-info">
+                      <div class="h6 mb-0">Stellar - Dashboard</div>
+                      <div class="small fw-bold text-dark"><span>35 %</span></div>
+                  </div>
+                  <div class="progress mb-0">
+                      <div class="progress-bar bg-info" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100" style="width: 35%;"></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="row align-items-center">
+          <div class="col-auto">
+              <span class="icon icon-md text-purple"><span class="fab fa-bootstrap"></span></span>
+          </div>
+          <div class="col">
+              <div class="progress-wrapper">
+                  <div class="progress-info">
+                      <div class="h6 mb-0">Volt - Dashboard</div>
+                      <div class="small fw-bold text-dark"><span>34 %</span></div>
+                  </div>
+                  <div class="progress mb-0">
+                      <div class="progress-bar bg-purple" role="progressbar" aria-valuenow="34" aria-valuemin="0" aria-valuemax="100" style="width: 34%;"></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card shadow-sm&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-header border-bottom border-gray-300&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">h2</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;h5 mb-0&#34;</span><span class="p">&gt;</span>Progress track<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-body&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row align-items-center mb-4&#34;</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-auto&#34;</span><span class="p">&gt;</span>
+              <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;icon icon-md text-purple&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fab fa-bootstrap&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+          <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;</span>
+              <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress-wrapper&#34;</span><span class="p">&gt;</span>
+                  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress-info&#34;</span><span class="p">&gt;</span>
+                      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;h6 mb-0&#34;</span><span class="p">&gt;</span>Rocket - SaaS Template<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;small fw-bold text-dark&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>34 %<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress mb-0&#34;</span><span class="p">&gt;</span>
+                      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress-bar bg-purple&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;progressbar&#34;</span> <span class="na">aria-valuenow</span><span class="o">=</span><span class="s">&#34;34&#34;</span> <span class="na">aria-valuemin</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">aria-valuemax</span><span class="o">=</span><span class="s">&#34;100&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;width: 34%;&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+              <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+          <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row align-items-center mb-4&#34;</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-auto&#34;</span><span class="p">&gt;</span>
+              <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;icon icon-md text-danger&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fab fa-angular&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+          <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;</span>
+              <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress-wrapper&#34;</span><span class="p">&gt;</span>
+                  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress-info&#34;</span><span class="p">&gt;</span>
+                      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;h6 mb-0&#34;</span><span class="p">&gt;</span>Pixel - Design System<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;small fw-bold text-dark&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>60 %<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress mb-0&#34;</span><span class="p">&gt;</span>
+                      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress-bar bg-danger&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;progressbar&#34;</span> <span class="na">aria-valuenow</span><span class="o">=</span><span class="s">&#34;60&#34;</span> <span class="na">aria-valuemin</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">aria-valuemax</span><span class="o">=</span><span class="s">&#34;100&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;width: 60%;&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+              <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+          <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row align-items-center mb-4&#34;</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-auto&#34;</span><span class="p">&gt;</span>
+              <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;icon icon-md text-success&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fab fa-vuejs&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+          <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;</span>
+              <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress-wrapper&#34;</span><span class="p">&gt;</span>
+                  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress-info&#34;</span><span class="p">&gt;</span>
+                      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;h6 mb-0&#34;</span><span class="p">&gt;</span>Spaces - Listings Template<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;small fw-bold text-dark&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>45 %<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress mb-0&#34;</span><span class="p">&gt;</span>
+                      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress-bar bg-tertiary&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;progressbar&#34;</span> <span class="na">aria-valuenow</span><span class="o">=</span><span class="s">&#34;45&#34;</span> <span class="na">aria-valuemin</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">aria-valuemax</span><span class="o">=</span><span class="s">&#34;100&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;width: 45%;&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+              <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+          <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row align-items-center mb-4&#34;</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-auto&#34;</span><span class="p">&gt;</span>
+              <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;icon icon-md text-info&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fab fa-react&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+          <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;</span>
+              <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress-wrapper&#34;</span><span class="p">&gt;</span>
+                  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress-info&#34;</span><span class="p">&gt;</span>
+                      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;h6 mb-0&#34;</span><span class="p">&gt;</span>Stellar - Dashboard<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;small fw-bold text-dark&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>35 %<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress mb-0&#34;</span><span class="p">&gt;</span>
+                      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress-bar bg-info&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;progressbar&#34;</span> <span class="na">aria-valuenow</span><span class="o">=</span><span class="s">&#34;35&#34;</span> <span class="na">aria-valuemin</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">aria-valuemax</span><span class="o">=</span><span class="s">&#34;100&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;width: 35%;&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+              <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+          <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row align-items-center&#34;</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-auto&#34;</span><span class="p">&gt;</span>
+              <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;icon icon-md text-purple&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fab fa-bootstrap&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+          <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;</span>
+              <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress-wrapper&#34;</span><span class="p">&gt;</span>
+                  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress-info&#34;</span><span class="p">&gt;</span>
+                      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;h6 mb-0&#34;</span><span class="p">&gt;</span>Volt - Dashboard<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;small fw-bold text-dark&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>34 %<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress mb-0&#34;</span><span class="p">&gt;</span>
+                      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress-bar bg-purple&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;progressbar&#34;</span> <span class="na">aria-valuenow</span><span class="o">=</span><span class="s">&#34;34&#34;</span> <span class="na">aria-valuemin</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">aria-valuemax</span><span class="o">=</span><span class="s">&#34;100&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;width: 34%;&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+              <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+          <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<h3 id="events-span-classbadge-bg-secondary-text-dark-font-small-px-2-ms-2prospan">Events <span class="badge bg-secondary text-dark font-small px-2 ms-2">Pro</span></h3>
+<div class="bd-example">
+<div class="card shadow-sm mb-4">
+  <div class="card-header border-bottom border-gray-300">
+      <h2 class="h5 mb-0">Events</h2>
+  </div>
+  <div class="card-body">
+      <div class="row align-items-center border-bottom border-gray-300 pb-4 mb-4">
+          <div class="col-auto">
+              <div class="calendar d-flex"><span class="calendar-month">Aug</span><span class="calendar-day">10</span></div>
+          </div>
+          <div class="col">
+              <a href="#"><h3 class="h5">Newmarket Nights</h3></a>
+              <span>Organized by <a href="#" class="text-700">University of Oxford</a></span>
+              <div class="small fw-bold mt-1">Time: 6:00AM</div>
+              <span class="small fw-bold">Place: Cambridge Boat Club, Cambridge</span>
+          </div>
+      </div>
+      <div class="row align-items-center border-bottom border-gray-300 pb-4 mb-4">
+          <div class="col-auto">
+              <div class="calendar d-flex"><span class="calendar-month">Sep</span><span class="calendar-day">12</span></div>
+          </div>
+          <div class="col">
+              <a href="#"><h3 class="h5 mb-0">Noco Hemp Expo</h3></a>
+              <span>Organized by <a href="#" class="text-700">University of Oxford</a></span>
+              <div class="small fw-bold mt-1">Thu, 12 Sep - Sat, 18 Sep 2020</div>
+              <span class="small fw-bold">Place: Denver Expo Club, USA</span>
+          </div>
+      </div>
+      <div class="row align-items-center">
+          <div class="col-auto">
+              <div class="calendar d-flex"><span class="calendar-month">Sep</span><span class="calendar-day">20</span></div>
+          </div>
+          <div class="col">
+              <a href="#"><h3 class="h5 mb-0">Canadian National Exhibition (CNE)</h3></a>
+              <span>Organized by <a href="#" class="text-700">University of Oxford</a></span>
+              <div class="small fw-bold mt-1">Fri, 20 Sep - Mon, 07 Oct 2020</div>
+              <span class="small fw-bold">Place: Toronto , Canada</span>
+          </div>
+      </div>
+  </div>
+  <div class="card-footer border-top border-gray-300 text-center">
+      <a class="fw-bold text-primary" href="#">See all</a>
+  </div>
+</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card shadow-sm mb-4&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-header border-bottom border-gray-300&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">h2</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;h5 mb-0&#34;</span><span class="p">&gt;</span>Events<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-body&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row align-items-center border-bottom border-gray-300 pb-4 mb-4&#34;</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-auto&#34;</span><span class="p">&gt;</span>
+              <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;calendar d-flex&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;calendar-month&#34;</span><span class="p">&gt;</span>Aug<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;calendar-day&#34;</span><span class="p">&gt;</span>10<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+          <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;</span>
+              <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;&lt;</span><span class="nt">h3</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;h5&#34;</span><span class="p">&gt;</span>Newmarket Nights<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+              <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>Organized by <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-700&#34;</span><span class="p">&gt;</span>University of Oxford<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+              <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;small fw-bold mt-1&#34;</span><span class="p">&gt;</span>Time: 6:00AM<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+              <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;small fw-bold&#34;</span><span class="p">&gt;</span>Place: Cambridge Boat Club, Cambridge<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+          <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row align-items-center border-bottom border-gray-300 pb-4 mb-4&#34;</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-auto&#34;</span><span class="p">&gt;</span>
+              <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;calendar d-flex&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;calendar-month&#34;</span><span class="p">&gt;</span>Sep<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;calendar-day&#34;</span><span class="p">&gt;</span>12<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+          <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;</span>
+              <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;&lt;</span><span class="nt">h3</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;h5 mb-0&#34;</span><span class="p">&gt;</span>Noco Hemp Expo<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+              <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>Organized by <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-700&#34;</span><span class="p">&gt;</span>University of Oxford<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+              <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;small fw-bold mt-1&#34;</span><span class="p">&gt;</span>Thu, 12 Sep - Sat, 18 Sep 2020<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+              <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;small fw-bold&#34;</span><span class="p">&gt;</span>Place: Denver Expo Club, USA<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+          <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row align-items-center&#34;</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-auto&#34;</span><span class="p">&gt;</span>
+              <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;calendar d-flex&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;calendar-month&#34;</span><span class="p">&gt;</span>Sep<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;calendar-day&#34;</span><span class="p">&gt;</span>20<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+          <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;</span>
+              <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;&lt;</span><span class="nt">h3</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;h5 mb-0&#34;</span><span class="p">&gt;</span>Canadian National Exhibition (CNE)<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+              <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>Organized by <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-700&#34;</span><span class="p">&gt;</span>University of Oxford<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+              <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;small fw-bold mt-1&#34;</span><span class="p">&gt;</span>Fri, 20 Sep - Mon, 07 Oct 2020<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+              <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;small fw-bold&#34;</span><span class="p">&gt;</span>Place: Toronto , Canada<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+          <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-footer border-top border-gray-300 text-center&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fw-bold text-primary&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>See all<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<h3 id="profile-card-span-classbadge-bg-secondary-text-dark-font-small-px-2-ms-2prospan">Profile card <span class="badge bg-secondary text-dark font-small px-2 ms-2">Pro</span></h3>
+<p>You can use these card to showcase a profile:</p>
+<div class="bd-example">
+<div class="card text-center p-0 mb-4">
+    <div class="profile-cover rounded-top" data-background="../../assets/img/profile-cover.jpg"></div>
+    <div class="card-body pb-5">
+        <img src="../../assets/img/team/profile-picture-1.jpg" class="user-avatar large-avatar rounded-circle mx-auto mt-n7 mb-4" alt="Neil Portrait">
+        <h4 class="h3">Neil Sims</h4>
+        <h5 class="fw-normal">Senior Software Engineer</h5>
+        <p class="text-gray mb-4">New York, USA</p>
+        <a class="btn btn-sm btn-dark me-2" href="#"><span class="fas fa-user-plus me-1"></span> Connect</a>
+        <a class="btn btn-sm btn-secondary" href="#">Send Message</a>
+    </div>
+</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card text-center p-0 mb-4&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;profile-cover rounded-top&#34;</span> <span class="na">data-background</span><span class="o">=</span><span class="s">&#34;../../assets/img/profile-cover.jpg&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-body pb-5&#34;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;../../assets/img/team/profile-picture-1.jpg&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;user-avatar large-avatar rounded-circle mx-auto mt-n7 mb-4&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;Neil Portrait&#34;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">h4</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;h3&#34;</span><span class="p">&gt;</span>Neil Sims<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">h5</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fw-normal&#34;</span><span class="p">&gt;</span>Senior Software Engineer<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-gray mb-4&#34;</span><span class="p">&gt;</span>New York, USA<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-sm btn-dark me-2&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-user-plus me-1&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span> Connect<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-sm btn-secondary&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>Send Message<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<h3 id="profile-list-span-classbadge-bg-secondary-text-dark-font-small-px-2-ms-2prospan">Profile list <span class="badge bg-secondary text-dark font-small px-2 ms-2">Pro</span></h3>
+<div class="bd-example">
+<div class="row">
+     <div class="col-12 mb-4">
+        <div class="card shadow-sm">
+            <div class="card-header border-bottom border-gray-300">
+                <h2 class="h5 mb-0">Team members</h2>
+            </div>
+            <div class="card-body">
+                <ul class="list-group list-group-flush list my--3">
+                    <li class="list-group-item px-0">
+                        <div class="row align-items-center">
+                        <div class="col-auto">
+                            <!-- Avatar -->
+                            <a href="#" class="user-avatar">
+                                <img class="rounded-circle" alt="Image placeholder" src="../../assets/img/team/profile-picture-1.jpg">
+                            </a>
+                        </div>
+                        <div class="col ms--2">
+                            <h4 class="h6 mb-0">
+                                <a href="#">Christopher Wood</a>
+                            </h4>
+                            <span class="text-success">●</span>
+                            <small>Online</small>
+                        </div>
+                        <div class="col-auto">
+                            <button type="button" class="btn btn-sm btn-tertiary">Add</button>
+                        </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item px-0">
+                        <div class="row align-items-center">
+                        <div class="col-auto">
+                            <!-- Avatar -->
+                            <a href="#" class="user-avatar">
+                                <img class="rounded-circle" alt="Image placeholder" src="../../assets/img/team/profile-picture-2.jpg">
+                            </a>
+                        </div>
+                        <div class="col ms--2">
+                            <h4 class="h6 mb-0">
+                                <a href="#">Jose Leos</a>
+                            </h4>
+                            <span class="text-warning">●</span>
+                            <small>In a meeting</small>
+                        </div>
+                        <div class="col-auto">
+                            <button type="button" class="btn btn-sm btn-tertiary">Add</button>
+                        </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item px-0">
+                        <div class="row align-items-center">
+                            <div class="col-auto">
+                                <!-- Avatar -->
+                                <a href="#" class="user-avatar">
+                                    <img class="rounded-circle" alt="Image placeholder" src="../../assets/img/team/profile-picture-3.jpg">
+                                </a>
+                            </div>
+                            <div class="col ms--2">
+                                <h4 class="h6 mb-0">
+                                    <a href="#">Bonnie Green</a>
+                                </h4>
+                                <span class="text-danger">●</span>
+                                <small>Offline</small>
+                            </div>
+                            <div class="col-auto">
+                                <button type="button" class="btn btn-sm btn-tertiary">Add</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item px-0">
+                        <div class="row align-items-center">
+                            <div class="col-auto">
+                                <!-- Avatar -->
+                                <a href="#" class="user-avatar">
+                                    <img class="rounded-circle" alt="Image placeholder" src="../../assets/img/team/profile-picture-4.jpg">
+                                </a>
+                            </div>
+                            <div class="col ms--2">
+                            <h4 class="h6 mb-0">
+                                    <a href="#">Neil Sims</a>
+                            </h4>
+                            <span class="text-success">●</span>
+                            <small>Online</small>
+                            </div>
+                            <div class="col-auto">
+                                <button type="button" class="btn btn-sm btn-tertiary">Add</button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+          </div>
+      </div>
+</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-12 mb-4&#34;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card shadow-sm&#34;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-header border-bottom border-gray-300&#34;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">h2</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;h5 mb-0&#34;</span><span class="p">&gt;</span>Team members<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-body&#34;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;list-group list-group-flush list my--3&#34;</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;list-group-item px-0&#34;</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row align-items-center&#34;</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-auto&#34;</span><span class="p">&gt;</span>
+                            <span class="c">&lt;!-- Avatar --&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;user-avatar&#34;</span><span class="p">&gt;</span>
+                                <span class="p">&lt;</span><span class="nt">img</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;rounded-circle&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;Image placeholder&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;../../assets/img/team/profile-picture-1.jpg&#34;</span><span class="p">&gt;</span>
+                            <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+                        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col ms--2&#34;</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">h4</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;h6 mb-0&#34;</span><span class="p">&gt;</span>
+                                <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>Christopher Wood<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+                            <span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-success&#34;</span><span class="p">&gt;</span>●<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">small</span><span class="p">&gt;</span>Online<span class="p">&lt;/</span><span class="nt">small</span><span class="p">&gt;</span>
+                        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-auto&#34;</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-sm btn-tertiary&#34;</span><span class="p">&gt;</span>Add<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+                        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                    <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;list-group-item px-0&#34;</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row align-items-center&#34;</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-auto&#34;</span><span class="p">&gt;</span>
+                            <span class="c">&lt;!-- Avatar --&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;user-avatar&#34;</span><span class="p">&gt;</span>
+                                <span class="p">&lt;</span><span class="nt">img</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;rounded-circle&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;Image placeholder&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;../../assets/img/team/profile-picture-2.jpg&#34;</span><span class="p">&gt;</span>
+                            <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+                        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col ms--2&#34;</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">h4</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;h6 mb-0&#34;</span><span class="p">&gt;</span>
+                                <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>Jose Leos<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+                            <span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-warning&#34;</span><span class="p">&gt;</span>●<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">small</span><span class="p">&gt;</span>In a meeting<span class="p">&lt;/</span><span class="nt">small</span><span class="p">&gt;</span>
+                        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-auto&#34;</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-sm btn-tertiary&#34;</span><span class="p">&gt;</span>Add<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+                        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                    <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;list-group-item px-0&#34;</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row align-items-center&#34;</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-auto&#34;</span><span class="p">&gt;</span>
+                                <span class="c">&lt;!-- Avatar --&gt;</span>
+                                <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;user-avatar&#34;</span><span class="p">&gt;</span>
+                                    <span class="p">&lt;</span><span class="nt">img</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;rounded-circle&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;Image placeholder&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;../../assets/img/team/profile-picture-3.jpg&#34;</span><span class="p">&gt;</span>
+                                <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+                            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col ms--2&#34;</span><span class="p">&gt;</span>
+                                <span class="p">&lt;</span><span class="nt">h4</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;h6 mb-0&#34;</span><span class="p">&gt;</span>
+                                    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>Bonnie Green<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+                                <span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
+                                <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-danger&#34;</span><span class="p">&gt;</span>●<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+                                <span class="p">&lt;</span><span class="nt">small</span><span class="p">&gt;</span>Offline<span class="p">&lt;/</span><span class="nt">small</span><span class="p">&gt;</span>
+                            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-auto&#34;</span><span class="p">&gt;</span>
+                                <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-sm btn-tertiary&#34;</span><span class="p">&gt;</span>Add<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+                            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                    <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;list-group-item px-0&#34;</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row align-items-center&#34;</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-auto&#34;</span><span class="p">&gt;</span>
+                                <span class="c">&lt;!-- Avatar --&gt;</span>
+                                <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;user-avatar&#34;</span><span class="p">&gt;</span>
+                                    <span class="p">&lt;</span><span class="nt">img</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;rounded-circle&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;Image placeholder&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;../../assets/img/team/profile-picture-4.jpg&#34;</span><span class="p">&gt;</span>
+                                <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+                            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col ms--2&#34;</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">h4</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;h6 mb-0&#34;</span><span class="p">&gt;</span>
+                                    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>Neil Sims<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+                            <span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-success&#34;</span><span class="p">&gt;</span>●<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">small</span><span class="p">&gt;</span>Online<span class="p">&lt;/</span><span class="nt">small</span><span class="p">&gt;</span>
+                            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-auto&#34;</span><span class="p">&gt;</span>
+                                <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-sm btn-tertiary&#34;</span><span class="p">&gt;</span>Add<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+                            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                    <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+          <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<h3 id="alerts--notifications-span-classbadge-bg-secondary-text-dark-font-small-px-2-ms-2prospan">Alerts &amp; Notifications <span class="badge bg-secondary text-dark font-small px-2 ms-2">Pro</span></h3>
+<div class="bd-example">
+<div class="row">
+     <div class="col-12 mb-4">
+        <div class="card card-body bg-white border-gray-300">
+            <h2 class="h5 mb-4">Alerts & Notifications</h2>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item d-flex align-items-center justify-content-between px-0 pt-4 border-bottom">
+                    <div>
+                        <h3 class="h6 mb-1">Company News</h3>
+                        <p class="small pe-4">Get Rocket news, announcements, and product updates</p>
+                    </div>
+                    <div>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="user-notification-1">
+                            <label class="form-check-label" for="user-notification-1"></label>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item d-flex align-items-center justify-content-between px-0 pt-4 border-bottom">
+                    <div>
+                        <h3 class="h6 mb-1">Account Activity</h3>
+                        <p class="small pe-4">Get important notifications about you or activity you've missed</p>
+                    </div>
+                    <div>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="user-notification-2" checked>
+                            <label class="form-check-label" for="user-notification-2"></label>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item d-flex align-items-center justify-content-between px-0 pt-4">
+                    <div>
+                        <h3 class="h6 mb-1">Meetups Near You</h3>
+                        <p class="small pe-4">Get an email when a Dribbble Meetup is posted close to my location</p>
+                    </div>
+                    <div>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="user-notification-3" checked>
+                            <label class="form-check-label" for="user-notification-3"></label>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-12 mb-4&#34;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card card-body bg-white border-gray-300&#34;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">h2</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;h5 mb-4&#34;</span><span class="p">&gt;</span>Alerts <span class="err">&amp;</span> Notifications<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;list-group list-group-flush&#34;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;list-group-item d-flex align-items-center justify-content-between px-0 pt-4 border-bottom&#34;</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">h3</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;h6 mb-1&#34;</span><span class="p">&gt;</span>Company News<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;small pe-4&#34;</span><span class="p">&gt;</span>Get Rocket news, announcements, and product updates<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+                    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check form-switch&#34;</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-input&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;checkbox&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;user-notification-1&#34;</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-label&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;user-notification-1&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+                        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;list-group-item d-flex align-items-center justify-content-between px-0 pt-4 border-bottom&#34;</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">h3</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;h6 mb-1&#34;</span><span class="p">&gt;</span>Account Activity<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;small pe-4&#34;</span><span class="p">&gt;</span>Get important notifications about you or activity you&#39;ve missed<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+                    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check form-switch&#34;</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-input&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;checkbox&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;user-notification-2&#34;</span> <span class="na">checked</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-label&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;user-notification-2&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+                        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;list-group-item d-flex align-items-center justify-content-between px-0 pt-4&#34;</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">h3</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;h6 mb-1&#34;</span><span class="p">&gt;</span>Meetups Near You<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;small pe-4&#34;</span><span class="p">&gt;</span>Get an email when a Dribbble Meetup is posted close to my location<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+                    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check form-switch&#34;</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-input&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;checkbox&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;user-notification-3&#34;</span> <span class="na">checked</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-label&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;user-notification-3&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+                        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<h3 id="invoices-span-classbadge-bg-secondary-text-dark-font-small-px-2-ms-2prospan">Invoices <span class="badge bg-secondary text-dark font-small px-2 ms-2">Pro</span></h3>
+<div class="bd-example">
+<div class="row">
+     <div class="col-12 mb-4">
+        <div class="card card-body shadow-sm bg-white border-gray-300 p-0 p-md-4">
+            <div class="card-header border-bottom p-3">
+                <h3 class="h5">Order History</h3>
+                <p class="mb-0">Manage billing information and view receipts</p>
+            </div>
+            <div class="card-body px-0 py-0">
+                <ul class="list-group">
+                    <li class="list-group-item border-bottom">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <h3 class="h6 mb-1">
+                                    <a href="#">Invoice #120345</a>
+                                </h3>
+                                <!-- Text -->
+                                <small class="text-gray-700">
+                                    Billed August 21, 2019
+                                </small>
+                            </div>
+                            <div class="col-auto">
+                                <button class="btn btn-sm btn-outline-dark">
+                                    Pay now
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <h3 class="h6 mb-1">
+                                    <a href="#">Invoice #120344</a>
+                                </h3>
+                                <!-- Text -->
+                                <small class="text-gray-700">
+                                    Billed July 21, 2019
+                                </small>
+                            </div>
+                            <div class="col-auto">
+                                <span class="badge badge-pill badge-success">
+                                    <span class="text-uppercase fw-bold">Paid</span>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-12 mb-4&#34;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card card-body shadow-sm bg-white border-gray-300 p-0 p-md-4&#34;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-header border-bottom p-3&#34;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">h3</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;h5&#34;</span><span class="p">&gt;</span>Order History<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mb-0&#34;</span><span class="p">&gt;</span>Manage billing information and view receipts<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-body px-0 py-0&#34;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;list-group&#34;</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;list-group-item border-bottom&#34;</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row align-items-center&#34;</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;</span>
+                                <span class="p">&lt;</span><span class="nt">h3</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;h6 mb-1&#34;</span><span class="p">&gt;</span>
+                                    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>Invoice #120345<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+                                <span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+                                <span class="c">&lt;!-- Text --&gt;</span>
+                                <span class="p">&lt;</span><span class="nt">small</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-gray-700&#34;</span><span class="p">&gt;</span>
+                                    Billed August 21, 2019
+                                <span class="p">&lt;/</span><span class="nt">small</span><span class="p">&gt;</span>
+                            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-auto&#34;</span><span class="p">&gt;</span>
+                                <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-sm btn-outline-dark&#34;</span><span class="p">&gt;</span>
+                                    Pay now
+                                <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+                            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                    <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;list-group-item&#34;</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row align-items-center&#34;</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;</span>
+                                <span class="p">&lt;</span><span class="nt">h3</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;h6 mb-1&#34;</span><span class="p">&gt;</span>
+                                    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>Invoice #120344<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+                                <span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+                                <span class="c">&lt;!-- Text --&gt;</span>
+                                <span class="p">&lt;</span><span class="nt">small</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-gray-700&#34;</span><span class="p">&gt;</span>
+                                    Billed July 21, 2019
+                                <span class="p">&lt;/</span><span class="nt">small</span><span class="p">&gt;</span>
+                            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-auto&#34;</span><span class="p">&gt;</span>
+                                <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;badge badge-pill badge-success&#34;</span><span class="p">&gt;</span>
+                                    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-uppercase fw-bold&#34;</span><span class="p">&gt;</span>Paid<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+                                <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+                            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                    <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<h3 id="timeline-span-classbadge-bg-secondary-text-dark-font-small-px-2-ms-2prospan">Timeline <span class="badge bg-secondary text-dark font-small px-2 ms-2">Pro</span></h3>
+<div class="bd-example">
+<div class="row">
+     <div class="col-12 mb-4">
+            <div class="card shadow-sm">
+                  <div class="card-header d-flex align-items-center border-bottom border-gray-300">
+                      <h3 class="h5 mb-0">
+                          Notification Timeline
+                      </h3>
+                      <div class="ms-auto"><a class="text-primary fw-bold" href="#">View all</a></div>
+                  </div>
+                  <div class="card-body">
+                      <div class="list-group list-group-flush list-group-timeline">
+                          <div class="list-group-item">
+                              <div class="row">
+                                  <div class="col-auto">
+                                      <div class="icon icon-shape icon-sm bg-tertiary text-white rounded-circle"><span class="fas fa-envelope-open-text"></span></div>
+                                  </div>
+                                  <div class="col ms-n2">
+                                      <span class="badge bg-success py-1 mb-2">New message</span>
+                                      <p class="text-dark fw-bold mb-1">
+                                          Let's meet at Starbucks at 11:30. Wdyt?
+                                      </p>
+                                      <!-- Time -->
+                                      <small class="text-gray">
+                                          <span class="fas fa-clock me-2"></span>2m ago
+                                      </small>
+                                  </div>
+                              </div>
+                              <!-- / .row -->
+                          </div>
+                          <div class="list-group-item">
+                              <div class="row">
+                                  <div class="col-auto">
+                                      <div class="icon icon-shape icon-sm bg-danger text-white rounded-circle"><span class="fas fa-exclamation"></span></div>
+                                  </div>
+                                  <div class="col ms-n2">
+                                      <h3 class="h6 text-gray fw-normal mb-1">
+                                      <span class="badge bg-danger py-1 mb-2">Issue</span>
+                                      <p class="text-dark fw-bold mb-1">
+                                          A new issue has been reported for Pixel Pro.
+                                      </p>
+                                      <!-- Time -->
+                                      <small class="text-gray">
+                                          <span class="fas fa-clock me-2"></span>3 hrs ago
+                                      </small>
+                                  </div>
+                              </div>
+                              <!-- / .row -->
+                          </div>
+                          <div class="list-group-item">
+                              <div class="row">
+                                  <div class="col-auto">
+                                      <div class="icon icon-shape icon-sm bg-info text-white rounded-circle"><span class="fas fa-history"></span></div>
+                                  </div>
+                                  <div class="col ms-n2">
+                                      <span class="badge bg-info py-1 mb-2">Update</span>
+                                      <p class="text-dark fw-bold mb-1">
+                                          Spaces - Listings Template has been updated
+                                      </p>
+                                      <!-- Time -->
+                                      <small class="text-gray">
+                                          <span class="fas fa-clock me-2"></span>3 hrs ago
+                                      </small>
+                                  </div>
+                              </div>
+                              <!-- / .row -->
+                          </div>
+                      </div>
+                  </div>
+              </div>
+    </div>
+</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-12 mb-4&#34;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card shadow-sm&#34;</span><span class="p">&gt;</span>
+                  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-header d-flex align-items-center border-bottom border-gray-300&#34;</span><span class="p">&gt;</span>
+                      <span class="p">&lt;</span><span class="nt">h3</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;h5 mb-0&#34;</span><span class="p">&gt;</span>
+                          Notification Timeline
+                      <span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+                      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;ms-auto&#34;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-primary fw-bold&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>View all<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-body&#34;</span><span class="p">&gt;</span>
+                      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;list-group list-group-flush list-group-timeline&#34;</span><span class="p">&gt;</span>
+                          <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;list-group-item&#34;</span><span class="p">&gt;</span>
+                              <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>
+                                  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-auto&#34;</span><span class="p">&gt;</span>
+                                      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;icon icon-shape icon-sm bg-tertiary text-white rounded-circle&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-envelope-open-text&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                                  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                                  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col ms-n2&#34;</span><span class="p">&gt;</span>
+                                      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;badge bg-success py-1 mb-2&#34;</span><span class="p">&gt;</span>New message<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+                                      <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-dark fw-bold mb-1&#34;</span><span class="p">&gt;</span>
+                                          Let&#39;s meet at Starbucks at 11:30. Wdyt?
+                                      <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+                                      <span class="c">&lt;!-- Time --&gt;</span>
+                                      <span class="p">&lt;</span><span class="nt">small</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-gray&#34;</span><span class="p">&gt;</span>
+                                          <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-clock me-2&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>2m ago
+                                      <span class="p">&lt;/</span><span class="nt">small</span><span class="p">&gt;</span>
+                                  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                              <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                              <span class="c">&lt;!-- / .row --&gt;</span>
+                          <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                          <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;list-group-item&#34;</span><span class="p">&gt;</span>
+                              <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>
+                                  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-auto&#34;</span><span class="p">&gt;</span>
+                                      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;icon icon-shape icon-sm bg-danger text-white rounded-circle&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-exclamation&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                                  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                                  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col ms-n2&#34;</span><span class="p">&gt;</span>
+                                      <span class="p">&lt;</span><span class="nt">h3</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;h6 text-gray fw-normal mb-1&#34;</span><span class="p">&gt;</span>
+                                      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;badge bg-danger py-1 mb-2&#34;</span><span class="p">&gt;</span>Issue<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+                                      <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-dark fw-bold mb-1&#34;</span><span class="p">&gt;</span>
+                                          A new issue has been reported for Pixel Pro.
+                                      <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+                                      <span class="c">&lt;!-- Time --&gt;</span>
+                                      <span class="p">&lt;</span><span class="nt">small</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-gray&#34;</span><span class="p">&gt;</span>
+                                          <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-clock me-2&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>3 hrs ago
+                                      <span class="p">&lt;/</span><span class="nt">small</span><span class="p">&gt;</span>
+                                  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                              <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                              <span class="c">&lt;!-- / .row --&gt;</span>
+                          <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                          <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;list-group-item&#34;</span><span class="p">&gt;</span>
+                              <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>
+                                  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-auto&#34;</span><span class="p">&gt;</span>
+                                      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;icon icon-shape icon-sm bg-info text-white rounded-circle&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-history&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                                  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                                  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col ms-n2&#34;</span><span class="p">&gt;</span>
+                                      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;badge bg-info py-1 mb-2&#34;</span><span class="p">&gt;</span>Update<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+                                      <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-dark fw-bold mb-1&#34;</span><span class="p">&gt;</span>
+                                          Spaces - Listings Template has been updated
+                                      <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+                                      <span class="c">&lt;!-- Time --&gt;</span>
+                                      <span class="p">&lt;</span><span class="nt">small</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-gray&#34;</span><span class="p">&gt;</span>
+                                          <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-clock me-2&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>3 hrs ago
+                                      <span class="p">&lt;/</span><span class="nt">small</span><span class="p">&gt;</span>
+                                  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                              <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                              <span class="c">&lt;!-- / .row --&gt;</span>
+                          <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+              <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<h3 id="blog-card-span-classbadge-bg-secondary-text-dark-font-small-px-2-ms-2prospan">Blog card <span class="badge bg-secondary text-dark font-small px-2 ms-2">Pro</span></h3>
+<div class="bd-example">
+<div class="row">
+     <div class="col-12 col-lg-10 mb-4">
+        <div class="card shadow p-2 p-md-4">
+            <div class="card-header px-0">
+                <div class="post-meta">
+                    <div class="media d-flex align-items-center justify-content-between">
+                        <div class="post-group">
+                            <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="23k followers" data-bs-original-title="23k followers">
+                                <img class="avatar-sm me-2 img-fluid rounded-circle" src="../../assets/img/team/profile-picture-2.jpg" alt="avatar"> techhub
+                            </a>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="author-name text-dark fw-bold font-small me-4 d-none d-lg-block">
+                                Posted by <a href="#" class="me-2">@bonniegreen</a>5 hours ago
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn btn-link dropdown-toggle dropdown-toggle-split m-0 p-0" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="icon icon-sm">
+                                        <i class="fas fa-ellipsis-h icon-dark"></i>
+                                    </span>
+                                    <span class="sr-only">Toggle Dropdown</span>
+                                </button>
+                                <div class="dropdown-menu py-0">
+                                    <a class="dropdown-item rounded-top" href="#"><span class="fas fa-edit me-2"></span>Edit post</a>
+                                    <a class="dropdown-item text-danger rounded-bottom" href="#"><span class="fa fa-trash me-2" aria-hidden="true"></span>Delete post</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body py-4 px-0">
+                <a href="#">
+                    <img src="../../assets/img/profile-cover.jpg" class="card-img-top rounded" alt="blog image">
+                    <h4 class="my-4">List of public corporations by market capitalization</h4>
+                </a>
+                <p class="card-text mb-4">All of the world's 10 largest companies as measured by market capitalization are American. Market capitalization is the total value of a company's entire purchased shares of stock. While these companies... </p>
+            </div>
+            <div class="card-footer bg-white border-0 pt-0 px-0">
+                <div class="d-flex flex-wrap flex-lg-nowrap align-items-center justify-content-between">
+                    <div class="post-details mb-3 mb-lg-0">
+                        <button class="btn btn-sm btn-dark animate-hover me-2">
+                            <span class="fas fa-arrow-up me-2 animate-up-2"></span>
+                            4
+                        </button>
+                        <button class="btn btn-sm btn-danger animate-hover">
+                            <span class="fas fa-arrow-down me-2 animate-down-2"></span>
+                            1
+                        </button>
+                    </div>
+                    <div class="post-meta">
+                        <a class="text-dark me-3" href="#"><i class="far fa-comments me-2"></i>33.7k</a>
+                        <button class="btn me-3 btn-link text-primary"><i class="fas fa-share me-2"></i>Share</button>
+                        <button class="btn btn-secondary"><i class="far fa-save me-2"></i>Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-12 col-lg-10 mb-4&#34;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card shadow p-2 p-md-4&#34;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-header px-0&#34;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;post-meta&#34;</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;media d-flex align-items-center justify-content-between&#34;</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;post-group&#34;</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;tooltip&#34;</span> <span class="na">data-bs-placement</span><span class="o">=</span><span class="s">&#34;top&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;23k followers&#34;</span> <span class="na">data-bs-original-title</span><span class="o">=</span><span class="s">&#34;23k followers&#34;</span><span class="p">&gt;</span>
+                                <span class="p">&lt;</span><span class="nt">img</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;avatar-sm me-2 img-fluid rounded-circle&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;../../assets/img/team/profile-picture-2.jpg&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;avatar&#34;</span><span class="p">&gt;</span> techhub
+                            <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+                        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex align-items-center&#34;</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;author-name text-dark fw-bold font-small me-4 d-none d-lg-block&#34;</span><span class="p">&gt;</span>
+                                Posted by <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;me-2&#34;</span><span class="p">&gt;</span>@bonniegreen<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>5 hours ago
+                            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn-group&#34;</span><span class="p">&gt;</span>
+                                <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-link dropdown-toggle dropdown-toggle-split m-0 p-0&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;dropdown&#34;</span> <span class="na">aria-haspopup</span><span class="o">=</span><span class="s">&#34;true&#34;</span> <span class="na">aria-expanded</span><span class="o">=</span><span class="s">&#34;false&#34;</span><span class="p">&gt;</span>
+                                    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;icon icon-sm&#34;</span><span class="p">&gt;</span>
+                                        <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-ellipsis-h icon-dark&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
+                                    <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+                                    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;sr-only&#34;</span><span class="p">&gt;</span>Toggle Dropdown<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+                                <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+                                <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;dropdown-menu py-0&#34;</span><span class="p">&gt;</span>
+                                    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;dropdown-item rounded-top&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-edit me-2&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>Edit post<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+                                    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;dropdown-item text-danger rounded-bottom&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fa fa-trash me-2&#34;</span> <span class="na">aria-hidden</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>Delete post<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+                                <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-body py-4 px-0&#34;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;../../assets/img/profile-cover.jpg&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-img-top rounded&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;blog image&#34;</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">h4</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;my-4&#34;</span><span class="p">&gt;</span>List of public corporations by market capitalization<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-text mb-4&#34;</span><span class="p">&gt;</span>All of the world&#39;s 10 largest companies as measured by market capitalization are American. Market capitalization is the total value of a company&#39;s entire purchased shares of stock. While these companies... <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-footer bg-white border-0 pt-0 px-0&#34;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex flex-wrap flex-lg-nowrap align-items-center justify-content-between&#34;</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;post-details mb-3 mb-lg-0&#34;</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-sm btn-dark animate-hover me-2&#34;</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-arrow-up me-2 animate-up-2&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+                            4
+                        <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-sm btn-danger animate-hover&#34;</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-arrow-down me-2 animate-down-2&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+                            1
+                        <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+                    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;post-meta&#34;</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-dark me-3&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;far fa-comments me-2&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>33.7k<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn me-3 btn-link text-primary&#34;</span><span class="p">&gt;&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-share me-2&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>Share<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-secondary&#34;</span><span class="p">&gt;&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;far fa-save me-2&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>Save<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+                    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+
+        </main>
+
+        <div class="col-lg-3 bd-sidebar">
+          
+            <nav class="bd-toc bd-links mb-5 text-muted list-style-none" aria-label="Secondary navigation">
+              <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#widget-cards">Widget cards</a></li>
+        <li><a href="#counters">Counters</a></li>
+        <li><a href="#category">Category</a></li>
+        <li><a href="#ratings-span-classbadge-bg-secondary-text-dark-font-small-px-2-ms-2prospan">Ratings <span class="badge bg-secondary text-dark font-small px-2 ms-2">Pro</span></a></li>
+        <li><a href="#progress-tracker-span-classbadge-bg-secondary-text-dark-font-small-px-2-ms-2prospan">Progress tracker <span class="badge bg-secondary text-dark font-small px-2 ms-2">Pro</span></a></li>
+        <li><a href="#events-span-classbadge-bg-secondary-text-dark-font-small-px-2-ms-2prospan">Events <span class="badge bg-secondary text-dark font-small px-2 ms-2">Pro</span></a></li>
+        <li><a href="#profile-card-span-classbadge-bg-secondary-text-dark-font-small-px-2-ms-2prospan">Profile card <span class="badge bg-secondary text-dark font-small px-2 ms-2">Pro</span></a></li>
+        <li><a href="#profile-list-span-classbadge-bg-secondary-text-dark-font-small-px-2-ms-2prospan">Profile list <span class="badge bg-secondary text-dark font-small px-2 ms-2">Pro</span></a></li>
+        <li><a href="#alerts--notifications-span-classbadge-bg-secondary-text-dark-font-small-px-2-ms-2prospan">Alerts &amp; Notifications <span class="badge bg-secondary text-dark font-small px-2 ms-2">Pro</span></a></li>
+        <li><a href="#invoices-span-classbadge-bg-secondary-text-dark-font-small-px-2-ms-2prospan">Invoices <span class="badge bg-secondary text-dark font-small px-2 ms-2">Pro</span></a></li>
+        <li><a href="#timeline-span-classbadge-bg-secondary-text-dark-font-small-px-2-ms-2prospan">Timeline <span class="badge bg-secondary text-dark font-small px-2 ms-2">Pro</span></a></li>
+        <li><a href="#blog-card-span-classbadge-bg-secondary-text-dark-font-small-px-2-ms-2prospan">Blog card <span class="badge bg-secondary text-dark font-small px-2 ms-2">Pro</span></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+            </nav>
+          
+        </div>
+      </div>
+    </div>
+
+    <footer class="bd-footer p-3 pt-5 p-md-5 mt-5 bg-primary text-white text-center">
+  <div class="container">
+    <a href="https://themesberg.com" target="_blank">
+      <img src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/brand/themesberg.svg" class="mb-4" width="35" alt="Themesberg Logo">
+    </a>
+    <p class="font-small mb-4">Designed and built by <a href="https://themesberg.com" target="_blank">Themesberg</a>.</p>
+    <hr class="my-4" style="background: #181e38">
+    <ul class="bd-footer-links mb-2">
+      <li class="me-3"><a href="https://themesberg.com/themes" target="_blank">Products</a></li>
+      <li class="me-3"><a href="https://themesberg.com/blog" target="_blank">Blog</a></li>
+      <li class="me-3"><a href="https://themesberg.com/about" target="_blank">About</a></li>
+      <li><a href="https://themesberg.com/contact" target="_blank">Contact</a></li>
+    </ul>
+  </div>
+</footer>
+
+    
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/@popperjs/core/dist/umd/popper.min.js"></script>
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+
+
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/onscreen/dist/on-screen.umd.min.js"></script>
+
+
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/nouislider/distribute/nouislider.min.js"></script>
+
+
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/jarallax/dist/jarallax.min.js"></script>
+
+
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+
+
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/countup.js/dist/countUp.umd.js"></script>
+
+
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/chartist/dist/chartist.min.js"></script>
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
+
+
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/vanillajs-datepicker/dist/js/datepicker.min.js"></script>
+
+
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/simple-datatables/dist/umd/simple-datatables.js"></script>
+
+
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/sweetalert2/dist/sweetalert2.all.min.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+
+
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/vanillajs-datepicker/dist/js/datepicker.min.js"></script>
+
+
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/fullcalendar/main.min.js"></script>
+
+
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/dropzone/dist/min/dropzone.min.js"></script>
+
+
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/choices.js/public/assets/scripts/choices.min.js"></script>
+
+
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/notyf/notyf.min.js"></script>
+
+
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/leaflet/dist/leaflet.js"></script>
+
+
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/svg-pan-zoom/dist/svg-pan-zoom.min.js"></script>
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/svgmap/dist/svgMap.min.js"></script>
+
+
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/js/volt.js"></script>
+
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/clipboard.min.js"></script>
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/anchor.min.js"></script>
+
+<script src="/docs/volt-bootstrap-5-dashboard/docs/3.0/assets/js/docs.min.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,1012 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Use modals to develop faster and more interactive user interfaces">
+<meta name="author" content="Themesberg">
+<meta name="generator" content="Hugo 0.67.1">
+
+<title>Modals · Volt Bootstrap 5 Dashboard Documentation</title>
+
+
+
+
+
+<!-- Bootstrap core CSS -->
+
+
+<link type="text/css" href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+
+<link type="text/css" href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
+
+
+<link type="text/css" href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/notyf/notyf.min.css" rel="stylesheet">
+
+
+<link type="text/css" href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/fullcalendar/main.min.css" rel="stylesheet">
+
+
+<link type="text/css" href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/dropzone/dist/min/dropzone.min.css" rel="stylesheet">
+
+
+<link type="text/css" href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/choices.js/public/assets/styles/choices.min.css" rel="stylesheet">
+
+
+<link type="text/css" href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/leaflet/dist/leaflet.css" rel="stylesheet">
+  <link rel="stylesheet" href="/docs/volt-bootstrap-5-dashboard/assets/css/docs.css">
+
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/img/favicon/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/img/favicon/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/img/favicon/favicon-16x16.png" sizes="16x16" type="image/png">
+
+<link rel="mask-icon" href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/img/favicon/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/img/favicon/favicon.ico">
+<meta name="msapplication-config" content="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@themesberg">
+<meta name="twitter:creator" content="@themesberg">
+<meta name="twitter:title" content="Modals · Volt Bootstrap 5 Dashboard Documentation">
+<meta name="twitter:description" content="Use modals to develop faster and more interactive user interfaces">
+<meta name="twitter:image" content="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/img/volt-bootstrap-5-dashboard-preview.jpg">
+
+<!-- Facebook -->
+<meta property="og:url" content="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/modals/">
+<meta property="og:title" content="Modals · Volt Bootstrap 5 Dashboard Documentation">
+<meta property="og:description" content="Use modals to develop faster and more interactive user interfaces">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/img/volt-bootstrap-5-dashboard-preview.jpg">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+
+<script>(function (w, d, s, l, i) {
+    w[l] = w[l] || []; w[l].push({
+      'gtm.start':
+        new Date().getTime(), event: 'gtm.js'
+    }); var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+  })(window, document, 'script', 'dataLayer', 'GTM-THQTXJ7');</script>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141734189-6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-141734189-6');
+</script>
+
+
+  </head>
+  <body>
+    
+
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-THQTXJ7"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  
+
+
+    <header class="navbar navbar-nav navbar-expand navbar-dark navbar-theme-primary">
+  <div class="container px-3 px-md-4">
+    <div class="d-flex align-items-center">
+      <a class="navbar-brand me-4" href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/getting-started/overview/" aria-label="Volt Documentation">
+        <img src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/brand/light.svg" height="30" alt="Volt logo">
+        <span class="ms-2">Volt Docs</span>
+      </a>
+
+      <div class="navbar-nav-scroll order-md-0 justify-content-start d-none d-md-flex">
+        <ul class="navbar-nav bd-navbar-nav flex-row">
+          <li class="nav-item">
+            <a class="nav-link" href="https://themesberg.com/templates/bootstrap" target="_blank" rel="noopener">Themes</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdownPreview" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Live preview <i class="fas fa-angle-down nav-link-arrow ms-2"></i>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownPreview">
+              <li>
+                <a href="https://demo.themesberg.com/volt/" target="_blank" class="dropdown-item">Volt Dashboard</a>
+              </li>
+              <li>
+                <a href="https://demo.themesberg.com/volt-pro/" target="_blank" class="dropdown-item">Volt Dashboard Pro</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdownSupport" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Support <i class="fas fa-angle-down nav-link-arrow ms-2"></i>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownSupport">
+              <li>
+                <a href="https://github.com/themesberg/volt-bootstrap-5-dashboard/issues" target="_blank" class="dropdown-item">Volt Dashboard</a>
+              </li>
+              <li>
+                <a href="https://themesberg.com/contact" target="_blank" class="dropdown-item">Volt Dashboard Pro</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <button class="btn btn-link bd-search-docs-toggle d-lg-none p-0 ms-3 order-3 ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" role="img"><title>Menu</title><path stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"/></svg>
+    </button>
+
+    <div class="d-flex align-items-center">
+      <ul class="flex-row list-style-none me-3 d-none d-lg-flex">
+        <li class="me-3">
+          <a href="https://www.facebook.com/themesberg/" class="fab fa-facebook text-white" target="_blank"></a>
+        </li>
+        <li class="me-3">
+          <a href="https://twitter.com/themesberg" class="fab fa-twitter text-white" target="_blank"></a>
+        </li>
+        <li>
+          <a href="https://github.com/themesberg/volt-bootstrap-5-dashboard" class="fab fa-github text-white" target="_blank"></a>
+        </li>
+      </ul>
+      <div class="d-none d-lg-block">
+        <a class="btn btn-secondary text-dark animate-up-2 ms-3 d-none d-sm-inline-block" href="https://themesberg.com/product/admin-dashboard/volt-premium-bootstrap-5-dashboard" target="_blank"><i class="fas fa-cart-arrow-down me-2"></i>Buy now</a>
+        <a class="btn btn-outline-white animate-up-2 ms-3 d-none d-sm-inline-block" href="https://demo.themesberg.com/volt/" target="_blank">Try free demo</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+    <nav class="bd-subnavbar pt-3 pb-3 pb-md-3 d-lg-none">
+  <div class="container">
+    
+
+    
+
+    <div class="d-flex w-100 align-items-center justify-content-between">
+      <ul class="flex-row list-style-none me-3 d-flex d-lg-none">
+        <li class="me-3">
+          <a href="https://www.facebook.com/themesberg/" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Themesberg on Facebook" data-original-title="Like us on Facebook">
+            <i class="fab fa-facebook text-primary"></i>
+          </a>
+        </li>
+        <li class="me-3">
+          <a href="https://twitter.com/themesberg" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Themesberg on Twitter" data-original-title="Follow us on Twitter ❤️">
+            <i class="fab fa-twitter text-primary"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/themesberg" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Themesberg on Github" data-original-title="Star us on Github">
+            <i class="fab fa-github text-primary"></i>
+          </a>
+        </li>
+      </ul>
+      <div>
+        <a class="btn btn-sm btn-secondary text-dark animate-up-2 ms-2 ms-lg-3" href="https://themesberg.com/product/admin-dashboard/volt-premium-bootstrap-5-dashboard" target="_blank"><i class="fas fa-download me-2"></i>Buy now</a>
+        <a class="btn btn-sm btn-outline-gray animate-up-2 ms-2 ms-lg-3" href="https://demo.themesberg.com/volt/" target="_blank">Try free demo</a>
+      </div>
+    </div>
+
+    
+  </div>
+</nav>
+
+
+    <div class="container my-4">
+      <div class="row flex-xl-nowrap">
+        <div class="col-lg-2 bd-sidebar">
+          <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Main navigation"><ul class="list-unstyled">
+
+    <li class="bd-sidenav-group my-1 js-sidenav-group has-children">
+      <a class="d-inline-flex align-items-center bd-sidenav-group-link"   href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/getting-started/overview/">
+        Getting started 
+      </a>
+      <ul class="nav bd-sidenav flex-column mb-2">
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/getting-started/overview/">Overview
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/getting-started/download/">Download
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/getting-started/installation/">Installation
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/getting-started/license/">License
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/getting-started/file-structure/">File structure
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/getting-started/build-tools/">Build tools
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/getting-started/changelog/">Changelog
+          </a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="bd-sidenav-group my-1 js-sidenav-group has-children">
+      <a class="d-inline-flex align-items-center bd-sidenav-group-link"   href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/laravel-example-pages/settings/">
+        Laravel example pages 
+      </a>
+      <ul class="nav bd-sidenav flex-column mb-2">
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/laravel-example-pages/settings/">Settings
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/laravel-example-pages/sign-in/">Sign in
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/laravel-example-pages/sign-up/">Sign up
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/laravel-example-pages/forgot-password/">Forgot password
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/laravel-example-pages/reset-password/">Reset password
+          </a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="bd-sidenav-group my-1 js-sidenav-group has-children">
+      <a class="d-inline-flex align-items-center bd-sidenav-group-link"   href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/foundation/colors/">
+        Foundation 
+      </a>
+      <ul class="nav bd-sidenav flex-column mb-2">
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/foundation/colors/">Colors
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/foundation/grid/">Grid
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/foundation/icons/">Icons
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/foundation/typography/">Typography
+          </a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="bd-sidenav-group my-1 active js-sidenav-group has-children">
+      <a class="d-inline-flex align-items-center bd-sidenav-group-link"   href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/accordions/" aria-current="true">
+        Components 
+      </a>
+      <ul class="nav bd-sidenav flex-column mb-2">
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/accordions/">Accordions
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/alerts/">Alerts
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/badges/">Badges
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/widgets/">Widgets
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/breadcrumbs/">Breadcrumbs
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/buttons/">Buttons
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/forms/">Forms
+          </a>
+        </li>
+        <li  class="active bd-sidenav-active">
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/modals/" aria-current="page">Modals
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/navs/">Navs
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/navbars/">Navbars
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/pagination/">Pagination
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/popovers/">Popovers
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/progress/">Progress
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/tables/">Tables
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/tabs/">Tabs
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/toasts/">Toasts
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/tooltips/">Tooltips
+          </a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="bd-sidenav-group my-1 js-sidenav-group has-children">
+      <a class="d-inline-flex align-items-center bd-sidenav-group-link"   href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/plugins/charts/">
+        Plugins 
+      </a>
+      <ul class="nav bd-sidenav flex-column mb-2">
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/plugins/charts/">Charts
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/plugins/datepicker/">Datepicker
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/plugins/notifications/">Notifications
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/plugins/kanban/">Kanban<span class="badge badge-sm bg-secondary text-dark px-2 ms-2">Pro</span>
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/plugins/mapbox/">MapBox<span class="badge badge-sm bg-secondary text-dark px-2 ms-2">Pro</span>
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/plugins/calendar/">Calendar<span class="badge badge-sm bg-secondary text-dark px-2 ms-2">Pro</span>
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/plugins/sweet-alerts/">Sweet Alerts<span class="badge badge-sm bg-secondary text-dark px-2 ms-2">Pro</span>
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/plugins/dropzone/">DropZone<span class="badge badge-sm bg-secondary text-dark px-2 ms-2">Pro</span>
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/plugins/datatables/">DataTables<span class="badge badge-sm bg-secondary text-dark px-2 ms-2">Pro</span>
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/plugins/svg-map/">SVG Map<span class="badge badge-sm bg-secondary text-dark px-2 ms-2">Pro</span>
+          </a>
+        </li>
+        <li >
+          <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/plugins/choices-js/">Choices JS<span class="badge badge-sm bg-secondary text-dark px-2 ms-2">Pro</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+        </div>
+
+        <main class="col-lg-7 py-md-3 px-lg-5 bd-content" role="main">
+          <h1 class="bd-title" id="content">Modals </h1>
+          <p class="bd-lead">Use modals to develop faster and more interactive user interfaces</p>
+
+          <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CEBDT237&placement=themesbergcom" id="_carbonads_js"></script>
+          
+          
+
+          <h2 id="default">Default</h2>
+<p>The following example is a simple way of toggling a modal based on clicking on an element:</p>
+<div class="bd-example">
+<button type="button" class="btn btn-block btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#modal-default">Default</button>
+<div class="modal fade" id="modal-default" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="h6 modal-title">Terms of Service</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>With less than a month to go before the European Union enacts new consumer privacy laws for its citizens, companies around the world are updating their terms of service agreements to comply.</p>
+                <p>The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect on May 25 and is meant to ensure a common set of data rights in the European Union. It requires organizations to notify users as
+                    soon as possible of high-risk data breaches that could personally affect them.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary">Accept</button>
+                <button type="button" class="btn btn-link text-gray ms-auto" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-block btn-primary mb-3&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;modal&#34;</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#modal-default&#34;</span><span class="p">&gt;</span>Default<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;modal fade&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;modal-default&#34;</span> <span class="na">tabindex</span><span class="o">=</span><span class="s">&#34;-1&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;dialog&#34;</span> <span class="na">aria-labelledby</span><span class="o">=</span><span class="s">&#34;modal-default&#34;</span> <span class="na">aria-hidden</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;modal-dialog modal-dialog-centered&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;document&#34;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;modal-content&#34;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;modal-header&#34;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">h2</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;h6 modal-title&#34;</span><span class="p">&gt;</span>Terms of Service<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn-close&#34;</span> <span class="na">data-bs-dismiss</span><span class="o">=</span><span class="s">&#34;modal&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Close&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;modal-body&#34;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>With less than a month to go before the European Union enacts new consumer privacy laws for its citizens, companies around the world are updating their terms of service agreements to comply.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect on May 25 and is meant to ensure a common set of data rights in the European Union. It requires organizations to notify users as
+                    soon as possible of high-risk data breaches that could personally affect them.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;modal-footer&#34;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-secondary&#34;</span><span class="p">&gt;</span>Accept<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-link text-gray ms-auto&#34;</span> <span class="na">data-bs-dismiss</span><span class="o">=</span><span class="s">&#34;modal&#34;</span><span class="p">&gt;</span>Close<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<h2 id="notification">Notification</h2>
+<div class="bd-example">
+<!-- Button Modal -->
+<button type="button" class="btn btn-block btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#modal-notification">Notification</button>
+<!-- Modal Content -->
+<div class="modal fade" id="modal-notification" tabindex="-1" role="dialog" aria-labelledby="modal-notification" aria-hidden="true">
+    <div class="modal-dialog modal-info modal-dialog-centered" role="document">
+        <div class="modal-content bg-gradient-secondary">
+            <div class="modal-header">
+                <p class="modal-title" id="modal-title-notification">A new experience, personalized for you.</p>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="py-3 text-center">
+                    <span class="modal-icon display-1-lg"><span class="far fa-envelope-open"></span></span>
+                    <h2 class="h4 modal-title my-3">Important message!</h2>
+                    <p>Do you know that you can assign status and relation to a company right in the visit list?</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-sm btn-white">Go to Inbox</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End of Modal Content -->
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- Button Modal --&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-block btn-primary mb-3&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;modal&#34;</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#modal-notification&#34;</span><span class="p">&gt;</span>Notification<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="c">&lt;!-- Modal Content --&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;modal fade&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;modal-notification&#34;</span> <span class="na">tabindex</span><span class="o">=</span><span class="s">&#34;-1&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;dialog&#34;</span> <span class="na">aria-labelledby</span><span class="o">=</span><span class="s">&#34;modal-notification&#34;</span> <span class="na">aria-hidden</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;modal-dialog modal-info modal-dialog-centered&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;document&#34;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;modal-content bg-gradient-secondary&#34;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;modal-header&#34;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;modal-title&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;modal-title-notification&#34;</span><span class="p">&gt;</span>A new experience, personalized for you.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn-close&#34;</span> <span class="na">data-bs-dismiss</span><span class="o">=</span><span class="s">&#34;modal&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Close&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;modal-body&#34;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;py-3 text-center&#34;</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;modal-icon display-1-lg&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;far fa-envelope-open&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">h2</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;h4 modal-title my-3&#34;</span><span class="p">&gt;</span>Important message!<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Do you know that you can assign status and relation to a company right in the visit list?<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;modal-footer&#34;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-sm btn-white&#34;</span><span class="p">&gt;</span>Go to Inbox<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="c">&lt;!-- End of Modal Content --&gt;</span></code></pre></div>
+<h2 id="login-modal-span-classbadge-bg-secondary-text-dark-font-small-px-2-ms-2prospan">Login modal <span class="badge bg-secondary text-dark font-small px-2 ms-2">Pro</span></h2>
+<div class="bd-example">
+<!-- Button Modal -->
+<button type="button" class="btn btn-block btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#modal-form">Sign In</button>
+<!-- Modal Content -->
+<div class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="modal-form" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+          <div class="modal-body p-0">
+              <div class="card border-light p-3 p-lg-4">
+                  <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+                  <div class="card-header border-0 text-center pb-0">
+                      <h2 class="h4">Sign in to our platform</h2>
+                      <span>Login here using your username and password</span>
+                  </div>
+                  <div class="card-body p-0 pl-lg-3">
+                      <form action="#" class="mt-4">
+                          <!-- Form -->
+                          <div class="form-group mb-4">
+                              <label for="login_email">Your Email</label>
+                              <div class="input-group">
+                                  <span class="input-group-text" id="basic-addon1"><span class="fas fa-envelope"></span></span>
+                                  <input type="email" class="form-control" placeholder="example@company.com" id="login_email" required>
+                              </div>
+                          </div>
+                          <!-- End of Form -->
+                          <div class="form-group">
+                              <!-- Form -->
+                              <div class="form-group mb-4">
+                                  <label for="login_password">Your Password</label>
+                                  <div class="input-group">
+                                      <span class="input-group-text" id="basic-addon2"><span class="fas fa-unlock-alt"></span></span>
+                                      <input type="password" placeholder="Password" class="form-control" id="login_password" required>
+                                  </div>
+                              </div>
+                              <!-- End of Form -->
+                              <div class="d-flex justify-content-between align-items-center mb-4">
+                                  <div class="form-check">
+                                      <input class="form-check-input" type="checkbox" value="" id="remember">
+                                      <label class="form-check-label mb-0" for="remember">
+                                        Remember me
+                                      </label>
+                                  </div>
+                                  <div><a href="#" class="small text-right">Lost password?</a></div>
+                              </div>
+                          </div>
+                          <div class="d-grid">
+                              <button type="submit" class="btn btn-dark">Sign in</button>
+                          </div>
+                      </form>
+                      <div class="mt-3 mb-4 text-center">
+                          <span class="fw-normal">or login with</span>
+                      </div>
+                      <div class="d-flex justify-content-center my-4">
+                          <a href="#" class="btn btn-icon-only btn-pill btn-outline-light text-facebook me-2" type="button" aria-label="facebook button" title="facebook button">
+                              <span aria-hidden="true" class="fab fa-facebook-f"></span>
+                          </a>
+                          <a href="#" class="btn btn-icon-only btn-pill btn-outline-light text-twitter me-2" type="button" aria-label="twitter button" title="twitter button">
+                              <span aria-hidden="true" class="fab fa-twitter"></span>
+                          </a>
+                          <a href="#" class="btn btn-icon-only btn-pill btn-outline-light text-facebook" type="button" aria-label="github button" title="github button">
+                              <span aria-hidden="true" class="fab fa-github"></span>
+                          </a>
+                      </div>
+                      <div class="d-flex justify-content-center align-items-center mt-4">
+                          <span class="fw-normal">
+                              Not registered?
+                              <a href="#" class="fw-bold">Create account</a>
+                          </span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- End of Modal Content -->
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- Button Modal --&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-block btn-primary mb-3&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;modal&#34;</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#modal-form&#34;</span><span class="p">&gt;</span>Sign In<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="c">&lt;!-- Modal Content --&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;modal fade&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;modal-form&#34;</span> <span class="na">tabindex</span><span class="o">=</span><span class="s">&#34;-1&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;dialog&#34;</span> <span class="na">aria-labelledby</span><span class="o">=</span><span class="s">&#34;modal-form&#34;</span> <span class="na">aria-hidden</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;modal-dialog modal-dialog-centered&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;document&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;modal-content&#34;</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;modal-body p-0&#34;</span><span class="p">&gt;</span>
+              <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card border-light p-3 p-lg-4&#34;</span><span class="p">&gt;</span>
+                  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn-close ms-auto&#34;</span> <span class="na">data-bs-dismiss</span><span class="o">=</span><span class="s">&#34;modal&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Close&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+                  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-header border-0 text-center pb-0&#34;</span><span class="p">&gt;</span>
+                      <span class="p">&lt;</span><span class="nt">h2</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;h4&#34;</span><span class="p">&gt;</span>Sign in to our platform<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+                      <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>Login here using your username and password<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+                  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-body p-0 pl-lg-3&#34;</span><span class="p">&gt;</span>
+                      <span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mt-4&#34;</span><span class="p">&gt;</span>
+                          <span class="c">&lt;!-- Form --&gt;</span>
+                          <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-group mb-4&#34;</span><span class="p">&gt;</span>
+                              <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;login_email&#34;</span><span class="p">&gt;</span>Your Email<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+                              <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;input-group&#34;</span><span class="p">&gt;</span>
+                                  <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;input-group-text&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;basic-addon1&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-envelope&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+                                  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;email&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;example@company.com&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;login_email&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
+                              <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                          <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                          <span class="c">&lt;!-- End of Form --&gt;</span>
+                          <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-group&#34;</span><span class="p">&gt;</span>
+                              <span class="c">&lt;!-- Form --&gt;</span>
+                              <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-group mb-4&#34;</span><span class="p">&gt;</span>
+                                  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;login_password&#34;</span><span class="p">&gt;</span>Your Password<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+                                  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;input-group&#34;</span><span class="p">&gt;</span>
+                                      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;input-group-text&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;basic-addon2&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-unlock-alt&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+                                      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;password&#34;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;Password&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;login_password&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
+                                  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                              <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                              <span class="c">&lt;!-- End of Form --&gt;</span>
+                              <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex justify-content-between align-items-center mb-4&#34;</span><span class="p">&gt;</span>
+                                  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check&#34;</span><span class="p">&gt;</span>
+                                      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-input&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;checkbox&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;remember&#34;</span><span class="p">&gt;</span>
+                                      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-label mb-0&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;remember&#34;</span><span class="p">&gt;</span>
+                                        Remember me
+                                      <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+                                  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                                  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;small text-right&#34;</span><span class="p">&gt;</span>Lost password?<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                              <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                          <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                          <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-grid&#34;</span><span class="p">&gt;</span>
+                              <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;submit&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-dark&#34;</span><span class="p">&gt;</span>Sign in<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+                          <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                      <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+                      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mt-3 mb-4 text-center&#34;</span><span class="p">&gt;</span>
+                          <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fw-normal&#34;</span><span class="p">&gt;</span>or login with<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+                      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex justify-content-center my-4&#34;</span><span class="p">&gt;</span>
+                          <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-icon-only btn-pill btn-outline-light text-facebook me-2&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;facebook button&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;facebook button&#34;</span><span class="p">&gt;</span>
+                              <span class="p">&lt;</span><span class="nt">span</span> <span class="na">aria-hidden</span><span class="o">=</span><span class="s">&#34;true&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fab fa-facebook-f&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+                          <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+                          <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-icon-only btn-pill btn-outline-light text-twitter me-2&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;twitter button&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;twitter button&#34;</span><span class="p">&gt;</span>
+                              <span class="p">&lt;</span><span class="nt">span</span> <span class="na">aria-hidden</span><span class="o">=</span><span class="s">&#34;true&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fab fa-twitter&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+                          <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+                          <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-icon-only btn-pill btn-outline-light text-facebook&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;github button&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;github button&#34;</span><span class="p">&gt;</span>
+                              <span class="p">&lt;</span><span class="nt">span</span> <span class="na">aria-hidden</span><span class="o">=</span><span class="s">&#34;true&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fab fa-github&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+                          <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+                      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex justify-content-center align-items-center mt-4&#34;</span><span class="p">&gt;</span>
+                          <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fw-normal&#34;</span><span class="p">&gt;</span>
+                              Not registered?
+                              <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fw-bold&#34;</span><span class="p">&gt;</span>Create account<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+                          <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+                      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+              <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+          <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="c">&lt;!-- End of Modal Content --&gt;</span></code></pre></div>
+<h2 id="register-modal-span-classbadge-bg-secondary-text-dark-font-small-px-2-ms-2prospan">Register modal <span class="badge bg-secondary text-dark font-small px-2 ms-2">Pro</span></h2>
+<div class="bd-example">
+<!-- Button Modal -->
+<button type="button" class="btn btn-block btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#modal-form-signup">Sign Up</button>
+<!-- Modal Content -->
+<div class="modal fade" id="modal-form-signup" tabindex="-1" role="dialog" aria-labelledby="modal-form-signup" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+          <div class="modal-body p-0">
+              <div class="card p-3 p-lg-4">
+                  <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+                  <div class="card-header border-0 text-center pb-0">
+                      <h2 class="mb-3 h5">Create Account</h2>
+                  </div>
+                  <div class="card-body p-0 pl-lg-3">
+                      <form action="#">
+                          <!-- Form -->
+                          <div class="form-group mb-4">
+                              <label for="email">Your Email</label>
+                              <div class="input-group">
+                                  <span class="input-group-text" id="basic-addon3"><span class="fas fa-envelope"></span></span>
+                                  <input type="email" class="form-control" placeholder="example@company.com" id="email" required>
+                              </div>
+                          </div>
+                          <!-- End of Form -->
+                          <div class="form-group">
+                              <!-- Form -->
+                              <div class="form-group mb-4">
+                                  <label for="password">Your Password</label>
+                                  <div class="input-group">
+                                      <span class="input-group-text" id="basic-addon4"><span class="fas fa-unlock-alt"></span></span>
+                                      <input type="password" placeholder="Password" class="form-control" id="password" required>
+                                  </div>
+                              </div>
+                              <!-- End of Form -->
+                              <!-- Form -->
+                              <div class="form-group mb-4">
+                                  <label for="password_confirm">Confirm Password</label>
+                                  <div class="input-group">
+                                      <span class="input-group-text" id="basic-addon5"><span class="fas fa-unlock-alt"></span></span>
+                                      <input type="password" placeholder="Confirm Password" class="form-control" id="password_confirm" required>
+                                  </div>
+                              </div>
+                              <!-- End of Form -->
+                              <div class="form-check mb-4">
+                                  <input class="form-check-input" type="checkbox" value="" id="terms">
+                                  <label class="form-check-label mb-0" for="terms">
+                                      I agree to the <a href="#">terms and conditions</a>
+                                  </label>
+                              </div>
+                          </div>
+                          <div class="d-grid">
+                              <button type="submit" class="btn btn-dark">Sign up</button>
+                          </div>
+                      </form>
+                      <div class="mt-3 mb-4 text-center">
+                          <span class="fw-normal">or</span>
+                      </div>
+                      <div class="d-flex justify-content-center my-4">
+                          <a href="#" class="btn btn-icon-only btn-pill btn-outline-light text-facebook me-2" type="button" aria-label="facebook button" title="facebook button">
+                              <span aria-hidden="true" class="fab fa-facebook-f"></span>
+                          </a>
+                          <a href="#" class="btn btn-icon-only btn-pill btn-outline-light text-twitter me-2" type="button" aria-label="twitter button" title="twitter button">
+                              <span aria-hidden="true" class="fab fa-twitter"></span>
+                          </a>
+                          <a href="#" class="btn btn-icon-only btn-pill btn-outline-light text-facebook" type="button" aria-label="github button" title="github button">
+                              <span aria-hidden="true" class="fab fa-github"></span>
+                          </a>
+                      </div>
+                      <div class="d-flex justify-content-center align-items-center mt-4">
+                          <span class="fw-normal">
+                              Already have an account?
+                              <a href="#" class="fw-bold">Login here</a>
+                          </span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- End of Modal Content -->
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- Button Modal --&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-block btn-primary mb-3&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;modal&#34;</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#modal-form-signup&#34;</span><span class="p">&gt;</span>Sign Up<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="c">&lt;!-- Modal Content --&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;modal fade&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;modal-form-signup&#34;</span> <span class="na">tabindex</span><span class="o">=</span><span class="s">&#34;-1&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;dialog&#34;</span> <span class="na">aria-labelledby</span><span class="o">=</span><span class="s">&#34;modal-form-signup&#34;</span> <span class="na">aria-hidden</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;modal-dialog modal-dialog-centered&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;document&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;modal-content&#34;</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;modal-body p-0&#34;</span><span class="p">&gt;</span>
+              <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card p-3 p-lg-4&#34;</span><span class="p">&gt;</span>
+                  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn-close ms-auto&#34;</span> <span class="na">data-bs-dismiss</span><span class="o">=</span><span class="s">&#34;modal&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Close&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+                  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-header border-0 text-center pb-0&#34;</span><span class="p">&gt;</span>
+                      <span class="p">&lt;</span><span class="nt">h2</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mb-3 h5&#34;</span><span class="p">&gt;</span>Create Account<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+                  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-body p-0 pl-lg-3&#34;</span><span class="p">&gt;</span>
+                      <span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>
+                          <span class="c">&lt;!-- Form --&gt;</span>
+                          <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-group mb-4&#34;</span><span class="p">&gt;</span>
+                              <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;email&#34;</span><span class="p">&gt;</span>Your Email<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+                              <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;input-group&#34;</span><span class="p">&gt;</span>
+                                  <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;input-group-text&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;basic-addon3&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-envelope&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+                                  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;email&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;example@company.com&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;email&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
+                              <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                          <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                          <span class="c">&lt;!-- End of Form --&gt;</span>
+                          <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-group&#34;</span><span class="p">&gt;</span>
+                              <span class="c">&lt;!-- Form --&gt;</span>
+                              <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-group mb-4&#34;</span><span class="p">&gt;</span>
+                                  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;password&#34;</span><span class="p">&gt;</span>Your Password<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+                                  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;input-group&#34;</span><span class="p">&gt;</span>
+                                      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;input-group-text&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;basic-addon4&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-unlock-alt&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+                                      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;password&#34;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;Password&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;password&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
+                                  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                              <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                              <span class="c">&lt;!-- End of Form --&gt;</span>
+                              <span class="c">&lt;!-- Form --&gt;</span>
+                              <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-group mb-4&#34;</span><span class="p">&gt;</span>
+                                  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;password_confirm&#34;</span><span class="p">&gt;</span>Confirm Password<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+                                  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;input-group&#34;</span><span class="p">&gt;</span>
+                                      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;input-group-text&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;basic-addon5&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-unlock-alt&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+                                      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;password&#34;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;Confirm Password&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;password_confirm&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
+                                  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                              <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                              <span class="c">&lt;!-- End of Form --&gt;</span>
+                              <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check mb-4&#34;</span><span class="p">&gt;</span>
+                                  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-input&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;checkbox&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;terms&#34;</span><span class="p">&gt;</span>
+                                  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-label mb-0&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;terms&#34;</span><span class="p">&gt;</span>
+                                      I agree to the <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>terms and conditions<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+                                  <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+                              <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                          <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                          <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-grid&#34;</span><span class="p">&gt;</span>
+                              <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;submit&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-dark&#34;</span><span class="p">&gt;</span>Sign up<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+                          <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                      <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+                      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mt-3 mb-4 text-center&#34;</span><span class="p">&gt;</span>
+                          <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fw-normal&#34;</span><span class="p">&gt;</span>or<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+                      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex justify-content-center my-4&#34;</span><span class="p">&gt;</span>
+                          <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-icon-only btn-pill btn-outline-light text-facebook me-2&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;facebook button&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;facebook button&#34;</span><span class="p">&gt;</span>
+                              <span class="p">&lt;</span><span class="nt">span</span> <span class="na">aria-hidden</span><span class="o">=</span><span class="s">&#34;true&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fab fa-facebook-f&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+                          <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+                          <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-icon-only btn-pill btn-outline-light text-twitter me-2&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;twitter button&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;twitter button&#34;</span><span class="p">&gt;</span>
+                              <span class="p">&lt;</span><span class="nt">span</span> <span class="na">aria-hidden</span><span class="o">=</span><span class="s">&#34;true&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fab fa-twitter&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+                          <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+                          <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-icon-only btn-pill btn-outline-light text-facebook&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;github button&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;github button&#34;</span><span class="p">&gt;</span>
+                              <span class="p">&lt;</span><span class="nt">span</span> <span class="na">aria-hidden</span><span class="o">=</span><span class="s">&#34;true&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fab fa-github&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+                          <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+                      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex justify-content-center align-items-center mt-4&#34;</span><span class="p">&gt;</span>
+                          <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fw-normal&#34;</span><span class="p">&gt;</span>
+                              Already have an account?
+                              <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fw-bold&#34;</span><span class="p">&gt;</span>Login here<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+                          <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+                      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+              <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+          <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="c">&lt;!-- End of Modal Content --&gt;</span></code></pre></div>
+<h2 id="subscribe-span-classbadge-bg-secondary-text-dark-font-small-px-2-ms-2prospan">Subscribe <span class="badge bg-secondary text-dark font-small px-2 ms-2">Pro</span></h2>
+<div class="bd-example">
+<!-- Button Modal -->
+<button type="button" class="btn btn-block btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#modal-subscribe">Subscribe</button>
+<!-- Modal Content -->
+<div class="modal fade" id="modal-subscribe" tabindex="-1" role="dialog" aria-labelledby="modal-subscribe" aria-hidden="true">
+    <div class="modal-dialog modal-tertiary modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content bg-dark text-white">
+            <div class="modal-header">
+                <button type="button" class="btn-close btn-close-white text-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center py-3">
+                <span class="modal-icon display-1"><span class="fas fa-envelope-open-text"></span></span>
+                <h3 class="modal-title mb-3">Join our 1,360,462 subscribers</h3>
+                <p class="mb-4 lead">Get exclusive access to freebies, premium products and news.</p>
+                <div class="form-group px-lg-5">
+                    <div class="d-flex mb-3 justify-content-center">
+                        <input type="text" id="subscribe" class="me-sm-1 mb-sm-0 form-control form-control-lg" placeholder="example@company.com">
+                        <div>
+                            <button type="submit" class="ms-2 btn large-form-btn btn-tertiary">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer z-2 mx-auto text-center">
+                <p class="text-white font-small">
+                    We’ll never share your details with third parties.
+                    <br class="visible-md">View our <a href="#">Privacy Policy</a> for more info.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End of Modal Content -->
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- Button Modal --&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-block btn-primary mb-3&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;modal&#34;</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#modal-subscribe&#34;</span><span class="p">&gt;</span>Subscribe<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="c">&lt;!-- Modal Content --&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;modal fade&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;modal-subscribe&#34;</span> <span class="na">tabindex</span><span class="o">=</span><span class="s">&#34;-1&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;dialog&#34;</span> <span class="na">aria-labelledby</span><span class="o">=</span><span class="s">&#34;modal-subscribe&#34;</span> <span class="na">aria-hidden</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;modal-dialog modal-tertiary modal-dialog-centered modal-lg&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;document&#34;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;modal-content bg-dark text-white&#34;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;modal-header&#34;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn-close btn-close-white text-white&#34;</span> <span class="na">data-bs-dismiss</span><span class="o">=</span><span class="s">&#34;modal&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Close&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;modal-body text-center py-3&#34;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;modal-icon display-1&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-envelope-open-text&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">h3</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;modal-title mb-3&#34;</span><span class="p">&gt;</span>Join our 1,360,462 subscribers<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mb-4 lead&#34;</span><span class="p">&gt;</span>Get exclusive access to freebies, premium products and news.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-group px-lg-5&#34;</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex mb-3 justify-content-center&#34;</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;subscribe&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;me-sm-1 mb-sm-0 form-control form-control-lg&#34;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;example@company.com&#34;</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;submit&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;ms-2 btn large-form-btn btn-tertiary&#34;</span><span class="p">&gt;</span>Subscribe<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+                        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;modal-footer z-2 mx-auto text-center&#34;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-white font-small&#34;</span><span class="p">&gt;</span>
+                    We’ll never share your details with third parties.
+                    <span class="p">&lt;</span><span class="nt">br</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visible-md&#34;</span><span class="p">&gt;</span>View our <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>Privacy Policy<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span> for more info.
+                <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="c">&lt;!-- End of Modal Content --&gt;</span></code></pre></div>
+
+        </main>
+
+        <div class="col-lg-3 bd-sidebar">
+          
+            <nav class="bd-toc bd-links mb-5 text-muted list-style-none" aria-label="Secondary navigation">
+              <nav id="TableOfContents">
+  <ul>
+    <li><a href="#default">Default</a></li>
+    <li><a href="#notification">Notification</a></li>
+    <li><a href="#login-modal-span-classbadge-bg-secondary-text-dark-font-small-px-2-ms-2prospan">Login modal <span class="badge bg-secondary text-dark font-small px-2 ms-2">Pro</span></a></li>
+    <li><a href="#register-modal-span-classbadge-bg-secondary-text-dark-font-small-px-2-ms-2prospan">Register modal <span class="badge bg-secondary text-dark font-small px-2 ms-2">Pro</span></a></li>
+    <li><a href="#subscribe-span-classbadge-bg-secondary-text-dark-font-small-px-2-ms-2prospan">Subscribe <span class="badge bg-secondary text-dark font-small px-2 ms-2">Pro</span></a></li>
+  </ul>
+</nav>
+            </nav>
+          
+        </div>
+      </div>
+    </div>
+
+    <footer class="bd-footer p-3 pt-5 p-md-5 mt-5 bg-primary text-white text-center">
+  <div class="container">
+    <a href="https://themesberg.com" target="_blank">
+      <img src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/brand/themesberg.svg" class="mb-4" width="35" alt="Themesberg Logo">
+    </a>
+    <p class="font-small mb-4">Designed and built by <a href="https://themesberg.com" target="_blank">Themesberg</a>.</p>
+    <hr class="my-4" style="background: #181e38">
+    <ul class="bd-footer-links mb-2">
+      <li class="me-3"><a href="https://themesberg.com/themes" target="_blank">Products</a></li>
+      <li class="me-3"><a href="https://themesberg.com/blog" target="_blank">Blog</a></li>
+      <li class="me-3"><a href="https://themesberg.com/about" target="_blank">About</a></li>
+      <li><a href="https://themesberg.com/contact" target="_blank">Contact</a></li>
+    </ul>
+  </div>
+</footer>
+
+    
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/@popperjs/core/dist/umd/popper.min.js"></script>
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+
+
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/onscreen/dist/on-screen.umd.min.js"></script>
+
+
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/nouislider/distribute/nouislider.min.js"></script>
+
+
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/jarallax/dist/jarallax.min.js"></script>
+
+
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+
+
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/countup.js/dist/countUp.umd.js"></script>
+
+
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/chartist/dist/chartist.min.js"></script>
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
+
+
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/vanillajs-datepicker/dist/js/datepicker.min.js"></script>
+
+
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/simple-datatables/dist/umd/simple-datatables.js"></script>
+
+
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/sweetalert2/dist/sweetalert2.all.min.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+
+
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/vanillajs-datepicker/dist/js/datepicker.min.js"></script>
+
+
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/fullcalendar/main.min.js"></script>
+
+
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/dropzone/dist/min/dropzone.min.js"></script>
+
+
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/choices.js/public/assets/scripts/choices.min.js"></script>
+
+
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/notyf/notyf.min.js"></script>
+
+
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/leaflet/dist/leaflet.js"></script>
+
+
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/svg-pan-zoom/dist/svg-pan-zoom.min.js"></script>
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/svgmap/dist/svgMap.min.js"></script>
+
+
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/js/volt.js"></script>
+
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/clipboard.min.js"></script>
+<script src="https://themesberg.com/docs/volt-bootstrap-5-dashboard/assets/vendor/anchor.min.js"></script>
+
+<script src="/docs/volt-bootstrap-5-dashboard/docs/3.0/assets/js/docs.min.js"></script>
+
+  </body>
+</html>
