@@ -30,6 +30,11 @@
     </div>
     <div class="row">
         <div class="col-12 col-xl-8">
+            @if($showSavedAlert)
+            <div class="alert alert-success" role="alert">
+                    Saved!
+                </div>
+            @endif
             <div class="card card-body shadow-sm mb-4">
                 <h2 class="h5 mb-4">General information</h2>
                 <form wire:submit.prevent="save" action="#" method="POST">
@@ -112,12 +117,7 @@
                     <div class="mt-3">
                         <button type="submit" class="btn btn-dark">Save All</button>
                       </div>
-                    </form>
-                    @if($showSavedAlert)
-                      <div class="alert alert-primary mt-2" role="alert">
-                        Saved!
-                      </div>
-                    @endif
+                    </form>                   
                     @if($showDemoNotification)
                         <div class="alert alert-info mt-2" role="alert">
                             You cannot do that in the demo version.

@@ -389,5 +389,3 @@
         <div class="fw-bold small d-none d-lg-block">Showing <b>5</b> out of <b>25</b> entries</div>
     </div>
 </div>
-
-</main>

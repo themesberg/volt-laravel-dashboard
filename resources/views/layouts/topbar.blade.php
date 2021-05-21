@@ -7,8 +7,9 @@
             <div class="input-group input-group-merge search-bar">
                 <span class="input-group-text" id="topbar-addon"><span class="fas fa-search"></span></span>
                 <input type="text" class="form-control" id="topbarInputIconLeft" placeholder="Search" aria-label="Search" aria-describedby="topbar-addon">
-            </div>
-          </form>
+              </div>
+            </form>
+            <a href="#"><button class="btn mx-1 me-2 btn-secondary" type="button"><i class="fas fa-arrow-down mx-1"></i>Download</button></a>
         </div>
         <!-- Navbar links -->
         <ul class="navbar-nav align-items-center">

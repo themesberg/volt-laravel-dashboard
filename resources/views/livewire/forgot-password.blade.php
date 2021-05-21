@@ -20,12 +20,12 @@
                             </div>
                             <!-- End of Form -->
                             @if($mailSentAlert)
-                                <div class="alert alert-info" role="alert">
+                                <div class="alert alert-success" role="alert">
                                     An email containing the password reset link has been sent.
                                 </div>
                             @endif
                             @if($showDemoNotification)
-                                <div class="alert alert-info" role="alert">
+                                <div class="alert alert-danger" role="alert">
                                     You cannot do that in the demo version.
                                 </div>
                             @endif
