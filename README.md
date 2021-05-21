@@ -446,15 +446,15 @@ If you have questions or need help integrating the product please [contact us](h
 
 ## Social Media
 
-### Creative Tim:
+### Themesberg
 
-Twitter: <https://twitter.com/CreativeTim?ref=pdl-readme>
+Twitter: <https://twitter.com/themesberg>
 
-Facebook: <https://www.facebook.com/CreativeTim?ref=pdl-readme>
+Facebook: <https://www.facebook.com/themesberg/>
 
-Dribbble: <https://dribbble.com/creativetim?ref=pdl-readme>
+Dribbble: <https://dribbble.com/themesberg>
 
-Instagram: <https://www.instagram.com/CreativeTimOfficial?ref=pdl-readme>
+Instagram: <https://www.instagram.com/themesberg/>
 
 ### Updivision:
 
@@ -468,5 +468,5 @@ Updivision Blog: <https://updivision.com/blog/?ref=pdl-readme>
 
 ## Credits
 
-- [Creative Tim](https://creative-tim.com/?ref=pdl-readme)
+- [Themesberg](https://themesberg.com/)
 - [UPDIVISION](https://updivision.com)
