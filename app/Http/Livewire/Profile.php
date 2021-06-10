@@ -21,7 +21,7 @@ class Profile extends Component
         'user.address' => 'max:20',
         'user.number' => 'numeric',
         'user.city' => 'max:20',
-        'user.zip' => 'numeric',
+        'user.ZIP' => 'numeric',
     ];
 
     public function mount() { $this->user = auth()->user(); }
