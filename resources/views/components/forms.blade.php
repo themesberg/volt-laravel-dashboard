@@ -1,8 +1,12 @@
 <div class="py-4">
-    <nav aria-label="breadcrumb">
+    <nav aria-label="breadcrumb" class="d-none d-md-inline-block">
         <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">
-            <li class="breadcrumb-item"><a href="#"><span class="fas fa-home"></span></a></li>
-            <li class="breadcrumb-item"><a href="#">Components</a></li>
+            <li class="breadcrumb-item">
+                <a href="#">
+                    <svg class="icon icon-xxs" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                </a>
+            </li>
+            <li class="breadcrumb-item"><a href="#">Volt</a></li>
             <li class="breadcrumb-item active" aria-current="page">Forms</li>
         </ol>
     </nav>
@@ -19,7 +23,7 @@
 
 <div class="row">
     <div class="col-12 mb-4">
-        <div class="card border-light shadow-sm components-section">
+        <div class="card border-0 shadow components-section">
             <div class="card-body">     
                 <div class="row mb-4">
                     <div class="col-lg-4 col-sm-6">
@@ -34,7 +38,9 @@
                         <div class="mb-3">
                             <label for="exampleInputIconLeft">Icon Left</label>
                             <div class="input-group">
-                                <span class="input-group-text" id="basic-addon1"><span class="fas fa-search"></span></span>
+                                <span class="input-group-text" id="basic-addon1">
+                                    <svg class="icon icon-xs text-gray-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>  
+                                </span>
                                 <input type="text" class="form-control" id="exampleInputIconLeft" placeholder="Search" aria-label="Search">
                             </div>
                         </div>
@@ -44,7 +50,9 @@
                             <label for="exampleInputIconRight">Icon Right</label>
                             <div class="input-group">
                                 <input type="text" class="form-control" id="exampleInputIconRight" placeholder="Search" aria-label="Search">
-                                <span class="input-group-text" id="basic-addon2"><span class="fas fa-search"></span></span>
+                                <span class="input-group-text" id="basic-addon2">
+                                    <svg class="icon icon-xs text-gray-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>  
+                                </span>
                             </div>
                         </div>
                         <!-- End of Form -->
@@ -53,7 +61,9 @@
                             <label for="exampleInputIconPassword">Password</label>
                             <div class="input-group">
                                 <input type="password" class="form-control" id="exampleInputIconPassword" placeholder="Password" aria-label="Password">
-                                <span class="input-group-text" id="basic-addon3"><span class="fas fa-unlock-alt"></span></span>
+                                <span class="input-group-text" id="basic-addon3">
+                                    <svg class="icon icon-xs text-gray-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"></path></svg>
+                                </span>
                             </div>
                         </div>
                         <!-- End of Form -->
@@ -89,7 +99,9 @@
                         <div class="mb-3">
                             <label for="birthday">Birthday</label>
                             <div class="input-group">
-                                <span class="input-group-text"><span class="far fa-calendar-alt"></span></span>
+                                <span class="input-group-text">
+                                    <svg class="icon icon-xs text-gray-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+                                </span>
                                 <input data-datepicker="" class="form-control" id="birthday" type="text" placeholder="dd/mm/yyyy" required>                                               
                             </div>
                         </div>
@@ -190,44 +202,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row justify-content-between">
-                    <div class="col-12 col-md-5">
-                        <div class="mb-6">
-                            <span class="h6 fw-bold">Simple Range Slider</span>
-                        </div>
-                        <!-- Simple slider -->
-                        <div class="input-slider-container">
-                            <div id="input-slider-forms" class="input-slider" data-range-value-min="100" data-range-value-max="500"></div>
-                            <!-- Input slider values -->
-                            <div class="row mt-3 d-none">
-                                <div class="col-6">
-                                    <span class="range-slider-value" data-range-value-low="200"></span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End of Slider -->
-                    </div>
-                    <!-- Range slider -->
-                    <div class="col-12 col-md-5">
-                        <div class="mb-6">
-                        <span class="h6 fw-bold">Range Slider with numbers</span>
-                        </div>
-                        <!-- Range slider container -->
-                        <div id="input-slider-range" data-range-value-min="100" data-range-value-max="500"></div>
-                        <!-- Range slider values -->
-                        <div class="row d-none">
-                            <div class="col-6">
-                                <span class="range-slider-value value-low" data-range-value-low="200" id="input-slider-range-value-low"></span>
-                            </div>
-                            <div class="col-6 text-right">
-                                <span class="range-slider-value value-high" data-range-value-high="400" id="input-slider-range-value-high"></span>
-                            </div>
-                        </div>
-                        <!-- End of range slider values -->
-                    </div>
-                </div>
             </div>
         </div>
     </div>
 </div>
-

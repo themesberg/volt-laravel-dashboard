@@ -55,7 +55,7 @@
     "dependencies": {
         "@fortawesome/fontawesome-free": "5.11.2",
         "@popperjs/core": "^2.6.0",
-        "bootstrap": "5.0.0-beta1",
+        "bootstrap": "5.0.1",
         "chartist": "^0.11.4",
         "chartist-plugin-tooltips": "0.0.17",
         "cross-env": "^7.0.3",
@@ -66,16 +66,17 @@
         "simplebar": "^6.0.0-beta.2",
         "smooth-scroll": "^16.1.0",
         "sweetalert2": "^9.17.1",
-        "vanillajs-datepicker": "^1.0.3",
+        "vanillajs-datepicker": "^1.1.4",
         "waypoints": "4.0.1"
     },
     "scripts": {
-        "scss": "node-sass --watch resources/scss -o css",
+        "scss": "node-sass resources/scss -o css",
         "dev": "npm run development",
         "development": "mix",
         "watch": "mix watch",
         "watch-poll": "mix watch -- --watch-options-poll=1000",
         "hot": "mix watch --hot",
         "prod": "npm run production",
-        "production": "mix --production" }
+        "production": "mix --production"
+    }
 }
