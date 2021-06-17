@@ -1,5 +1,5 @@
 /**
- * @popperjs/core v2.8.4 - MIT License
+ * @popperjs/core v2.9.2 - MIT License
  */
 
 'use strict';
@@ -20,10 +20,11 @@ function getBoundingClientRect(element) {
   };
 }
 
-/*:: import type { Window } from '../types'; */
-
-/*:: declare function getWindow(node: Node | Window): Window; */
 function getWindow(node) {
+  if (node == null) {
+    return window;
+  }
+
   if (node.toString() !== '[object Window]') {
     var ownerDocument = node.ownerDocument;
     return ownerDocument ? ownerDocument.defaultView || window : window;
@@ -42,24 +43,15 @@ function getWindowScroll(node) {
   };
 }
 
-/*:: declare function isElement(node: mixed): boolean %checks(node instanceof
-  Element); */
-
 function isElement(node) {
   var OwnElement = getWindow(node).Element;
   return node instanceof OwnElement || node instanceof Element;
 }
-/*:: declare function isHTMLElement(node: mixed): boolean %checks(node instanceof
-  HTMLElement); */
-
 
 function isHTMLElement(node) {
   var OwnElement = getWindow(node).HTMLElement;
   return node instanceof OwnElement || node instanceof HTMLElement;
 }
-/*:: declare function isShadowRoot(node: mixed): boolean %checks(node instanceof
-  ShadowRoot); */
-
 
 function isShadowRoot(node) {
   // IE 11 has no ShadowRoot
@@ -163,14 +155,28 @@ function getCompositeRect(elementOrVirtualElement, offsetParent, isFixed) {
   };
 }
 
-// Returns the layout rect of an element relative to its offsetParent. Layout
 // means it doesn't take into account transforms.
+
 function getLayoutRect(element) {
+  var clientRect = getBoundingClientRect(element); // Use the clientRect sizes if it's not been transformed.
+  // Fixes https://github.com/popperjs/popper-core/issues/1223
+
+  var width = element.offsetWidth;
+  var height = element.offsetHeight;
+
+  if (Math.abs(clientRect.width - width) <= 1) {
+    width = clientRect.width;
+  }
+
+  if (Math.abs(clientRect.height - height) <= 1) {
+    height = clientRect.height;
+  }
+
   return {
     x: element.offsetLeft,
     y: element.offsetTop,
-    width: element.offsetWidth,
-    height: element.offsetHeight
+    width: width,
+    height: height
   };
 }
 
@@ -243,7 +249,18 @@ function getTrueOffsetParent(element) {
 
 
 function getContainingBlock(element) {
-  var isFirefox = navigator.userAgent.toLowerCase().includes('firefox');
+  var isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') !== -1;
+  var isIE = navigator.userAgent.indexOf('Trident') !== -1;
+
+  if (isIE && isHTMLElement(element)) {
+    // In IE 9, 10 and 11 fixed elements containing block is always established by the viewport
+    var elementCss = getComputedStyle(element);
+
+    if (elementCss.position === 'fixed') {
+      return null;
+    }
+  }
+
   var currentNode = getParentNode(element);
 
   while (isHTMLElement(currentNode) && ['html', 'body'].indexOf(getNodeName(currentNode)) < 0) {
@@ -251,7 +268,7 @@ function getContainingBlock(element) {
     // create a containing block.
     // https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_block#identifying_the_containing_block
 
-    if (css.transform !== 'none' || css.perspective !== 'none' || css.contain === 'paint' || ['transform', 'perspective'].includes(css.willChange) || isFirefox && css.willChange === 'filter' || isFirefox && css.filter && css.filter !== 'none') {
+    if (css.transform !== 'none' || css.perspective !== 'none' || css.contain === 'paint' || ['transform', 'perspective'].indexOf(css.willChange) !== -1 || isFirefox && css.willChange === 'filter' || isFirefox && css.filter && css.filter !== 'none') {
       return currentNode;
     } else {
       currentNode = currentNode.parentNode;
