@@ -119,14 +119,53 @@
             </span>
             <span class="sidebar-text">Calendar</span>
           </span>
-          <span>
-            <span class="badge badge-sm bg-secondary ms-1 text-gray-800">Pro</span>
-          </span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a href="" target="_blank" class="nav-link d-flex justify-content-between">
-          <span>
+          <div class="multi-level collapse {{ Request::segment(1) == 'buttons' || Request::segment(1) == 'notifications' || Request::segment(1) == 'forms' || Request::segment(1) == 'modals' || Request::segment(1) == 'typography' ? 'show' : '' }}" role="list"
+            id="submenu-components" aria-expanded="false">
+            <ul class="flex-column nav">
+              <li class="nav-item">
+                <a class="nav-link" target="_blank"
+                  href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/accordions/">
+                  <span class="sidebar-text">All Components</span>
+                </a>
+              </li>
+              <li class="nav-item {{ Request::segment(1) == 'buttons' ? 'active' : '' }}">
+                <a class="nav-link" href="/buttons">
+                  <span class="sidebar-text">Buttons</span>
+                </a>
+              </li>
+              <li class="nav-item {{ Request::segment(1) == 'notifications' ? 'active' : '' }}">
+                <a class="nav-link" href="/notifications">
+                  <span class="sidebar-text">Notifications</span>
+                </a>
+              </li>
+              <li class="nav-item {{ Request::segment(1) == 'forms' ? 'active' : '' }}">
+                <a class="nav-link" href="/forms">
+                  <span class="sidebar-text">Forms</span>
+                </a>
+              </li>
+              <li class="nav-item {{ Request::segment(1) == 'modals' ? 'active' : '' }}">
+                <a class="nav-link" href="/modals">
+                  <span class="sidebar-text">Modals</span>
+                </a>
+              </li>
+              <li class="nav-item {{ Request::segment(1) == 'typography' ? 'active' : '' }}">
+                <a class="nav-link" href="/typography">
+                  <span class="sidebar-text">Typography</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li role="separator" class="dropdown-divider mt-4 mb-3 border-gray-700"></li>
+        <li class="nav-item">
+          <a href="documentation/getting-started/overview/index.html" target="_blank"
+            class="nav-link d-flex align-items-center">
+            <span class="sidebar-icon"><svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg></span>
+            <span class="sidebar-text">Documentation <span class="badge badge-sm bg-secondary ms-1 text-gray-800">v1.0</span></span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="https://themesberg.com" target="_blank" class="nav-link d-flex align-items-center">
             <span class="sidebar-icon">
               <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd"
