@@ -23,6 +23,7 @@ use App\Http\Livewire\Transactions;
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\ResetPasswordExample;
 use App\Http\Livewire\UpgradeToPro;
+use App\Http\Livewire\Users;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,8 +36,7 @@ use App\Http\Livewire\UpgradeToPro;
 |
 */
 
-Route::redirect('/', '/index');
-Route::get('/index', Index::class)->name('index');
+Route::redirect('/', '/login');
 
 Route::get('/register', Register::class)->name('register');
 
@@ -52,6 +52,7 @@ Route::get('/upgrade-to-pro', UpgradeToPro::class)->name('upgrade-to-pro');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', Profile::class)->name('profile');
+    Route::get('/users', Users::class)->name('users');
     Route::get('/login-example', LoginExample::class)->name('login-example');
     Route::get('/register-example', RegisterExample::class)->name('register-example');
     Route::get('/forgot-password-example', ForgotPasswordExample::class)->name('forgot-password-example');
@@ -66,4 +67,3 @@ Route::middleware('auth')->group(function () {
     Route::get('/modals', Modals::class)->name('modals');
     Route::get('/typography', Typography::class)->name('typography');
 });
-
