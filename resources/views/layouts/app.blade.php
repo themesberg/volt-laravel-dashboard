@@ -1,7 +1,7 @@
 <x-layouts.base>
 
 
-    @if(in_array(request()->route()->getName(), ['dashboard', 'profile', 'users', 'bootstrap-tables', 'transactions',
+    @if(in_array(request()->route()->getName(), ['dashboard', 'profile', 'profile-example', 'users', 'bootstrap-tables', 'transactions',
     'buttons',
     'forms', 'modals', 'notifications', 'typography', 'upgrade-to-pro']))
 
@@ -22,18 +22,12 @@
 
     {{ $slot }}
     {{-- Footer --}}
-    @include('layouts.footer')
+    @include('layouts.footer2')
 
 
-    @elseif(in_array(request()->route()->getName(), ['404', '500']))
+    @elseif(in_array(request()->route()->getName(), ['404', '500', 'lock']))
 
     {{ $slot }}
-
-    @elseif(in_array(request()->route()->getName(), ['index']))
-
-    @include('layouts.index.indexnav')
-    {{ $slot }}
-    @include('layouts.index.indexfooter')
 
     @endif
 </x-layouts.base>

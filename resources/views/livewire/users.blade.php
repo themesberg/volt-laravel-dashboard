@@ -112,7 +112,7 @@
 </div>
 <div class="alert alert-danger" role="alert">
     Add, Edit, Delete features are not functional. This is a PRO feature! Click <a
-        href="https://volt-pro-laravel-admin-dashboard.updivision.com/">here</a> to see the PRO product.
+        href="https://volt-pro-laravel-admin-dashboard.updivision.com/" target="_blank">here</a> to see the PRO product.
 </div>
 <div class="card card-body shadow border-0 table-wrapper table-responsive">
     <div class="d-flex mb-3">

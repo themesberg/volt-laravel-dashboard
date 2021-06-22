@@ -25,6 +25,7 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <tr></tr>
                     <tr>
                         <td>
                             <h5>Laravel backend</h5>
@@ -152,6 +153,7 @@
                                     clip-rule="evenodd"></path>
                             </svg></td>
                     </tr>
+                    <tr></tr>
                     <tr>
                         <td>
                             <h5>Bootstrap 5</h5>
@@ -279,6 +281,7 @@
                                     clip-rule="evenodd"></path>
                             </svg></td>
                     </tr>
+                    <tr></tr>
                     <tr>
                         <td>
                             <h5>Support</h5>
@@ -336,7 +339,7 @@
                     <tr>
                         <th class="w-25 border-0"></th>
                         <th class="ps-2 pt-5 border-0">
-                            <a href="https://themesberg.com/product/admin-dashboard/volt-laravel-admin-dashboard"
+                            <a href="https://themesberg.com/product/laravel/volt-admin-dashboard-template"
                                 target="_blank" class="btn btn-gray-800 d-inline-flex align-items-center">
                                 <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -361,7 +364,7 @@
                                     </path>
                                 </svg>
                             </a>
-                            <a href="https://themesberg.com/product/admin-dashboard/volt-pro-laravel-admin-dashboard"
+                            <a href="https://themesberg.com/product/laravel/volt-pro-admin-dashboard-template"
                                 target="_blank" class="btn btn-outline-gray-800 d-inline-flex align-items-center ms-3">
                                 <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20"
                                     xmlns="http://www.w3.org/2000/svg">

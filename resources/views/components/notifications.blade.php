@@ -29,8 +29,8 @@
         <div class="card border-0 shadow">
             <div class="card-header border-gray-100 d-flex justify-content-between align-items-center">
                 <h2 class="h4 mb-0">Sweet alerts</h2>
-                <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/plugins/sweet-alerts/"
-                    class="btn btn-outline-gray-500 d-inline-flex align-items-center">
+                <a href="/documentation/plugins/sweet-alerts/index.html"
+                    class="btn btn-outline-gray-500 d-inline-flex align-items-center" target="_blank">
                     <svg class="icon icon-xxs me-2" fill="currentColor" viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd"
@@ -54,8 +54,8 @@
         <div class="card border-0 shadow">
             <div class="card-header border-gray-100 d-flex justify-content-between align-items-center">
                 <h2 class="h4 mb-0">Notyf</h2>
-                <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/plugins/notifications/"
-                    class="btn btn-outline-gray-500 d-inline-flex align-items-center">
+                <a href="/documentation/plugins/notifications/index.html"
+                    class="btn btn-outline-gray-500 d-inline-flex align-items-center" target="_blank">
                     <svg class="icon icon-xxs me-2" fill="currentColor" viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd"

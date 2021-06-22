@@ -68,7 +68,7 @@
           <ul class="flex-column nav">
             <li class="nav-item {{ Request::segment(1) == 'profile' ? 'active' : '' }}">
               <a href="/profile" class="nav-link">
-                <span class="sidebar-text">Settings</span>
+                <span class="sidebar-text">Profile</span>
               </a>
             </li>
             <li class="nav-item {{ Request::segment(1) == 'users' ? 'active' : '' }}">
@@ -80,7 +80,7 @@
         </div>
       </li>
       <li class="nav-item">
-        <a href="" target="_blank" class="nav-link d-flex justify-content-between">
+        <a href="https://themesberg.com/product/laravel/volt-pro-admin-dashboard-template" target="_blank" class="nav-link d-flex justify-content-between">
           <span>
             <span class="sidebar-icon"><svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg">
@@ -108,7 +108,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <a href="https://themesberg.com" target="_blank" class="nav-link d-flex justify-content-between">
+        <a href="https://themesberg.com/product/laravel/volt-pro-admin-dashboard-template" target="_blank" class="nav-link d-flex justify-content-between">
           <span>
             <span class="sidebar-icon">
               <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -125,7 +125,7 @@
         </a>
         </li>
       <li class="nav-item">
-        <a href="https://themesberg.com" target="_blank" class="nav-link d-flex justify-content-between">
+        <a href="https://themesberg.com/product/laravel/volt-pro-admin-dashboard-template" target="_blank" class="nav-link d-flex justify-content-between">
           <span>
             <span class="sidebar-icon">
               <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -195,6 +195,11 @@
         <div class="multi-level collapse" role="list" id="submenu-pages" aria-expanded="false">
           <ul class="flex-column nav">
             <li class="nav-item">
+              <a class="nav-link" href="{{ route('profile-example') }}">
+                <span class="sidebar-text">Profile</span>
+              </a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="{{ route('login-example') }}">
                 <span class="sidebar-text">Sign In</span>
               </a>
@@ -256,12 +261,6 @@
           class="multi-level collapse {{ Request::segment(1) == 'buttons' || Request::segment(1) == 'notifications' || Request::segment(1) == 'forms' || Request::segment(1) == 'modals' || Request::segment(1) == 'typography' ? 'show' : '' }}"
           role="list" id="submenu-components" aria-expanded="false">
           <ul class="flex-column nav">
-            <li class="nav-item">
-              <a class="nav-link" target="_blank"
-                href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/accordions/">
-                <span class="sidebar-text">All Components</span>
-              </a>
-            </li>
             <li class="nav-item {{ Request::segment(1) == 'buttons' ? 'active' : '' }}">
               <a class="nav-link" href="/buttons">
                 <span class="sidebar-text">Buttons</span>
@@ -292,7 +291,7 @@
       </li>
       <li role="separator" class="dropdown-divider mt-4 mb-3 border-gray-700"></li>
       <li class="nav-item">
-        <a href="https://themesberg.com/product/admin-dashboard/volt-laravel-admin-dashboard" target="_blank"
+        <a href="/documentation/getting-started/overview/index.html" target="_blank"
           class="nav-link d-flex align-items-center">
           <span class="sidebar-icon"><svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg">
@@ -306,16 +305,16 @@
       </li>
       <li class="nav-item">
         <a href="https://themesberg.com" target="_blank" class="nav-link d-flex align-items-center">
-          <span class="sidebar-icon">
-            <img src="/assets/img/themesberg.svg" height="20" width="28" alt="Themesberg Logo">
+          <span class="sidebar-icon me-2">
+            <img class="me-2" src="/assets/img/themesberg.svg" height="20" width="20" alt="Themesberg Logo">
           </span>
           <span class="sidebar-text">Themesberg</span>
         </a>
       </li>
       <li class="nav-item">
         <a href="https://updivision.com" target="_blank" class="nav-link d-flex align-items-center">
-          <span class="sidebar-icon">
-            <img src="/assets/img/updivision.png" height="20" width="28" alt="Themesberg Logo">
+          <span class="sidebar-icon me-2">
+            <img class="me-2" src="/assets/img/updivision.png" height="20" width="20" alt="Themesberg Logo">
           </span>
           <span class="sidebar-text">Updivision</span>
         </a>

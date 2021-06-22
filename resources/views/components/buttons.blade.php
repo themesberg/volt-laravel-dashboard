@@ -16,7 +16,7 @@
             <p class="mb-0">Dozens of reusable components built to provide buttons, alerts, popovers, and more.</p>
         </div>
         <div>
-            <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/buttons/" class="btn btn-outline-gray"><i class="far fa-question-circle me-1"></i> Buttons Docs</a>
+            <a href="/documentation/components/buttons/index.html" class="btn btn-outline-gray" target="_blank"><i class="far fa-question-circle me-1"></i> Buttons Docs</a>
         </div>
     </div>
 </div>

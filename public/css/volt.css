@@ -3156,7 +3156,7 @@ textarea.form-control-lg {
   border-bottom-left-radius: 0; }
 
 .valid-feedback {
-  display: none;
+  display: block;
   width: 100%;
   margin-top: 0.25rem;
   font-size: 0.875em;
@@ -3229,7 +3229,8 @@ textarea.form-control-lg {
     z-index: 3; }
 
 .invalid-feedback {
-  display: none;
+  /* display: none; */
+  display: block;
   width: 100%;
   margin-top: 0.25rem;
   font-size: 0.875em;

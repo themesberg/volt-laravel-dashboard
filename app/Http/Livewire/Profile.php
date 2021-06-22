@@ -3,6 +3,8 @@
 namespace App\Http\Livewire;
 
 use App\Models\User;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\Rule;
 use Livewire\Component;
 
 class Profile extends Component
@@ -11,18 +13,19 @@ class Profile extends Component
     public $showSavedAlert = false;
     public $showDemoNotification = false;
 
-    protected $rules = [
+    public function rules() {
+
+    return [
         'user.first_name' => 'max:15',
         'user.last_name' => 'max:20',
-        'user.birthday' => 'date_format:Y-m-d',
         'user.email' => 'email',
-        'user.phone' => 'numeric',
-        'user.gender' => '',
-        'user.address' => 'max:20',
+        'user.gender' => ['required', Rule::in(['Male', 'Female', 'Other'])],
+        'user.address' => 'max:40',
         'user.number' => 'numeric',
         'user.city' => 'max:20',
         'user.ZIP' => 'numeric',
     ];
+}
 
     public function mount() { $this->user = auth()->user(); }
 

@@ -18,6 +18,7 @@ use App\Http\Livewire\Auth\Register;
 use App\Http\Livewire\ForgotPasswordExample;
 use App\Http\Livewire\Index;
 use App\Http\Livewire\LoginExample;
+use App\Http\Livewire\ProfileExample;
 use App\Http\Livewire\RegisterExample;
 use App\Http\Livewire\Transactions;
 use Illuminate\Support\Facades\Route;
@@ -52,6 +53,7 @@ Route::get('/upgrade-to-pro', UpgradeToPro::class)->name('upgrade-to-pro');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', Profile::class)->name('profile');
+    Route::get('/profile-example', ProfileExample::class)->name('profile-example');
     Route::get('/users', Users::class)->name('users');
     Route::get('/login-example', LoginExample::class)->name('login-example');
     Route::get('/register-example', RegisterExample::class)->name('register-example');

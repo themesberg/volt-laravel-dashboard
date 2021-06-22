@@ -13,8 +13,8 @@ class Login extends Component
     public $remember_me = false;
 
     protected $rules = [
-        'email' => 'required|email',
-        'password' => 'required',
+        'email' => 'required|email:rfc,dns',
+        'password' => 'required|min:6',
     ];
 
     //This mounts the default credentials for the admin. Remove this section if you want to make it public.

@@ -16,7 +16,7 @@ class Register extends Component
 
     public function updatedEmail()
     {
-        $this->validate(['email'=>'required|email|unique:users']);
+        $this->validate(['email'=>'required|email:rfc,dns|unique:users']);
     }
     
     public function register()

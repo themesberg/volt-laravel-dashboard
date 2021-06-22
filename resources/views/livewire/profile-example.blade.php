@@ -125,49 +125,65 @@
     </div>
     <div class="row">
         <div class="col-12 col-xl-8">
-            @if($showSavedAlert)
-            <div class="alert alert-success" role="alert">
-                Saved!
-            </div>
-            @endif
             <div class="card card-body border-0 shadow mb-4">
                 <h2 class="h5 mb-4">General information</h2>
-                <form wire:submit.prevent="save" action="#" method="POST">
+                <form action="#" method="POST">
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <div>
                                 <label for="first_name">First Name</label>
-                                <input wire:model="user.first_name" class="form-control" id="first_name" type="text"
+                                <input class="form-control" id="first_name" type="text"
                                     placeholder="Enter your first name" required>
                             </div>
                         </div>
                         <div class="col-md-6 mb-3">
                             <div>
                                 <label for="last_name">Last Name</label>
-                                <input wire:model="user.last_name" class="form-control" id="last_name" type="text"
-                                    placeholder="Also your last name">
+                                <input class="form-control" id="last_name" type="text"
+                                    placeholder="Also your last name" required>
                             </div>
                         </div>
                     </div>
                     <div class="row align-items-center">
                         <div class="col-md-6 mb-3">
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input wire:model="user.email" class="form-control" id="email" type="email"
-                                    placeholder="name@company.com" disabled>
+                            <label for="birthday">Birthday</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><svg class="icon icon-xs" fill="currentColor"
+                                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                                            clip-rule="evenodd"></path>
+                                    </svg></span>
+                                <input data-datepicker=""
+                                    class="form-control datepicker-input" id="birthday" type="text"
+                                    placeholder="yyyy/mm/dd" disabled>
                             </div>
-                            @error('email') <div class="invalid-feedback">{{ $message }}</div> @enderror
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="gender">Gender</label>
-                            <select wire:model="user.gender" class="form-select mb-0" id="gender"
+                            <select class="form-select mb-0" id="gender"
                                 aria-label="Gender select example">
-                                <option selected>Choose...</option>
+                                <option selected>Gender</option>
                                 <option value="Female">Female</option>
                                 <option value="Male">Male</option>
                                 <option value="Other">Other</option>
                             </select>
-                            @error('user.gender') <div class="invalid-feedback">{{ $message }}</div> @enderror
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input  class="form-control" id="email" type="email"
+                                    placeholder="name@company.com" disabled>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input class="form-control" id="phone" type="number"
+                                    placeholder="+12-345 678 910">
+                            </div>
                         </div>
                     </div>
                     <h2 class="h5 my-4">Location</h2>
@@ -175,14 +191,14 @@
                         <div class="col-sm-9 mb-3">
                             <div class="form-group">
                                 <label for="address">Address</label>
-                                <input wire:model="user.address" class="form-control" id="address" type="text"
+                                <input  class="form-control" id="address" type="text"
                                     placeholder="Enter your home address">
                             </div>
                         </div>
                         <div class="col-sm-3 mb-3">
                             <div class="form-group">
                                 <label for="number">Number</label>
-                                <input wire:model="user.number" class="form-control" id="number" type="number"
+                                <input class="form-control" id="number" type="number"
                                     placeholder="No.">
                             </div>
                         </div>
@@ -191,14 +207,14 @@
                         <div class="col-sm-4 mb-3">
                             <div class="form-group">
                                 <label for="city">City</label>
-                                <input wire:model="user.city" class="form-control" id="city" type="text"
+                                <input class="form-control" id="city" type="text"
                                     placeholder="City">
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label for="zip">ZIP</label>
-                                <input wire:model="user.ZIP" class="form-control" id="zip" type="tel" placeholder="ZIP">
+                                <input class="form-control" id="zip" type="tel" placeholder="ZIP">
                             </div>
                         </div>
                     </div>
@@ -206,25 +222,59 @@
                         <button type="submit" class="btn btn-gray-800 mt-2 animate-up-2">Save All</button>
                     </div>
                 </form>
-                @if($showDemoNotification)
-                <div class="alert alert-info mt-2" role="alert">
-                    You cannot do that in the demo version.
-                </div>
-                @endif
+            </div>
+            <div class="card card-body border-0 shadow mb-4 mb-xl-0">
+                <h2 class="h5 mb-4">Alerts & Notifications</h2>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item d-flex align-items-center justify-content-between px-0 border-bottom">
+                        <div>
+                            <h3 class="h6 mb-1">Company News</h3>
+                            <p class="small pe-4">Get Rocket news, announcements, and product updates</p>
+                        </div>
+                        <div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="user-notification-1">
+                                <label class="form-check-label" for="user-notification-1"></label>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center justify-content-between px-0 border-bottom">
+                        <div>
+                            <h3 class="h6 mb-1">Account Activity</h3>
+                            <p class="small pe-4">Get important notifications about you or activity you've missed</p>
+                        </div>
+                        <div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="user-notification-2" checked>
+                                <label class="form-check-label" for="user-notification-2"></label>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center justify-content-between px-0">
+                        <div>
+                            <h3 class="h6 mb-1">Meetups Near You</h3>
+                            <p class="small pe-4">Get an email when a Dribbble Meetup is posted close to my location</p>
+                        </div>
+                        <div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="user-notification-3" checked>
+                                <label class="form-check-label" for="user-notification-3"></label>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
         <div class="col-12 col-xl-4">
             <div class="row">
                 <div class="col-12 mb-4">
                     <div class="card shadow border-0 text-center p-0">
-                        <div wire:ignore.self class="profile-cover rounded-top"
+                        <div class="profile-cover rounded-top"
                             data-background="../assets/img/profile-cover.jpg"></div>
                         <div class="card-body pb-5">
                             <img src="../assets/img/team/profile-picture-1.jpg"
                                 class="avatar-xl rounded-circle mx-auto mt-n7 mb-4" alt="Neil Portrait">
-                            <h4 class="h3">
-                                {{  auth()->user()->first_name ? auth()->user()->first_name . ' ' . auth()->user()->last_name : 'User Name'}}
-                            </h4>
+                            <h4 class="h3">User Name</h4>
                             <h5 class="fw-normal">Senior Software Engineer</h5>
                             <p class="text-gray mb-4">New York, USA</p>
                             <a class="btn btn-sm btn-gray-800 d-inline-flex align-items-center me-2" href="#">
@@ -237,6 +287,63 @@
                                 Connect
                             </a>
                             <a class="btn btn-sm btn-secondary" href="#">Send Message</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="card card-body border-0 shadow mb-4">
+                        <h2 class="h5 mb-4">Select profile photo</h2>
+                        <div class="d-flex align-items-center">
+                            <div class="me-3">
+                                <!-- Avatar -->
+                                <img class="rounded avatar-xl" src="../assets/img/team/profile-picture-1.jpg"
+                                    alt="change avatar">
+                            </div>
+                            <div class="file-field">
+                                <div class="d-flex justify-content-xl-center ms-xl-3">
+                                    <div class="d-flex">
+                                        <svg class="icon text-gray-500 me-2" fill="currentColor" viewBox="0 0 20 20"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd"
+                                                d="M8 4a3 3 0 00-3 3v4a5 5 0 0010 0V7a1 1 0 112 0v4a7 7 0 11-14 0V7a5 5 0 0110 0v4a3 3 0 11-6 0V7a1 1 0 012 0v4a1 1 0 102 0V7a3 3 0 00-3-3z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                        <input type="file">
+                                        <div class="d-md-block text-left">
+                                            <div class="fw-normal text-dark mb-1">Choose Image</div>
+                                            <div class="text-gray small">JPG, GIF or PNG. Max size of 800K</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="card card-body border-0 shadow">
+                        <h2 class="h5 mb-4">Select cover photo</h2>
+                        <div class="d-flex align-items-center">
+                            <div class="me-3">
+                                <!-- Avatar -->
+                                <img class="rounded avatar-xl" src="../assets/img/profile-cover.jpg" alt="change cover">
+                            </div>
+                            <div class="file-field">
+                                <div class="d-flex justify-content-xl-center ms-xl-3">
+                                    <div class="d-flex">
+                                        <svg class="icon text-gray-500 me-2" fill="currentColor" viewBox="0 0 20 20"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd"
+                                                d="M8 4a3 3 0 00-3 3v4a5 5 0 0010 0V7a1 1 0 112 0v4a7 7 0 11-14 0V7a5 5 0 0110 0v4a3 3 0 11-6 0V7a1 1 0 012 0v4a1 1 0 102 0V7a3 3 0 00-3-3z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                        <input type="file">
+                                        <div class="d-md-block text-left">
+                                            <div class="fw-normal text-dark mb-1">Choose Image</div>
+                                            <div class="text-gray small">JPG, GIF or PNG. Max size of 800K</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
