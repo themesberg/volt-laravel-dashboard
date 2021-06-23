@@ -14,6 +14,13 @@ class Register extends Component
     public $password = '';
     public $passwordConfirmation = '';
 
+    public function mount()
+    {
+        if (auth()->user()) {
+            return redirect()->intended('/dashboard');
+        }
+    }
+
     public function updatedEmail()
     {
         $this->validate(['email'=>'required|email:rfc,dns|unique:users']);

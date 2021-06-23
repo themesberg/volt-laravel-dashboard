@@ -22,6 +22,14 @@ class ForgotPassword extends Component
     protected $messages = [
         'email.exists' => 'The Email Address must be in our database.',
     ];
+
+    public function mount()
+    {
+        if (auth()->user()) {
+            return redirect()->intended('/dashboard');
+        }
+    }
+
     public function updatedEmail()
     {
         $this->validate(['email'=>'required|email|exists:users']);

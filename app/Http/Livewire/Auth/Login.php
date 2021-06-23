@@ -20,6 +20,9 @@ class Login extends Component
     //This mounts the default credentials for the admin. Remove this section if you want to make it public.
     public function mount()
     {
+        if (auth()->user()) {
+            return redirect()->intended('/dashboard');
+        }
         $this->fill([
             'email' => 'admin@volt.com',
             'password' => 'secret',

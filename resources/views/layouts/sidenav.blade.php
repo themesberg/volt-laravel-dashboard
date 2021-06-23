@@ -54,7 +54,7 @@
         <span class="nav-link collapsed d-flex justify-content-between align-items-center" data-bs-toggle="collapse"
           data-bs-target="#submenu-laravel" aria-expanded="true">
           <span>
-            <span class="sidebar-icon"><i class="fab fa-laravel" style="color: #f0bc74;"></i></span>
+            <span class="sidebar-icon"><i class="fab fa-laravel me-2" style="color: #f0bc74;"></i></span>
             <span class="sidebar-text" style="color: #f0bc74;">Laravel Examples</span>
           </span>
           <span class="link-arrow"><svg class="icon icon-sm" fill="currentColor" viewBox="0 0 20 20"
