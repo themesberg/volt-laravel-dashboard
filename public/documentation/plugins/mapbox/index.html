@@ -101,7 +101,7 @@
     <header class="navbar navbar-nav navbar-expand navbar-dark navbar-theme-primary">
   <div class="container px-3 px-md-4">
     <div class="d-flex align-items-center">
-      <a class="navbar-brand me-4" href="../../getting-started/overview/" aria-label="Volt Documentation">
+      <a class="navbar-brand me-4" href="../../getting-started/overview/index.html" aria-label="Volt Documentation">
         <img src="../../assets/brand/light.svg" height="30" alt="Volt logo">
         <span class="ms-2">Volt Docs</span>
       </a>
@@ -109,7 +109,7 @@
       <div class="navbar-nav-scroll order-md-0 justify-content-start d-none d-md-flex">
         <ul class="navbar-nav bd-navbar-nav flex-row">
           <li class="nav-item">
-            <a class="nav-link" href="https://themesberg.com/templates/bootstrap" target="_blank" rel="noopener">Themes</a>
+            <a class="nav-link" href="https://themesberg.com/templates/laravel/" target="_blank" rel="noopener">Themes</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="dropdownPreview" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -165,7 +165,7 @@
       </ul>
       <div class="d-none d-lg-flex">
         <a class="btn btn-secondary text-dark animate-up-2 ms-3 d-none d-sm-flex align-items-center justify-content-center" href="https://themesberg.com/product/laravel/volt-pro-admin-dashboard-template" target="_blank"><svg class="icon icon-xs me-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>Buy now</a>
-        <a class="btn btn-outline-white animate-up-2 ms-3 d-none d-sm-inline-block" href="https://volt-laravel-admin-dashboard.updivision.com/" target="_blank">Try free demo</a>
+        <a class="btn btn-outline-white animate-up-2 ms-3 d-none d-sm-inline-block" href="https://themesberg.com/product/laravel/volt-admin-dashboard-template" target="_blank">Try free demo</a>
       </div>
     </div>
   </div>
@@ -197,7 +197,7 @@
       </ul>
       <div>
         <a class="btn btn-secondary text-dark animate-up-2 ms-2 ms-lg-3" href="https://themesberg.com/product/laravel/volt-pro-admin-dashboard-template" target="_blank"><svg class="icon icon-xs me-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>Buy now</a>
-        <a class="btn btn-outline-gray-800 animate-up-2 ms-2 ms-lg-3" href="https://volt-laravel-admin-dashboard.updivision.com/" target="_blank">Try free demo</a>
+        <a class="btn btn-outline-gray-800 animate-up-2 ms-2 ms-lg-3" href="https://themesberg.com/product/laravel/volt-admin-dashboard-template" target="_blank">Try free demo</a>
       </div>
     </div>
 
@@ -212,7 +212,7 @@
           <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Main navigation"><ul class="list-unstyled">
 
             <li class="bd-sidenav-group my-1 js-sidenav-group has-children">
-              <a class="d-inline-flex align-items-center bd-sidenav-group-link"   href="../../getting-started/overview/">
+              <a class="d-inline-flex align-items-center bd-sidenav-group-link"   href="../../getting-started/overview/index.html">
                 Getting started 
               </a>
               <ul class="nav bd-sidenav flex-column mb-2">
@@ -253,7 +253,7 @@
                       </a>
                       <ul class="nav bd-sidenav flex-column mb-2">
                           <li >
-                            <a href="../../laravel-example-pages/settings/index.html" >Settings
+                            <a href="../../laravel-example-pages/settings/index.html" >Profile
                             </a>
                           </li>
                           <li>
@@ -471,7 +471,7 @@
     <img src="../../assets/img/mapbox-token-create.png" alt="Mapbox Create a Token">
 </p>
 <p>After you have succesfully created your own token, you will need to update the <code>spaces.js</code> file to use your own:</p>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">config</span> <span class="o">=</span> <span class="p">{</span>
+<div class="highlight"><pre ><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">config</span> <span class="o">=</span> <span class="p">{</span>
     <span class="nx">mapboxToken</span><span class="o">:</span> <span class="s1">&#39;YOUR_MAPBOX_TOKEN_HERE&#39;</span><span class="p">,</span>
     <span class="nx">mapboxId</span><span class="o">:</span> <span class="s1">&#39;mapbox/light-v10&#39;</span> <span class="c1">// this is the styling
 </span><span class="c1"></span><span class="p">};</span>
@@ -479,15 +479,15 @@
 <h2 id="initializing-your-map">Initializing your map</h2>
 <p>Spaces uses <a href="https://leafletjs.com/">Leaflet.js</a> to manipulate the Mapbox API. In order to initialize a map, all you need to do is to include the following CSS and Javascript files:</p>
 <p>Include <code>leaflet.css</code> before the end of your <code>&lt;head&gt;</code> tag:</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- Leaflet CSS --&gt;</span>
+<div class="highlight"><pre ><code class="language-html" data-lang="html"><span class="c">&lt;!-- Leaflet CSS --&gt;</span>
 <span class="p">&lt;</span><span class="nt">link</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/css&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;@@path/vendor/leaflet/dist/leaflet.css&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span><span class="p">&gt;</span></code></pre></div>
 <p>Include <code>leaflet.js</code> file before the end of your <code>&lt;body&gt;</code> tag:</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- Leaflet JS --&gt;</span>
+<div class="highlight"><pre ><code class="language-html" data-lang="html"><span class="c">&lt;!-- Leaflet JS --&gt;</span>
 <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;@@path/vendor/leaflet/dist/leaflet.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span></code></pre></div>
 <p>Then in your html file you need to create a <code>div</code> tag with an id attribute:</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;mapListings&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<div class="highlight"><pre ><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;mapListings&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <p>After that in your Javascript files you&rsquo;ll need to initialize the map like this:</p>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">mapListings</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="s1">&#39;mapListings&#39;</span><span class="p">).</span><span class="nx">setView</span><span class="p">(</span><span class="nx">baseLatLng</span><span class="p">,</span> <span class="nx">zoom</span><span class="p">);</span>
+<div class="highlight"><pre ><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">mapListings</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="s1">&#39;mapListings&#39;</span><span class="p">).</span><span class="nx">setView</span><span class="p">(</span><span class="nx">baseLatLng</span><span class="p">,</span> <span class="nx">zoom</span><span class="p">);</span>
 <span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">(</span><span class="s1">&#39;https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}&#39;</span><span class="p">,</span> <span class="p">{</span>
     <span class="nx">attribution</span><span class="o">:</span> <span class="s1">&#39;Map data &amp;copy; &lt;a href=&#34;https://www.openstreetmap.org/&#34;&gt;OpenStreetMap&lt;/a&gt; contributors, &lt;a href=&#34;https://creativecommons.org/licenses/by-sa/2.0/&#34;&gt;CC-BY-SA&lt;/a&gt;, Imagery © &lt;a href=&#34;https://www.mapbox.com/&#34;&gt;Mapbox&lt;/a&gt;&#39;</span><span class="p">,</span>
     <span class="nx">maxZoom</span><span class="o">:</span> <span class="mi">18</span><span class="p">,</span>
@@ -498,15 +498,15 @@
 <p>Of course with Spaces you already have all of this done. This guide is only here to show you what you have to do if you want to set it up yourself. You can learn more about what you can do with the map by reading the full <a href="https://leafletjs.com/reference-1.6.0.html">Leaflet.js docs</a>.</p>
 <h2 id="default-location">Default location</h2>
 <p>To set the default location view you will need to update the following latitude and longitude values within the <code>spaces.js</code> file:</p>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">baseLatLng</span> <span class="o">=</span> <span class="p">[</span><span class="mf">37.57</span><span class="p">,</span> <span class="o">-</span><span class="mf">122.26</span><span class="p">];</span>
+<div class="highlight"><pre ><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">baseLatLng</span> <span class="o">=</span> <span class="p">[</span><span class="mf">37.57</span><span class="p">,</span> <span class="o">-</span><span class="mf">122.26</span><span class="p">];</span>
 </code></pre></div>
 <h2 id="default-zoom">Default zoom</h2>
 <p>In order to set the default zoom you will need to update the following value in the <code>spaces.js</code> file:</p>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">zoom</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<div class="highlight"><pre ><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">zoom</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
 </code></pre></div>
 <h2 id="listing-items">Listing items</h2>
 <p>To add, update or remove a listing item from the map you will need to add an object with the following format to the <code>listings</code> variable.</p>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">listings</span> <span class="o">=</span> <span class="p">[</span>
+<div class="highlight"><pre ><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">listings</span> <span class="o">=</span> <span class="p">[</span>
         <span class="p">{</span>
             <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;#&#39;</span><span class="p">,</span>
             <span class="nx">latLng</span><span class="o">:</span> <span class="p">[</span><span class="mf">37.70</span><span class="p">,</span> <span class="o">-</span><span class="mf">122.41</span><span class="p">],</span>
@@ -522,7 +522,7 @@
 <span class="p">]</span>
 </code></pre></div>
 <p>Of course you can change the variable name and even add or remove certain data by editing the following code:</p>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">$</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="nx">listings</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">index</span><span class="p">,</span> <span class="nx">listing</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><pre ><code class="language-javascript" data-lang="javascript"><span class="nx">$</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="nx">listings</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">index</span><span class="p">,</span> <span class="nx">listing</span><span class="p">)</span> <span class="p">{</span>
     <span class="kd">var</span> <span class="nx">popupHtml</span> <span class="o">=</span> <span class="sb">`
 </span><span class="sb">        &lt;a href=&#34;</span><span class="si">${</span><span class="nx">listing</span><span class="p">.</span><span class="nx">url</span><span class="si">}</span><span class="sb">&#34; class=&#34;card card-article-wide flex-column no-gutters no-hover&#34;&gt;
 </span><span class="sb">            &lt;div class=&#34;card-body py-0 d-flex flex-column justify-content-between col-12&#34;&gt;
@@ -540,7 +540,7 @@
 <h2 id="changing-the-marker-icon">Changing the marker icon</h2>
 <p>For Spaces we chose a marker icon with the secondary color of the theme. But if you integrate Spaces with your own branding colors, you may need to change the aspect of the markers. Change the following options with your own preferences.</p>
 <p>Notice we use a <code>marker.svg</code> icon. If you want, you can also just change the <code>fill</code> attribute color inside the <code>marker.svg</code> file to update the marker color:</p>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">icon</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nx">icon</span><span class="p">({</span>
+<div class="highlight"><pre ><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">icon</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nx">icon</span><span class="p">({</span>
     <span class="nx">iconUrl</span><span class="o">:</span> <span class="s1">&#39;../../assets/img/marker.svg&#39;</span><span class="p">,</span>
 
     <span class="nx">iconSize</span><span class="o">:</span>     <span class="p">[</span><span class="mi">38</span><span class="p">,</span> <span class="mi">95</span><span class="p">],</span> <span class="c1">// size of the icon
@@ -562,7 +562,7 @@
 <li>mapbox/satellite-streets-v11</li>
 </ul>
 <p>This is based on the URL you can when clicking on the preview link from Mapbox.</p>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">config</span> <span class="o">=</span> <span class="p">{</span>
+<div class="highlight"><pre ><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">config</span> <span class="o">=</span> <span class="p">{</span>
     <span class="nx">mapboxToken</span><span class="o">:</span> <span class="s1">&#39;pk.eyJ1Ijoiem9sdGFudGhlbWVzYmVyZyIsImEiOiJjazZqaWUwcWswYTBvM21td2Jmcm5mYmdyIn0.7_5YCbbOFRnvqZzCNDo9fw&#39;</span><span class="p">,</span>
     <span class="nx">mapboxId</span><span class="o">:</span> <span class="s1">&#39;mapbox/light-v10&#39;</span>
 <span class="p">};</span>
@@ -595,7 +595,10 @@
     <a href="https://themesberg.com" target="_blank">
       <img src="../../assets/brand/themesberg.svg" class="mb-4" width="35" alt="Themesberg Logo">
     </a>
-    <p class="font-small mb-4">Designed and built by <a href="https://themesberg.com" target="_blank">Themesberg</a>.</p>
+    <a href="https://updivision.com" target="_blank">
+      <img src="../../assets/img/updivision.png"class="image-sm mb-4 mx-2" alt="Upvidision Logo">
+    </a>
+    <p class="font-small mb-4">Designed and built by <a href="https://themesberg.com" target="_blank">Themesberg</a> and <a href="https://updivision.com" target="_blank">Upvidision</a>.</p>
     <hr class="my-4" style="background: #181e38">
     <ul class="bd-footer-links mb-2">
       <li class="me-3"><a href="https://themesberg.com/themes" target="_blank">Products</a></li>

@@ -101,7 +101,7 @@
     <header class="navbar navbar-nav navbar-expand navbar-dark navbar-theme-primary">
   <div class="container px-3 px-md-4">
     <div class="d-flex align-items-center">
-      <a class="navbar-brand me-4" href="../../getting-started/overview/" aria-label="Volt Documentation">
+      <a class="navbar-brand me-4" href="../../getting-started/overview/index.html" aria-label="Volt Documentation">
         <img src="../../assets/brand/light.svg" height="30" alt="Volt logo">
         <span class="ms-2">Volt Docs</span>
       </a>
@@ -109,7 +109,7 @@
       <div class="navbar-nav-scroll order-md-0 justify-content-start d-none d-md-flex">
         <ul class="navbar-nav bd-navbar-nav flex-row">
           <li class="nav-item">
-            <a class="nav-link" href="https://themesberg.com/templates/bootstrap" target="_blank" rel="noopener">Themes</a>
+            <a class="nav-link" href="https://themesberg.com/templates/laravel/" target="_blank" rel="noopener">Themes</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="dropdownPreview" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -165,7 +165,7 @@
       </ul>
       <div class="d-none d-lg-flex">
         <a class="btn btn-secondary text-dark animate-up-2 ms-3 d-none d-sm-flex align-items-center justify-content-center" href="https://themesberg.com/product/laravel/volt-pro-admin-dashboard-template" target="_blank"><svg class="icon icon-xs me-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>Buy now</a>
-        <a class="btn btn-outline-white animate-up-2 ms-3 d-none d-sm-inline-block" href="https://volt-laravel-admin-dashboard.updivision.com/" target="_blank">Try free demo</a>
+        <a class="btn btn-outline-white animate-up-2 ms-3 d-none d-sm-inline-block" href="https://themesberg.com/product/laravel/volt-admin-dashboard-template" target="_blank">Try free demo</a>
       </div>
     </div>
   </div>
@@ -197,7 +197,7 @@
       </ul>
       <div>
         <a class="btn btn-secondary text-dark animate-up-2 ms-2 ms-lg-3" href="https://themesberg.com/product/laravel/volt-pro-admin-dashboard-template" target="_blank"><svg class="icon icon-xs me-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>Buy now</a>
-        <a class="btn btn-outline-gray-800 animate-up-2 ms-2 ms-lg-3" href="https://volt-laravel-admin-dashboard.updivision.com/" target="_blank">Try free demo</a>
+        <a class="btn btn-outline-gray-800 animate-up-2 ms-2 ms-lg-3" href="https://themesberg.com/product/laravel/volt-admin-dashboard-template" target="_blank">Try free demo</a>
       </div>
     </div>
 
@@ -212,7 +212,7 @@
           <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Main navigation"><ul class="list-unstyled">
 
             <li class="bd-sidenav-group my-1 js-sidenav-group has-children">
-              <a class="d-inline-flex align-items-center bd-sidenav-group-link"   href="../../getting-started/overview/">
+              <a class="d-inline-flex align-items-center bd-sidenav-group-link"   href="../../getting-started/overview/index.html">
                 Getting started 
               </a>
               <ul class="nav bd-sidenav flex-column mb-2">
@@ -253,7 +253,7 @@
                       </a>
                       <ul class="nav bd-sidenav flex-column mb-2">
                           <li >
-                            <a href="../../laravel-example-pages/settings/index.html" >Settings
+                            <a href="../../laravel-example-pages/settings/index.html" >Profile
                             </a>
                           </li>
                           <li>
@@ -467,11 +467,8 @@
 
           <p>Item management is the most advanced example included in the Pro theme, because every item has a picture, belongs to a category and has multiple tags. To access this example click the &ldquo;Laravel Examples/Item Management&rdquo; link in the left sidebar or add /items to the URL. Here you can manage the items. A list of items will appear once you start adding them (to access the add page click &ldquo;Add item&rdquo;). On the add page, besides the Name and Description fields (which are present in most of the CRUD examples) you can see a category dropdown, which contains the categories you added, a file input and a tag multi select. If you did not add any categories or tags, please go to the corresponding sections (category management, tag management) and add some.</p>
 <p>The code for saving a new item is a bit different than before (see snippet bellow):</p>
-<p><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">public <span class="k">function</span> add<span class="o">()</span>
+<p><div class="highlight"><pre ><code class="language-bash" data-lang="bash">public <span class="k">function</span> add<span class="o">()</span>
     <span class="o">{</span>
-        <span class="k">if</span> <span class="o">(</span>env<span class="o">(</span><span class="s1">&#39;IS_DEMO&#39;</span><span class="o">))</span> <span class="o">{</span>
-            <span class="nv">$this</span>-&gt;showDemoNotification <span class="o">=</span> true<span class="p">;</span>
-        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
             <span class="nv">$this</span>-&gt;validate<span class="o">()</span><span class="p">;</span>
 
             // dd<span class="o">(</span><span class="nv">$this</span>-&gt;tags_id<span class="o">)</span><span class="p">;</span>
@@ -516,7 +513,10 @@ Similar to all the examples included in the theme, this one also has validation 
     <a href="https://themesberg.com" target="_blank">
       <img src="../../assets/brand/themesberg.svg" class="mb-4" width="35" alt="Themesberg Logo">
     </a>
-    <p class="font-small mb-4">Designed and built by <a href="https://themesberg.com" target="_blank">Themesberg</a>.</p>
+    <a href="https://updivision.com" target="_blank">
+      <img src="../../assets/img/updivision.png"class="image-sm mb-4 mx-2" alt="Upvidision Logo">
+    </a>
+    <p class="font-small mb-4">Designed and built by <a href="https://themesberg.com" target="_blank">Themesberg</a> and <a href="https://updivision.com" target="_blank">Upvidision</a>.</p>
     <hr class="my-4" style="background: #181e38">
     <ul class="bd-footer-links mb-2">
       <li class="me-3"><a href="https://themesberg.com/themes" target="_blank">Products</a></li>

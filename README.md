@@ -441,7 +441,7 @@ If you have questions or need help integrating the product please [contact us](h
 
 - [More themes](https://themesberg.com/themes) from Themesberg
 - [Free themes](https://themesberg.com/templates/free) from Themesberg
-- [Bootstrap Themes, Templates & UI Kits](https://themesberg.com/templates/bootstrap) from Themesberg
+- [Bootstrap Themes, Templates & UI Kits](https://themesberg.com/templates/laravel/) from Themesberg
 - [Affiliate Program](https://themesberg.com/affiliate)
 
 ## Social Media
