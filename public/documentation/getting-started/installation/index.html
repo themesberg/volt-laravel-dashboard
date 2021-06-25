@@ -475,9 +475,9 @@
 <ol>
 <li>Download the project&rsquo;s zip then copy and paste <strong>volt-dashboard-master</strong> folder in your <strong>projects</strong> folder. Rename the folder to your project&rsquo;s name</li>
 <li>Make sure you have Node and Composer locally installed.</li>
-<li>Run the following command in order to download all the project dependencies.</li>
-
-<p><div class="highlight"><pre ><code class="language-bash" data-lang="bash">composer install</code></pre></div>
+<li>Run the following commands in order to download all the project dependencies.</li>
+<p><div class="highlight"><pre ><code class="language-bash" data-lang="bash">composer install</code></pre></div></p>
+<p><div class="highlight"><pre ><code class="language-bash" data-lang="bash">npm install</code></pre></div></p>
 <li>Copy <code>.env.example</code> to <code>.env</code> and update the configurations (mainly the database configuration).</li>
 <li>In your terminal run <code>php artisan key:generate</code>.</li>
 <li>Run <code>php artisan migrate --seed</code> to create the database tables and seed them.</li>
@@ -485,11 +485,6 @@
 </ol>
 <h2 id="usage">Usage</h2>
 <p>Register a user or login using <strong>admin@volt.com</strong> and <strong>secret</strong> and start testing the Laravel app (make sure to run the migrations and seeders for these credentials to be available).</p>
-<ul>
-<li>admin type - <strong><a href="mailto:admin@paper.com">admin@paper.com</a></strong> with the password <strong>secret</strong></li>
-<li>creator type - <strong><a href="mailto:creator@paper.com">creator@paper.com</a></strong> with the password <strong>secret</strong></li>
-<li>member type - <strong><a href="mailto:member@paper.com">member@paper.com</a></strong> with the password <strong>secret</strong></li>
-</ul>
 <p>Make sure to run the migrations and seeders for the above credentials to be available.</p>
 <p>Besides the dashboard and the auth pages this application also has an edit profile page. All the necessary files (controllers, requests, views) are installed out of the box and all the needed routes are added to <code>routes/web.php</code>. Keep in mind that all of the features can be viewed once you login using the credentials provided above or by registering your own user.</p>
 
