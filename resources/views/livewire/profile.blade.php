@@ -1,7 +1,7 @@
 <div>
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center py-4">
         <div>
-            <button class="btn btn-secondary text-dark me-2 dropdown-toggle" data-bs-toggle="dropdown"
+            <button class="btn btn-secondary me-2 dropdown-toggle" data-bs-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 <span class="fas fa-plus me-2"></span>New
             </button>

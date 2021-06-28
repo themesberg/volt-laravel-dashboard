@@ -32,11 +32,11 @@
     <ul class="nav flex-column pt-3 pt-md-0">
       <li class="nav-item">
         <a href="/dashboard" class="nav-link d-flex align-items-center">
-          <span class="sidebar-icon">
-            <img src="/assets/img/brand/light.svg" height="30" width="30" alt="Volt Logo">
+          <span class="sidebar-icon me-3">
+            <img src="/assets/img/brand/light.svg" height="20" width="20" alt="Volt Logo">
           </span>
           <span class="mt-1 ms-1 sidebar-text">
-            <h3>Volt</h3>
+            Volt Laravel
           </span>
         </a>
       </li>
@@ -91,7 +91,7 @@
             <span class="sidebar-text">Kanban </span>
           </span>
           <span>
-            <span class="badge badge-sm bg-secondary ms-1 text-gray-800">Pro</span>
+            <span class="badge badge-sm bg-secondary ms-1">Pro</span>
           </span>
         </a>
       </li>
@@ -120,7 +120,7 @@
             <span class="sidebar-text">Calendar</span>
           </span>
           <span>
-            <span class="badge badge-sm bg-secondary ms-1 text-gray-800">Pro</span>
+            <span class="badge badge-sm bg-secondary ms-1">Pro</span>
           </span>
         </a>
         </li>
@@ -137,7 +137,7 @@
             <span class="sidebar-text">Map</span>
           </span>
           <span>
-            <span class="badge badge-sm bg-secondary ms-1 text-gray-800">Pro</span>
+            <span class="badge badge-sm bg-secondary ms-1">Pro</span>
           </span>
         </a>
         </li>
@@ -299,8 +299,8 @@
                 d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
                 clip-rule="evenodd"></path>
             </svg></span>
-          <span class="sidebar-text">Documentation <span
-              class="badge badge-sm bg-secondary ms-1 text-gray-800">v1.0</span></span>
+          <span class="sidebar-text">Documentation </span> <span><span
+              class="badge badge-sm bg-secondary ms-1">v1.0</span></span>
         </a>
       </li>
       <li class="nav-item">

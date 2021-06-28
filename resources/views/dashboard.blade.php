@@ -43,8 +43,8 @@
                     </div>
                 </div>
                 <div class="d-flex ms-auto">
-                    <a href="#" class="btn btn-secondary text-dark btn-sm me-2">Month</a>
-                    <a href="#" class="btn btn-dark btn-sm me-3">Week</a>
+                    <a href="#" class="btn btn-secondary btn-sm me-2">Month</a>
+                    <a href="#" class="btn btn-sm me-3">Week</a>
                 </div>
             </div>
             <div class="card-body p-2">

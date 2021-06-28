@@ -38,11 +38,11 @@ $indigo     : #4F46E5 !default;
 $purple     : #7C3AED !default;
 $pink       : #EF4683 !default;
 $red        : #E11D48 !default;
+$red-100    : #fbbab5 !default;
+$red-200    : #fbaea7 !default;
 $orange     : #FBA918 !default;
 $brown      : #b9a084 !default;
 $yellow     : #f3c78e !default;
-$yellow-100 : #ffeed6 !default;
-$yellow-200 : #f5dbb8 !default;
 $green      : #10B981 !default;
 $teal       : #1E90FF !default;
 $cyan       : #63b1bd !default;
@@ -137,8 +137,8 @@ $theme-colors: (
     "white": $white,
     "indigo": $indigo,
     "purple": $purple,
-    "yellow-100": $yellow-100,
-    "yellow-200": $yellow-200,
+    "red-100": $red-100,
+    "red-200": $red-200,
     "gray-50": $gray-50,
     "gray-100": $gray-100,
     "gray-200": $gray-200,
