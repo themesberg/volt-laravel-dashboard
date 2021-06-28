@@ -6,7 +6,7 @@
 [![GitHub issues open](https://img.shields.io/github/issues/themesberg/volt-laravel-admin-dashboard.svg)](https://github.com/themesberg/volt-laravel-admin-dashboard/issues?q=is%3Aopen+is%3Aissue)
 [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/themesberg/volt-bootstrap-5-dashboard.svg)](https://github.com/themesberg/volt-laravel-admin-dashboard/issues?q=is%3Aissue+is%3Aclosed)
 
-[![Volt Bootstrap 5 Dashboard Preview](https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-bootstrap-5-dashboard/volt-bootstrap-5-dashboard-preview.jpg)](https://volt-laravel-admin-dashboard.updivision.com/dashboard)
+[![Volt Laravel Dashboard Preview](https://i.imgur.com/1iqriPG.gif)](https://volt-laravel-admin-dashboard.updivision.com/dashboard)
 
 Never start a development project from scratch again. We've partnered with UPDIVISION to create the ultimate design & development toolbox, free for personal and commercial projects. 
 
@@ -53,7 +53,7 @@ We also included detailed documentation for every component and feature so it he
 
 ## Versions
 
-[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/html-logo.jpg?raw=true" width="60" height="60" />](https://themesberg.com/product/laravel/volt-admin-dashboard-template)[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/react-logo.jpg?raw=true" width="60" height="60" />](https://themesberg.com/product/dashboard/volt-react)[<img src="https://seekvectors.com/storage/images/Laravel%20Logo-100.jpg" width="60" height="60" />](https://themesberg.com/product/laravel/volt-admin-dashboard-template).
+[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/html-logo.jpg?raw=true" width="60" height="60" />](https://themesberg.com/product/laravel/volt-admin-dashboard-template)[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/react-logo.jpg?raw=true" width="60" height="60" />](https://themesberg.com/product/dashboard/volt-react)[<img src="public/assets/img/laravel.png" width="60" height="60" />](https://themesberg.com/product/laravel/volt-admin-dashboard-template).
 
 | HTML | React  | Laravel  |
 | --- | ---  | --- |
@@ -118,44 +118,6 @@ Besides the dashboard and the auth pages this application also has an edit profi
 
 You can access the dashboard either by using the "**Dashboard**" link in the left sidebar or by adding **/dashboard** in the URL.
 
-### User Profile
-
-You have the option to edit the current logged in user's profile information (name, email, profile picture) and password. To access this page, just click the "**Profile**" link in the left sidebar or add **/profile** in the URL.
-
-The `app/Http/Livewire/Profile.php` handles the update of the user information and password.
-
-```
-    public function mount() { $this->user = auth()->user(); }
-
-    public function save()
-    {
-        $this->validate();
-
-        $this->user->save();
-
-        $this->showSavedAlert = true;
-            
-        }
-    }
-```
-
-If you input the wrong data when editing the profile, don't worry. Validation rules have been added to prevent this.
-
-```
-    protected $rules = [
-        'user.first_name' => 'max:15',
-        'user.last_name' => 'max:20',
-        'user.birthday' => 'date_format:Y-m-d',
-        'user.email' => 'email',
-        'user.phone' => 'numeric',
-        'user.gender' => '',
-        'user.address' => 'max:20',
-        'user.number' => 'numeric',
-        'user.city' => 'max:20',
-        'user.zip' => 'numeric',
-    ];
-
-```
 
 ### Sign in
 
@@ -256,6 +218,45 @@ The `app/Http/Livewire/ResetPassword.php` handles the password reset process and
         }
     }
     
+```
+
+### User Profile
+
+You have the option to edit the current logged in user's profile information (name, email, profile picture) and password. To access this page, just click the "**Profile**" link in the left sidebar or add **/profile** in the URL.
+
+The `app/Http/Livewire/Profile.php` handles the update of the user information and password.
+
+```
+    public function mount() { $this->user = auth()->user(); }
+
+    public function save()
+    {
+        $this->validate();
+
+        $this->user->save();
+
+        $this->showSavedAlert = true;
+            
+        }
+    }
+```
+
+If you input the wrong data when editing the profile, don't worry. Validation rules have been added to prevent this.
+
+```
+    protected $rules = [
+        'user.first_name' => 'max:15',
+        'user.last_name' => 'max:20',
+        'user.birthday' => 'date_format:Y-m-d',
+        'user.email' => 'email',
+        'user.phone' => 'numeric',
+        'user.gender' => '',
+        'user.address' => 'max:20',
+        'user.number' => 'numeric',
+        'user.city' => 'max:20',
+        'user.zip' => 'numeric',
+    ];
+
 ```
 
 
