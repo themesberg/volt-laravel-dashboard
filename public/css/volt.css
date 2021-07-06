@@ -6583,7 +6583,7 @@ textarea.form-control-lg {
     display: none; }
 
 .popover-body {
-  padding: 1rem 1rem;
+  padding: 0.5rem 1rem;
   color: #ffffff; }
 
 .carousel {
@@ -15299,7 +15299,7 @@ label {
 
 .avatar-xl {
   width: 8rem;
-  height: 8rem; }
+  height: auto; }
   @media (max-width: 991.98px) {
     .avatar-xl {
       width: 4.5rem;
