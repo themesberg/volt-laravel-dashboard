@@ -20,13 +20,13 @@
     ],
     "homepage": "https://themesberg.com/product/admin-dashboard/volt-bootstrap-5-dashboard",
     "bugs": {
-        "url": "https://github.com/themesberg/volt-bootstrap-5-dashboard/issues"
+        "url": "https://github.com/themesberg/volt-laravel-dashboard/issues"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/themesberg/volt-bootstrap-5-dashboard"
+        "url": "https://github.com/themesberg/volt-laravel-dashboard"
     },
-    "license": "https://github.com/themesberg/volt-bootstrap-5-dashboard/blob/master/LICENSE.md",
+    "license": "https://github.com/themesberg/volt-laravel-dashboard/blob/master/LICENSE.md",
     "devDependencies": {
         "browser-sync": "^2.26.13",
         "del": "4.1.1",
