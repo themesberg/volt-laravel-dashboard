@@ -53,7 +53,7 @@ We also included detailed documentation for every component and feature so it he
 
 ## Versions
 
-[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/html-logo.jpg?raw=true" width="60" height="60" />](https://themesberg.com/product/laravel/volt-admin-dashboard-template)[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/react-logo.jpg?raw=true" width="60" height="60" />](https://themesberg.com/product/dashboard/volt-react)[<img src="public/assets/img/laravel.png" width="60" height="60" />](https://themesberg.com/product/laravel/volt-admin-dashboard-template).
+[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/html-logo.jpg?raw=true" width="60" height="60" />](https://themesberg.com/product/laravel/volt-admin-dashboard-template)[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/react-logo.jpg?raw=true" width="60" height="60" />](https://themesberg.com/product/dashboard/volt-react)[<img src="https://themesberg.s3.us-east-2.amazonaws.com/public/github/technology/laravel-logo.jpeg" width="60" height="60" />](https://themesberg.com/product/laravel/volt-admin-dashboard-template).
 
 | HTML | React  | Laravel  |
 | --- | ---  | --- |
