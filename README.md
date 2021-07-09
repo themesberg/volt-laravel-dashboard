@@ -6,7 +6,7 @@
 [![GitHub issues open](https://img.shields.io/github/issues/themesberg/volt-laravel-admin-dashboard.svg)](https://github.com/themesberg/volt-laravel-admin-dashboard/issues?q=is%3Aopen+is%3Aissue)
 [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/themesberg/volt-bootstrap-5-dashboard.svg)](https://github.com/themesberg/volt-laravel-admin-dashboard/issues?q=is%3Aissue+is%3Aclosed)
 
-[![Volt Laravel Dashboard Preview](https://i.imgur.com/1iqriPG.gif)](https://volt-laravel-admin-dashboard.updivision.com/dashboard)
+[![Volt Laravel Dashboard Preview](https://i.imgur.com/6CL95QK.gif)](https://volt-laravel-admin-dashboard.updivision.com/dashboard)
 
 Never start a development project from scratch again. We've partnered with UPDIVISION to create the ultimate design & development toolbox, free for personal and commercial projects. 
 
@@ -57,7 +57,7 @@ We also included detailed documentation for every component and feature so it he
 
 | HTML | React  | Laravel  |
 | --- | ---  | --- |
-| [![Volt Bootstrap 5 Dashboard HTML](https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-bootstrap-5-dashboard/volt-bootstrap-5-dashboard-preview.jpg)](https://volt-laravel-admin-dashboard.updivision.com/dashboard) | [![Volt React Dashboard](https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-react-dashboard/thumbnail.png)](https://github.com/themesberg/volt-react-dashboard) | [![Volt React Dashboard](https://cdn4.iconfinder.com/data/icons/unigrid-layout/60/021_layout_wireframe_grid_image-512.png)](https://github.com/themesberg/volt-laravel-admin-dashboard)
+| [![Volt Bootstrap 5 Dashboard HTML](https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-bootstrap-5-dashboard/volt-bootstrap-5-dashboard-preview.jpg)](https://volt-laravel-admin-dashboard.updivision.com/dashboard) | [![Volt React Dashboard](https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-react-dashboard/thumbnail.png)](https://github.com/themesberg/volt-react-dashboard) | [![Volt React Dashboard](https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-laravel-dashboard/volt-free-laravel-dashboard.jpg)](https://github.com/themesberg/volt-laravel-admin-dashboard)
 
 ## Laravel
 
@@ -322,7 +322,7 @@ At present, we officially aim to support the last two versions of the following 
 
 | HTML | React  | Laravel  |
 | --- | ---  | --- |
-| [![Volt Bootstrap 5 Dashboard HTML](https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-bootstrap-5-dashboard/volt-bootstrap-5-dashboard-preview.jpg)](https://volt-laravel-admin-dashboard.updivision.com/dashboard) | [![Volt React Dashboard](https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-react-dashboard/thumbnail.png)](https://github.com/themesberg/volt-react-dashboard) | [![Volt React Dashboard](https://cdn4.iconfinder.com/data/icons/unigrid-layout/60/021_layout_wireframe_grid_image-512.png)](https://github.com/themesberg/volt-laravel-admin-dashboard)
+| [![Volt Bootstrap 5 Dashboard HTML](https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-bootstrap-5-dashboard/volt-bootstrap-5-dashboard-preview.jpg)](https://volt-laravel-admin-dashboard.updivision.com/dashboard) | [![Volt React Dashboard](https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-react-dashboard/thumbnail.png)](https://github.com/themesberg/volt-react-dashboard) | [![Volt React Dashboard](https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-laravel-dashboard/volt-free-laravel-dashboard.jpg)](https://github.com/themesberg/volt-laravel-admin-dashboard)
 
 ## Change log
 
