@@ -1,4 +1,9 @@
 # Change Log
 
-## [1.0.0] 
-### Original Release
+## Version 1.0.0
+
+### Added
+- Volt Dashboard Free
+- Login
+- Register
+- Profile edit
