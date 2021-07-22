@@ -7,3 +7,4 @@
 - Login
 - Register
 - Profile edit
+- Recover password
