@@ -1,19 +1,30 @@
 <?php
 
+use App\Http\Livewire\BootstrapTables;
+use App\Http\Livewire\Components\Buttons;
+use App\Http\Livewire\Components\Forms;
+use App\Http\Livewire\Components\Modals;
+use App\Http\Livewire\Components\Notifications;
+use App\Http\Livewire\Components\Typography;
+use App\Http\Livewire\Dashboard;
+use App\Http\Livewire\Err404;
+use App\Http\Livewire\Err500;
 use App\Http\Livewire\ResetPassword;
 use App\Http\Livewire\ForgotPassword;
-use App\Http\Livewire\Login;
+use App\Http\Livewire\Lock;
+use App\Http\Livewire\Auth\Login;
 use App\Http\Livewire\Profile;
-use App\Http\Livewire\Register;
-use App\Models\User;
-use App\Notifications\MailResetPasswordToken;
+use App\Http\Livewire\Auth\Register;
+use App\Http\Livewire\ForgotPasswordExample;
+use App\Http\Livewire\Index;
+use App\Http\Livewire\LoginExample;
+use App\Http\Livewire\ProfileExample;
+use App\Http\Livewire\RegisterExample;
+use App\Http\Livewire\Transactions;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Auth\Events\PasswordReset;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Mail;
-use Illuminate\Support\Facades\Password;
-use Illuminate\Support\Str;
+use App\Http\Livewire\ResetPasswordExample;
+use App\Http\Livewire\UpgradeToPro;
+use App\Http\Livewire\Users;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,10 +37,6 @@ use Illuminate\Support\Str;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::redirect('/', '/login');
 
 Route::get('/register', Register::class)->name('register');
@@ -37,72 +44,28 @@ Route::get('/register', Register::class)->name('register');
 Route::get('/login', Login::class)->name('login');
 
 Route::get('/forgot-password', ForgotPassword::class)->name('forgot-password');
-Route::get('mail', function(){
-    $order = App\Models\User::find(1);
 
-    return (new ResetPassword($order))->toMail($order->user);
-});
+Route::get('/reset-password/{id}', ResetPassword::class)->name('reset-password')->middleware('signed');
 
-Route::get('/reset-password/{token}', ResetPassword::class)->name('reset-password');
-Route::get('/reset-password', ResetPassword::class)->name('reset-password');
-
+Route::get('/404', Err404::class)->name('404');
+Route::get('/500', Err500::class)->name('500');
+Route::get('/upgrade-to-pro', UpgradeToPro::class)->name('upgrade-to-pro');
 
 Route::middleware('auth')->group(function () {
-    // Route::get('/dashboard', Dashboard::class);
     Route::get('/profile', Profile::class)->name('profile');
+    Route::get('/profile-example', ProfileExample::class)->name('profile-example');
+    Route::get('/users', Users::class)->name('users');
+    Route::get('/login-example', LoginExample::class)->name('login-example');
+    Route::get('/register-example', RegisterExample::class)->name('register-example');
+    Route::get('/forgot-password-example', ForgotPasswordExample::class)->name('forgot-password-example');
+    Route::get('/reset-password-example', ResetPasswordExample::class)->name('reset-password-example');
+    Route::get('/dashboard', Dashboard::class)->name('dashboard');
+    Route::get('/transactions', Transactions::class)->name('transactions');
+    Route::get('/bootstrap-tables', BootstrapTables::class)->name('bootstrap-tables');
+    Route::get('/lock', Lock::class)->name('lock');
+    Route::get('/buttons', Buttons::class)->name('buttons');
+    Route::get('/notifications', Notifications::class)->name('notifications');
+    Route::get('/forms', Forms::class)->name('forms');
+    Route::get('/modals', Modals::class)->name('modals');
+    Route::get('/typography', Typography::class)->name('typography');
 });
-
-/* Route::middleware('guest')->group(function () {
-    Route::get('/login', Login::class)->name('login');
-    Route::get('/register', Register::class)->name('register');
-}); */
-
-
-//Incercare sa fac functionalitate la reset password
-
-
-/* Route::get('/forgot-password', function () {
-    return view('livewire.forgot-password');
-})->name('forgot-password');
-
-Route::post('/forgot-password', function (Request $request) {
-    $request->validate(['email' => 'required|email']);
-
-    $status = Password::sendResetLink(
-        $request->only('email')
-    );
-
-    return $status === Password::RESET_LINK_SENT
-                ? back()->with(['status' => __($status)])
-                : back()->withErrors(['email' => __($status)]);
-})->name('forgot-password');
-
-
-Route::get('/reset-password/{token}', function ($token) {
-    return view('livewire.reset-password', ['token' => $token]);
-})->name('reset-password');
-
-Route::get('/reset-password', function (Request $request) {
-    $request->validate([
-        'token' => 'required',
-        'email' => 'required|email',
-        'password' => 'required|min:6|confirmed',
-    ]);
-
-    $status = Password::reset(
-        $request->only('email', 'password', 'password_confirmation', 'token'),
-        function ($user, $password) use ($request) {
-            $user->forceFill([
-                'password' => Hash::make($password)
-            ])->setRememberToken(Str::random(60));
-
-            $user->save();
-
-            event(new PasswordReset($user));
-        }
-    );
-
-    return $status == Password::PASSWORD_RESET
-                ? redirect()->route('login')->with('status', __($status))
-                : back()->withErrors(['email' => [__($status)]]);
-}); */
