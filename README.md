@@ -20,7 +20,7 @@ You're getting a lean, mean, app-building machine made of:
 - 100+ handcrafted UI components tailored for Bootstrap 5 with Vanilla JS. This means buttons, alerts, modals, datepickers and everything in between
 - 11 example pages to get you started 
 - 3 lightweight plugins: datepicker, notification and charts library
-- SaaS files & Gulp commands
+- Sass files & Gulp commands
 - fully-functional authentication system, register and user profile editing features built with Laravel
 - Livewire & Alpine.js integration
 
