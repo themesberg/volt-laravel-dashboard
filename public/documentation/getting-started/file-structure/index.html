@@ -475,41 +475,38 @@
 
 <code>
   <pre class="text-gray-800">
-├── components
-│   ├── buttons.blade.php
-│   ├── forms.blade.php
-│   ├── modals.blade.php
-│   ├── notifications.blade.php
-│   └── typography.blade.php
-├── dashboard.blade.php
-├── layouts
-│   ├── app.blade.php
-│   ├── base.blade.php
-│   ├── footer2.blade.php
-│   ├── footer.blade.php
-│   ├── nav.blade.php
-│   ├── sidenav.blade.php
-│   └── topbar.blade.php
-├── livewire
-│   ├── auth
-│   │   ├── login.blade.php
-│   │   └── register.blade.php
-│   ├── forgot-password.blade.php
-│   ├── forgot-password-example.blade.php
-│   ├── login-example.blade.php
-│   ├── logout.blade.php
-│   ├── profile.blade.php
-│   ├── profile-example.blade.php
-│   ├── register-example.blade.php
-│   ├── reset-password.blade.php
-│   ├── upgrade-to-pro.blade.php
-│   └── users.blade.php
-├── lock.blade.php
-├── reset-password-example.blade.php
-└── transactions.blade.php
-├── 404.blade.php
-├── 500.blade.php
-├── bootstrap-tables.blade.php
+    ```
+    ├── components
+    │   ├── buttons.blade.php                       # Buttons page
+    │   ├── forms.blade.php                         # Forms page
+    │   ├── modals.blade.php                        # Modals page
+    │   ├── notifications.blade.php                 # Notifications page
+    │   └── typography.blade.php                    # Typography page
+    ├── dashboard.blade.php                         # Dashboard
+    ├── layouts
+    │   ├── app.blade.php                           # Including layouts based on routes
+    │   ├── base.blade.php                          # All the styles and scripts included
+    │   ├── footer2.blade.php                       # Footer for pages without sidenav
+    │   ├── footer.blade.php                        # Footer for pages with sidenav
+    │   ├── nav.blade.php                           # Nav for mobile view 
+    │   ├── sidenav.blade.php                       # The sidebar menu
+    │   └── topbar.blade.php                        # Search bar, notifications and user area
+    ├── livewire                                    # All the pages that are using livewire functionality
+    │   ├── auth                                    # Handles auth routes (login and register)
+    │   │   ├── login.blade.php                     
+    │   │   └── register.blade.php
+    │   ├── forgot-password.blade.php               # Handles the forgot-password form
+    │   ├── logout.blade.php                        # Logout functionality
+    │   ├── profile.blade.php                       # Profile page
+    │   ├── reset-password.blade.php                # Handles the reset password form
+    │   └── users.blade.php                         # Users table
+    ├── upgrade-to-pro.blade.php                    # Upgrade to pro page
+    ├── lock.blade.php                              # Lock page
+    └── transactions.blade.php                      # Transactions page
+    ├── 404.blade.php                               # Error 404 page
+    ├── 500.blade.php                               # Error 500 page
+    ├── bootstrap-tables.blade.php                  # Bootstrap tables page                
+    ```
   </pre>
 </code>
 
