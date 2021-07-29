@@ -1,3 +1,4 @@
+<title>Volt Laravel Dashboard - Forms</title>
 <div class="py-4">
     <nav aria-label="breadcrumb" class="d-none d-md-inline-block">
         <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">

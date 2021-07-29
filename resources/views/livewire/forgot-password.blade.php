@@ -1,5 +1,5 @@
 <main>
-
+    <title>Volt Laravel Dashboard - Forgot password</title>
     <!-- Section -->
     <section class="vh-lg-100 mt-4 mt-lg-0 bg-soft d-flex align-items-center">
         <div class="container">
