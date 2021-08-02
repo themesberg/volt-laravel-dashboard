@@ -470,6 +470,13 @@
           
           
 
+          <h2>Compiling SCSS files with Laravel Mix</h2>
+          <p>If you want to make changes to the scss files located in <code>resources/scss/</code> you need to have <code>Laravel Mix</code> installed and then add the following line of code to the <code>webpack.mix.js</code> file in the "scripts" section. </p>
+          <div class="highlight"><pre ><code class="language-bash" data-lang="bash">"scss": "node-sass resources/scss -o css"</code></pre></div>
+          <p>You can then run the following two commands in your project terminal in order to compile all of the scss files into one css file which you can then use to apply the styling changes to your project.</p>
+          <div class="highlight"><pre ><code class="language-bash" data-lang="bash">npm install node-sass</code></pre></div>
+          <div class="highlight mt-5"><pre ><code class="language-bash" data-lang="bash">npm run scss</code></pre></div>
+          <h2 id="starting-a-local-server">Starting a local server</h2>
           <h2 id="starting-a-local-server">Starting a local server</h2>
 <p>Developing with Volt is very easy. All you have to do to run a local server is writing the following command in the folder where <code>gulpfile.js</code> is located:</p>
 <div class="highlight"><pre ><code class="language-bash" data-lang="bash">gulp</code></pre></div>
