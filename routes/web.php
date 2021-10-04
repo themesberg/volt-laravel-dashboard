@@ -24,7 +24,7 @@ use App\Http\Livewire\Transactions;
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\ResetPasswordExample;
 use App\Http\Livewire\UpgradeToPro;
-use App\Http\Livewire\Users;1
+use App\Http\Livewire\Users;
 
 /*
 |--------------------------------------------------------------------------
