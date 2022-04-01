@@ -6,7 +6,7 @@
 [![GitHub issues open](https://img.shields.io/github/issues/themesberg/volt-laravel-admin-dashboard.svg)](https://github.com/themesberg/volt-laravel-admin-dashboard/issues?q=is%3Aopen+is%3Aissue)
 [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/themesberg/volt-laravel-admin-dashboard.svg)](https://github.com/themesberg/volt-laravel-admin-dashboard/issues?q=is%3Aissue+is%3Aclosed)
 
-[![Volt Laravel Dashboard Preview](https://i.imgur.com/6CL95QK.gif)](https://volt-laravel-admin-dashboard.updivision.com/dashboard)
+[![Volt Laravel Dashboard Preview](https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-laravel-dashboard/volt-free-laravel-dashboard.jpg)](https://volt-laravel-admin-dashboard.updivision.com/dashboard)
 
 Never start a development project from scratch again. We've partnered with UPDIVISION to create the ultimate design & development toolbox, free for personal and commercial projects. 
 
