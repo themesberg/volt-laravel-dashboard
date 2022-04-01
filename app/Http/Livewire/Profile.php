@@ -15,17 +15,17 @@ class Profile extends Component
 
     public function rules() {
 
-    return [
-        'user.first_name' => 'max:15',
-        'user.last_name' => 'max:20',
-        'user.email' => 'email',
-        'user.gender' => ['required', Rule::in(['Male', 'Female', 'Other'])],
-        'user.address' => 'max:40',
-        'user.number' => 'numeric',
-        'user.city' => 'max:20',
-        'user.ZIP' => 'numeric',
-    ];
-}
+        return [
+            'user.first_name' => 'max:15',
+            'user.last_name' => 'max:20',
+            'user.email' => 'email',
+            'user.gender' => ['required', Rule::in(['Male', 'Female', 'Other'])],
+            'user.address' => 'max:40',
+            'user.number' => 'numeric',
+            'user.city' => 'max:20',
+            'user.ZIP' => 'numeric',
+        ];
+    }
 
     public function mount() { $this->user = auth()->user(); }
 
@@ -39,7 +39,7 @@ class Profile extends Component
 
         $this->user->save();
 
-        $this->showSavedAlert = true;   
+        $this->showSavedAlert = true;
         }
     }
 

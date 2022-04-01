@@ -4,9 +4,9 @@
 [![version](https://img.shields.io/npm/v/@themesberg/volt-bootstrap-5-dashboard)](https://www.npmjs.com/package/@themesberg/volt-laravel-admin-dashboard)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.md)
 [![GitHub issues open](https://img.shields.io/github/issues/themesberg/volt-laravel-admin-dashboard.svg)](https://github.com/themesberg/volt-laravel-admin-dashboard/issues?q=is%3Aopen+is%3Aissue)
-[![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/themesberg/volt-bootstrap-5-dashboard.svg)](https://github.com/themesberg/volt-laravel-admin-dashboard/issues?q=is%3Aissue+is%3Aclosed)
+[![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/themesberg/volt-laravel-admin-dashboard.svg)](https://github.com/themesberg/volt-laravel-admin-dashboard/issues?q=is%3Aissue+is%3Aclosed)
 
-[![Volt Laravel Dashboard Preview](https://i.imgur.com/6CL95QK.gif)](https://volt-laravel-admin-dashboard.updivision.com/dashboard)
+[![Volt Laravel Dashboard Preview](https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-laravel-dashboard/volt-free-laravel-dashboard.jpg)](https://volt-laravel-admin-dashboard.updivision.com/dashboard)
 
 Never start a development project from scratch again. We've partnered with UPDIVISION to create the ultimate design & development toolbox, free for personal and commercial projects. 
 
@@ -20,7 +20,7 @@ You're getting a lean, mean, app-building machine made of:
 - 100+ handcrafted UI components tailored for Bootstrap 5 with Vanilla JS. This means buttons, alerts, modals, datepickers and everything in between
 - 11 example pages to get you started 
 - 3 lightweight plugins: datepicker, notification and charts library
-- SaaS files & Gulp commands
+- Sass files & Gulp commands
 - fully-functional authentication system, register and user profile editing features built with Laravel
 - Livewire & Alpine.js integration
 
