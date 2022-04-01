@@ -1,3 +1,4 @@
+<title>Volt Laravel Dashboard</title>
 <div class="py-4">
     <div class="dropdown">
         <button class="btn btn-gray-800 d-inline-flex align-items-center me-2 dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

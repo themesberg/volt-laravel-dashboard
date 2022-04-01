@@ -1,3 +1,4 @@
+<title>Volt Laravel Dashboard - Upgrade to Pro</title>
 <div class="row justify-content-center pt-5 pb-4">
     <div class="col-12 col-xl-9 text-center">
         <h1 class="fw-extrabold text-center d-inline-flex align-items-center mb-4">
