@@ -178,6 +178,7 @@
                                 <input wire:model="user.address" class="form-control" id="address" type="text"
                                     placeholder="Enter your home address">
                             </div>
+                            @error('user.address') <div class="invalid-feedback">{{ $message }}</div> @enderror
                         </div>
                         <div class="col-sm-3 mb-3">
                             <div class="form-group">
@@ -185,6 +186,7 @@
                                 <input wire:model="user.number" class="form-control" id="number" type="number"
                                     placeholder="No.">
                             </div>
+                            @error('user.number') <div class="invalid-feedback">{{ $message }}</div> @enderror
                         </div>
                     </div>
                     <div class="row">
@@ -194,6 +196,7 @@
                                 <input wire:model="user.city" class="form-control" id="city" type="text"
                                     placeholder="City">
                             </div>
+                            @error('user.city') <div class="invalid-feedback">{{ $message }}</div> @enderror
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
@@ -201,6 +204,7 @@
                                 <input wire:model="user.ZIP" class="form-control" id="zip" type="tel" placeholder="ZIP">
                             </div>
                         </div>
+                        @error('user.ZIP') <div class="invalid-feedback">{{ $message }}</div> @enderror
                     </div>
                     <div class="mt-3">
                         <button type="submit" class="btn btn-gray-800 mt-2 animate-up-2">Save All</button>
