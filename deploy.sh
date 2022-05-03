@@ -6,7 +6,7 @@ git fetch --all
 php8.0 artisan down
 git reset --hard origin/master
 php8.0 /usr/local/bin/composer install --no-interaction #install php part
-php8.0 artisan migrate:fresh --seed
+php8.0 artisan migrate:fresh --seed --force
 php8.0 artisan optimize:clear
 php8.0 artisan view:clear
 php8.0 artisan route:clear
