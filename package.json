@@ -47,7 +47,7 @@
         "laravel-mix": "^6.0.49",
         "lodash": "^4.17.19",
         "merge-stream": "2.0.0",
-        "postcss": "^8.1.14",
+        "postcss": "^8.4.14",
         "resolve-url-loader": "^3.1.3",
         "sass": "^1.32.12",
         "sass-loader": "^11.1.0"
@@ -70,7 +70,7 @@
         "waypoints": "4.0.1"
     },
     "scripts": {
-        "scss": "node-sass resources/scss -o css",
+        "scss": "node-sass resources/scss -o public/css",
         "dev": "npm run development",
         "development": "mix",
         "watch": "mix watch",

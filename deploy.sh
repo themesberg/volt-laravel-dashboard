@@ -18,5 +18,5 @@ chown -R www-data:www-data /usr/share/nginx/html/volt_laravel_admin_dashboard_fr
 php8.0 artisan up
 source ~/.nvm/nvm.sh
 npm install
-npm run prod
+npm run scss
 echo "Deploy script finished execution"
